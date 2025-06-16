@@ -9,7 +9,7 @@ import glsl from 'vite-plugin-glsl'
 export default defineConfig({
   // TODO: change to final domain
   // eslint-disable-next-line no-undef
-  site: process.env.NODE_ENV === 'development' ? 'http://localhost:4321' : 'https://wst-website.vercel.app',
+  site: process.env.NODE_ENV === 'development' ? 'http://localhost:4321' : 'https://wst-website-new.vercel.app',
   integrations: [
     robotsTxt({
       sitemapBaseFileName: 'sitemap-index',

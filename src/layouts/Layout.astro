@@ -1,0 +1,70 @@
+---
+import '../styles/index.scss';
+
+import Cursor from '../components/Cursor.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Splash from '../components/Splash.astro';
+import Canvas from '../components/Canvas.astro';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <title>Südliche Waldstraße Karlsruhe - Einkaufen in Karlsruhe</title>
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <!-- TODO: remove when going live -->
+    <meta name="robots" content="noindex, nofollow" />
+    <meta
+      name="description"
+      content="Südliche Waldstraße Karlsruhe - The Tast of goodness. Im „SÜDEN“ der Karlsruher Waldstraße trifft Exklusives auf Alltägliches."
+    />
+    <meta
+      property="og:title"
+      content="Südliche Waldstraße Karlsruhe - Einkaufen in Karlsruhe"
+    />
+    <meta
+      property="og:description"
+      content="Südliche Waldstraße Karlsruhe - The Tast of goodness. Im „SÜDEN“ der Karlsruher Waldstraße trifft Exklusives auf Alltägliches."
+    />
+    <!-- <meta
+      property="og:image"
+      content="https://wst-website.vercel.app/og-image.jpg"
+    /> -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en" />
+    <!-- TODO: preload font -->
+    <!-- <script
+      is:inline
+      defer
+      src="https://tracking.jnkl.dev/script.js"
+      data-website-id="b44d7dd2-f222-4333-a09d-e66fbe703a6e"
+      data-domains="wst-website.vercel.app"
+      data-do-not-track="true"></script> -->
+  </head>
+  <body>
+    <Cursor />
+
+    <Header />
+
+    <slot />
+
+    <Footer />
+
+    <Splash />
+
+    <Canvas />
+    <script>
+      import '../scripts/console.ts';
+      import '../scripts/scroll.ts';
+      import '../scripts/inview.ts';
+    </script>
+  </body>
+</html>

@@ -21,41 +21,41 @@ content:
       - name: content
         label: Content
         type: rich-text
-  - name: impressum
-    label: Impressum
-    type: file
-    path: src/pages/impressum.md
-    fields:
-      - name: layout
-        type: string
-        hidden: true
-        default: "../layouts/Impressum.astro"
-      - name: title
-        label: Title
-        type: string
-      - name: content
-        label: Content
-        component: richtext
-  - name: datenschutz
-    label: Datenschutz
-    type: file
-    path: src/pages/datenschutz.md
-    fields:
-      - name: layout
-        type: string
-        hidden: true
-        default: "../layouts/Datenschutz.astro"
-      - name: title
-        label: Title
-        type: string
-      - name: content
-        label: Content
-        component: richtext
-components:
-  richtext:
-    label: Richtext
-    type: object
-    fields:
-      - name: richtext
-        label: Richtext
-        type: rich-text
+#   - name: impressum
+#     label: Impressum
+#     type: file
+#     path: src/pages/impressum.md
+#     fields:
+#       - name: layout
+#         type: string
+#         hidden: true
+#         default: "../layouts/Impressum.astro"
+#       - name: title
+#         label: Title
+#         type: string
+#       - name: content
+#         label: Content
+#         component: richtext
+#   - name: datenschutz
+#     label: Datenschutz
+#     type: file
+#     path: src/pages/datenschutz.md
+#     fields:
+#       - name: layout
+#         type: string
+#         hidden: true
+#         default: "../layouts/Datenschutz.astro"
+#       - name: title
+#         label: Title
+#         type: string
+#       - name: content
+#         label: Content
+#         component: richtext
+# components:
+#   richtext:
+#     label: Richtext
+#     type: object
+#     fields:
+#       - name: richtext
+#         label: Richtext
+#         type: rich-text

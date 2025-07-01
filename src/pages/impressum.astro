@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <main>
+    <section class="container">
+      <div class="content">
+        <h1 data-inview>Impressum</h1>
+        <div class="richtext" data-inview>
+          <p>
+            Interessengemeinschaft Südliche Waldstrasse e.V. Waldstrasse 44
+            <br />
+            – Ergonomie und Wohnen – 76133 Karlsruhe 1. Vorsitzender: Raimund Löhr
+            <br />
+            Schatzmeister Hubert Roth
+          </p>
+          <p>
+            Steuernummer: 35022 / 57507
+            <br />
+            HRA: VR 2930 Amtsgericht Karlsruhe
+          </p>
+          <p>
+            <a href="mailto:hello@diewaldstrasse.com" target="_blank">
+              hello@diewaldstrasse.com
+            </a>
+            <br />
+            <a href="www.diewaldstrasse.com" target="_blank">
+              www.diewaldstrasse.com
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style lang="scss">
+  section {
+    margin-block: to-rem(100);
+  }
+
+  .content {
+    margin-inline: auto;
+    max-width: 60ch;
+  }
+
+  .richtext {
+    margin-top: to-rem(100);
+  }
+</style>

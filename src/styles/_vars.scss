@@ -13,17 +13,17 @@
   --grid-columns: 12;
 
   // fonts
-  --ff-primary: 'Helvetica', 'Arial', sans-serif;
+  --ff-primary: 'Delight', 'Helvetica', 'Arial', sans-serif;
   --ff-secondary: 'Georgia', 'Times New Roman', serif;
 
   // font-sizes
-  --fs-base: #{clamp-fluid(18, 24)};
-  --fs-1: #{clamp-fluid(54, 72)};
-  --fs-2: #{clamp-fluid(44, 60)};
-  --fs-3: #{clamp-fluid(38, 50)};
-  --fs-4: #{clamp-fluid(32, 42)};
-  --fs-5: #{clamp-fluid(26, 34)};
-  --fs-6: #{clamp-fluid(22, 28)};
+  --fs-base: #{clamp-fluid(16, 22)};
+  --fs-1: #{clamp-fluid(32, 66)};
+  --fs-2: #{clamp-fluid(28, 54)};
+  --fs-3: #{clamp-fluid(25, 45)};
+  --fs-4: #{clamp-fluid(22, 38)};
+  --fs-5: #{clamp-fluid(20, 32)};
+  --fs-6: #{clamp-fluid(18, 26)};
 
   // font-weights
   --fw-thin: 100;
@@ -45,8 +45,8 @@
   --fw-ultrablack: var(--fw-xblack);
 
   // colors
-  --c-light: #ffeedd;
-  --c-dark: #111111;
+  --c-light: #FAFAFA;
+  --c-dark: #101010;
 
   // animations
   // in-out

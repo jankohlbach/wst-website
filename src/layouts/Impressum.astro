@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout>
+  <main>
+    <section class="container">
+      <div class="content">
+        <h1 data-inview>{frontmatter.title}</h1>
+        <div class="richtext" data-inview>
+          {frontmatter.body}
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style lang="scss">
+  section {
+    margin-block: to-rem(100);
+  }
+
+  .content {
+    margin-inline: auto;
+    max-width: 60ch;
+  }
+
+  .richtext {
+    margin-top: to-rem(100);
+  }
+</style>

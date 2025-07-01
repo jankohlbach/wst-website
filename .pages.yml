@@ -18,7 +18,7 @@ content:
         type: string
       - name: content
         label: Content
-        type: rich-text
+        component: richtext
   - name: datenschutz
     label: Datenschutz
     type: file
@@ -33,12 +33,12 @@ content:
         type: string
       - name: content
         label: Content
-        type: rich-text
+        component: richtext
 components:
   richtext:
     label: Richtext
     type: object
     fields:
-      - name: body
-        label: Body
+      - name: richtext
+        label: Richtext
         type: rich-text

@@ -1,5 +1,6 @@
 ---
 layout: ../layouts/Datenschutz.astro
 title: Datenschutz
-content: Datenschutz content
+content:
+  richtext: Datenschutz content
 ---

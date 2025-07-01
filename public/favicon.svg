@@ -1,3 +1,5 @@
-<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="50" cy="50" r="50" fill="#000000"/>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="512" height="512" fill="black"/>
+<path d="M1 7.30322H512V504.119H1V7.30322Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M82.2806 504.119L1 363.337V185.32L102.597 368.301L121.924 330.003L30.433 175.745H129.193L167.314 245.25L199.939 175.745H289.302L209.514 316.882L234.514 362.273L327.6 175.745H422.637L241.429 504.119H224.407L163.414 397.734L104.548 504.119H82.2806Z" fill="white"/>
 </svg>

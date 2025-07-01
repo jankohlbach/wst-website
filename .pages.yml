@@ -4,6 +4,23 @@ media:
     input: src/media
     output: media
 content:
+  - name: generic
+    label: Generic
+    type: collection
+    path: src/pages
+    fields:
+      - name: slug
+        type: string
+      - name: layout
+        type: string
+        default: '../layouts/Generic.astro'
+        hidden: true
+      - name: title
+        label: Title
+        type: string
+      - name: content
+        label: Content
+        type: rich-text
   - name: impressum
     label: Impressum
     type: file

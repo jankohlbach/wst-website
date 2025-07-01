@@ -5,7 +5,7 @@ import Layout from '../layouts/Layout.astro';
 
 const { frontmatter } = Astro.props;
 
-const parsedContent = await marked(frontmatter.content);
+const parsedContent = await marked(frontmatter.content.richtext);
 ---
 
 <Layout>

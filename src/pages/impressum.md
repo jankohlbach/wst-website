@@ -12,4 +12,5 @@ content: |-
 
   [hello@diewaldstrasse.com](mailto:hello@diewaldstrasse.com)  
   [www.diewaldstrasse.com](http://www.diewaldstrasse.com)
+image: media/texture.jpg
 ---

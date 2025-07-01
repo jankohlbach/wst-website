@@ -11,5 +11,5 @@ content: |-
   HRA: VR 2930 Amtsgericht Karlsruhe
 
   [hello@diewaldstrasse.com](mailto:hello@diewaldstrasse.com)  
-  [www.diewaldstrasse.com](http://www.diewaldstrasse.com)
+  [https://diewaldstrasse.de](https://diewaldstrasse.de/)
 ---

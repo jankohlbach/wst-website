@@ -9,6 +9,8 @@ content:
     type: collection
     path: src/pages
     filename: '{primary}.md'
+    view:
+      fields: [ slug, title ]
     fields:
       - name: slug
         type: string

@@ -18,9 +18,6 @@ content:
         type: string
       - name: content
         label: Content
-        type: rich-text
-      - name: content
-        label: Content
         component: richtext
   - name: datenschutz
     label: Datenschutz

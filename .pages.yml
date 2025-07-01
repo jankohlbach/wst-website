@@ -24,6 +24,3 @@ content:
       - name: content
         label: Content
         type: rich-text
-      - name: image
-        label: Image
-        type: image

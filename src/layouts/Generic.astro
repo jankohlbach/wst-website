@@ -6,10 +6,6 @@ import Layout from '../layouts/Layout.astro';
 const { frontmatter } = Astro.props;
 
 const parsedContent = await marked(frontmatter.content);
-
-const images = import.meta.glob('../media/*', { eager: true });
-const imagePath = `../${frontmatter.image}`;
-const image = images[imagePath] as { default: { src: string } };
 ---
 
 <Layout>
@@ -18,8 +14,6 @@ const image = images[imagePath] as { default: { src: string } };
       <div class="content">
         <h1 data-inview>{frontmatter.title}</h1>
         <div class="richtext" data-inview set:html={parsedContent} />
-        <br />
-        <img src={image?.default?.src} alt="something" />
       </div>
     </section>
   </main>

@@ -24,3 +24,21 @@ content:
       - name: content
         label: Content
         type: rich-text
+  - name: '404'
+    label: '404'
+    type: file
+    path: src/pages/404.md
+    fields:
+      - name: layout
+        type: string
+        default: '../layouts/404.astro'
+        hidden: true
+      - name: title
+        label: Title
+        type: string
+      - name: subline
+        label: Subline
+        type: string
+      - name: linkText
+        label: Back Home Link Text
+        type: string

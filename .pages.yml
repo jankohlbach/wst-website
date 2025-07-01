@@ -39,6 +39,6 @@ components:
     label: Richtext
     type: object
     fields:
-      - name: content
-        label: Content
+      - name: richtext
+        label: Richtext
         type: rich-text

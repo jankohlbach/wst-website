@@ -1,0 +1,9 @@
+content:
+  - name: impressum
+    label: Impressum
+    type: file
+    path: src/pages/impressum.astro
+    fields:
+      - name: body
+        label: Body
+        type: rich-text

@@ -16,8 +16,8 @@ content:
       - name: title
         label: Title
         type: string
-      - name: body
-        label: Body
+      - name: content
+        label: Content
         type: rich-text
 components:
   richtext:

@@ -1,6 +1,6 @@
 ---
 layout: ../layouts/Impressum.astro
-title: Impressum pages
+title: Impressum
 content: |-
   Interessengemeinschaft Südliche Waldstrasse e.V. Waldstrasse 44  
   – Ergonomie und Wohnen – 76133 Karlsruhe 1. Vorsitzender: Raimund Löhr  

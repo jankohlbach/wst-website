@@ -1,11 +1,11 @@
 ---
-import { marked } from 'marked';
+// import { marked } from 'marked';
 
 import Layout from '../layouts/Layout.astro';
 
 const { frontmatter } = Astro.props;
 
-const parsedContent = await marked(frontmatter.content.richtext);
+// const parsedContent = await marked(frontmatter.content.richtext);
 ---
 
 <Layout>
@@ -13,7 +13,7 @@ const parsedContent = await marked(frontmatter.content.richtext);
     <section class="container">
       <div class="content">
         <h1 data-inview>{frontmatter.title}</h1>
-        <div class="richtext" data-inview set:html={parsedContent} />
+        <!-- <div class="richtext" data-inview set:html={parsedContent} /> -->
       </div>
     </section>
   </main>

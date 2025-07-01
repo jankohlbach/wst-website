@@ -12,7 +12,7 @@ content:
       - name: layout
         type: string
         hidden: true
-        default: "../layouts/AboutLayout.astro"
+        default: "../layouts/Impressum.astro"
       - name: title
         label: Title
         type: string

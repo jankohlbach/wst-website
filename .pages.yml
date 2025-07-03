@@ -9,7 +9,7 @@ content:
     type: collection
     path: src/pages
     filename: '{primary}.md'
-    exclude: [ '404' ]
+    exclude: [ '404.md' ]
     view:
       fields: [ slug, title ]
     fields:

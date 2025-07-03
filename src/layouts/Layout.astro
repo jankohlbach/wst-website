@@ -8,6 +8,10 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Splash from '../components/Splash.astro';
 import Canvas from '../components/Canvas.astro';
+
+const images = import.meta.glob('../media/*', { eager: true });
+const ogImagePath = `../${globals.siteImage}`;
+const ogImage = images[ogImagePath] as { default: { src: string } };
 ---
 
 <!doctype html>
@@ -24,22 +28,14 @@ import Canvas from '../components/Canvas.astro';
     <link rel="sitemap" href="/sitemap-index.xml" />
     <!-- TODO: remove when going live -->
     <meta name="robots" content="noindex, nofollow" />
-    <meta
-      name="description"
-      content="Südliche Waldstraße Karlsruhe - The Tast of goodness. Im „SÜDEN“ der Karlsruher Waldstraße trifft Exklusives auf Alltägliches."
-    />
-    <meta
-      property="og:title"
-      content="Südliche Waldstraße Karlsruhe - Einkaufen in Karlsruhe"
-    />
-    <meta
-      property="og:description"
-      content="Südliche Waldstraße Karlsruhe - The Tast of goodness. Im „SÜDEN“ der Karlsruher Waldstraße trifft Exklusives auf Alltägliches."
-    />
+    <meta name="description" content={globals.siteDescription} />
+    <meta property="og:title" content={globals.siteTitle} />
+    <meta property="og:description" content={globals.siteDescription} />
     <!-- <meta
       property="og:image"
       content="https://wst-website-new.vercel.app/og-image.jpg"
     /> -->
+    <meta property="og:image" content={ogImage.default.src} />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="de" />
     <link

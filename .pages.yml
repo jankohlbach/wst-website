@@ -4,6 +4,11 @@ media:
     input: src/media
     output: media
 content:
+  - name: globals
+    label: Global Settings
+    type: file
+    path: src/data/globals.json
+    format: json
   - name: generic
     label: Generic
     type: collection

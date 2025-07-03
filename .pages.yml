@@ -18,6 +18,10 @@ content:
         label: Site Description
         type: string
         required: true
+      - name: siteImage
+        label: Site Image (1200x630)
+        type: image
+        required: true
   - name: generic
     label: Generic
     type: collection

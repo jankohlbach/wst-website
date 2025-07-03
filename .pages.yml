@@ -26,6 +26,7 @@ content:
       - name: slug
         label: Slug
         type: string
+        required: true
       - name: layout
         type: string
         default: '../layouts/Generic.astro'
@@ -33,9 +34,11 @@ content:
       - name: title
         label: Title
         type: string
+        required: true
       - name: content
         label: Content
         type: rich-text
+        required: true
   - name: '404'
     label: '404'
     type: file
@@ -48,9 +51,12 @@ content:
       - name: title
         label: Title
         type: string
+        required: true
       - name: subline
         label: Subline
         type: string
+        required: true
       - name: linkText
         label: Back Home Link Text
         type: string
+        required: true

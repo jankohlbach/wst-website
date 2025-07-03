@@ -9,6 +9,11 @@ content:
     type: file
     path: src/data/globals.json
     format: json
+    fields:
+      - name: siteTitle
+        label: Site Title
+        type: string
+        required: true
   - name: generic
     label: Generic
     type: collection
@@ -19,6 +24,7 @@ content:
       fields: [ slug, title ]
     fields:
       - name: slug
+        label: Slug
         type: string
       - name: layout
         type: string

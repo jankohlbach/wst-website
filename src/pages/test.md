@@ -4,10 +4,12 @@ layout: ../layouts/PageGeneric.astro
 title: Test
 content: testcontent
 sections:
-  - type: richText
-    content: richtext 1
-  - type: richText
-    content: richtext 2
-  - type: richText
-    content: richtext 3
+  - modules:
+      - type: richText
+        content: richtext 1
+      - type: richText
+        content: richtext 2
+  - modules:
+      - type: richText
+        content: section 2 richtext
 ---

@@ -17,7 +17,9 @@
   --ff-secondary: 'Georgia', 'Times New Roman', serif;
 
   // font-sizes
+  --fs-small: #{clamp-fluid(14, 20)};
   --fs-base: #{clamp-fluid(16, 22)};
+  --fs-big: #{clamp-fluid(16, 24)};
   --fs-1: #{clamp-fluid(32, 66)};
   --fs-2: #{clamp-fluid(28, 54)};
   --fs-3: #{clamp-fluid(25, 45)};

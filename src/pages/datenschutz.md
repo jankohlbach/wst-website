@@ -1,6 +1,6 @@
 ---
 slug: datenschutz
-layout: ../layouts/Generic.astro
+layout: ../layouts/PageGeneric.astro
 title: Datenschutz
 content: datenschutz content
 ---

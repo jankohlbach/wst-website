@@ -26,6 +26,22 @@ content:
         label: Footer Content
         type: rich-text
         required: true
+      - name: footerLogo
+        label: Footer Logo (linked to Home Page)
+        type: image
+        required: true
+      - name: footerLegal
+        label: Copyright and Links to Legal Pages
+        type: rich-text
+        required: true
+      - name: footerLinkFacebook
+        label: Link to Facebook
+        type: string
+        required: true
+      - name: footerLinkInstagram
+        label: Link to Instagram
+        type: string
+        required: true
   - name: generic
     label: Generic
     type: collection

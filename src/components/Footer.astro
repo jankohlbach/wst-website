@@ -19,6 +19,7 @@ const logoImage = images[logoImagePath] as { default: { src: string } };
     <div class="bottom">
       <div class="socials">
         <ul>
+          <!-- TODO: dynamic list in backend -->
           <li>
             <a
               href={globals.footerLinkFacebook}
@@ -49,6 +50,7 @@ const logoImage = images[logoImagePath] as { default: { src: string } };
       </div>
       <div class="legal" set:html={parsedLegal} />
       <a href="/" class="logo" aria-label="Zur Startseite">
+        <!-- TODO: alt text in cms -->
         <img src={logoImage.default.src} alt="Logo der Waldstraße" />
       </a>
     </div>

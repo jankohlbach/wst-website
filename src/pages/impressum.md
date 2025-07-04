@@ -27,7 +27,9 @@ sections:
           Schatzmeister Hubert Roth
 
 
-          Steuernummer: 35022 / 57507 HRA: VR 2930 Amtsgericht Karlsruhe
+          Steuernummer: 35022 / 57507  
+
+          HRA: VR 2930 Amtsgericht Karlsruhe
 
 
           [hello@diewaldstrasse.com](mailto:hello@diewaldstrasse.com)  

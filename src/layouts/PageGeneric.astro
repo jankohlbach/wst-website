@@ -1,35 +1,32 @@
 ---
-import { marked } from 'marked';
-
 import Layout from '../layouts/Layout.astro';
+import Title from '../components/Title.astro';
+import Richtext from '../components/Richtext.astro';
 
 const { frontmatter } = Astro.props;
-
-const parsedContent = await marked(frontmatter.content);
 ---
 
 <Layout>
   <main>
-    <section class="container">
-      <div class="content">
-        <h1 data-inview>{frontmatter.title}</h1>
-        <div class="richtext" data-inview set:html={parsedContent} />
-      </div>
-    </section>
+    {
+      // @ts-expect-error not yet typed
+      frontmatter?.sections?.map((section) => (
+        <section>
+          {
+            // @ts-expect-error not yet typed
+            section?.modules?.map((module) => {
+              switch (module.type) {
+                case 'title':
+                  return <Title fields={module} />;
+                case 'richText':
+                  return <Richtext fields={module} />;
+                default:
+                  return null;
+              }
+            })
+          }
+        </section>
+      ))
+    }
   </main>
 </Layout>
-
-<style lang="scss">
-  section {
-    margin-block: to-rem(100);
-  }
-
-  .content {
-    margin-inline: auto;
-    max-width: 60ch;
-  }
-
-  .richtext {
-    margin-top: to-rem(100);
-  }
-</style>

@@ -1,3 +1,4 @@
+@use 'functions' as *;
 @use 'mixins' as *;
 
 // reset
@@ -99,9 +100,9 @@ body {
 }
 
 // native page-transition as progressive enhancement
-// @view-transition {
-//   navigation: auto;
-// }
+@view-transition {
+  navigation: auto;
+}
 
 // scroll
 html.lenis,
@@ -126,10 +127,23 @@ html.lenis body {
 }
 
 // grid
+section {
+  margin-block: clamp-fluid(60, 120);
+
+  > .module {
+    margin-block: clamp-fluid(40, 80)
+  }
+}
+
 .container {
   max-width: var(--container-max-width);
   padding-inline: var(--grid-margin);
   margin-inline: auto;
+}
+
+.content-block {
+  margin-inline: auto;
+  max-width: 60ch;
 }
 
 .grid {

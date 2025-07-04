@@ -1,0 +1,11 @@
+---
+import { marked } from 'marked';
+
+const { fields } = Astro.props;
+
+const parsedContent = await marked(fields.content);
+---
+
+<div class="module container" data-module={fields.type}>
+  <div class="content-block richtext" data-inview set:html={parsedContent} />
+</div>

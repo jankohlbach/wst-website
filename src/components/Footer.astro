@@ -59,7 +59,8 @@ const logoImage = images[logoImagePath] as { default: { src: string } };
 
 <style lang="scss">
   footer {
-    margin-block: to-rem(100);
+    margin-top: clamp-fluid(120, 180);
+    margin-bottom: to-rem(60);
     font-size: var(--fs-small);
     text-align: center;
   }

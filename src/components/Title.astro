@@ -1,0 +1,9 @@
+---
+const { fields } = Astro.props;
+---
+
+<div class="module container" data-module={fields.type}>
+  <div class="content-block">
+    <h1 data-inview>{fields.title}</h1>
+  </div>
+</div>

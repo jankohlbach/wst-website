@@ -57,7 +57,7 @@ content:
         required: true
       - name: layout
         type: string
-        default: '../layouts/Generic.astro'
+        default: '../layouts/PageGeneric.astro'
         hidden: true
       - name: title
         label: Title
@@ -74,7 +74,7 @@ content:
     fields:
       - name: layout
         type: string
-        default: '../layouts/404.astro'
+        default: '../layouts/Page404.astro'
         hidden: true
       - name: title
         label: Title

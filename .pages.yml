@@ -80,7 +80,7 @@ content:
             blockKey: type
             list:
               collapsible:
-                summary: 'Module'
+                summary: 'Module {index}: {fields.label}'
             blocks:
               - name: title
                 label: Title (Heading 1)

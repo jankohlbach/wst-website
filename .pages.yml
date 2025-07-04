@@ -78,7 +78,7 @@ content:
             blockKey: type
             list: true
             blocks:
-              - name: title
+              - name: moduleitle
                 label: Title
                 component: title
               - name: richText
@@ -106,7 +106,7 @@ content:
         type: string
         required: true
 components:
-  title:
+  moduleitle:
     label: Title (Heading 1)
     type: string
     required: true

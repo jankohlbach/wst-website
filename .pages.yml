@@ -78,7 +78,9 @@ content:
             label: Modules
             type: block
             blockKey: type
-            list: true
+            list:
+              collapsible:
+                summary: 'Module'
             blocks:
               - name: title
                 label: Title (Heading 1)

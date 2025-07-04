@@ -78,6 +78,9 @@ content:
             blockKey: type
             list: true
             blocks:
+              - name: title
+                label: Title
+                component: title
               - name: richText
                 label: Rich-Text
                 component: richText
@@ -103,6 +106,10 @@ content:
         type: string
         required: true
 components:
+  title:
+    label: Title (Heading 1)
+    type: string
+    required: true
   richText:
     label: Rich-Text
     type: object

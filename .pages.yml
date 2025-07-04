@@ -67,6 +67,29 @@ content:
         label: Content
         type: rich-text
         required: true
+      - name: sections
+        label: Page Sections
+        type: block
+        list: true # Often used with type: block to allow multiple sections
+        blockKey: type # Optional: customize the key used to store the block name, defaults to `_block`
+        blocks:
+          # Each item defines a possible block structure the user can select.
+          # These typically use 'component' or define 'fields' directly.
+          - name: hero
+            label: Hero
+            fields:
+              - name: title
+                label: Title
+                type: string
+              - name: image
+                label: Image
+                type: image
+          - name: content
+            label: Content
+            fields:
+              - name: content
+                label: Text Content
+                type: rich-text
   - name: '404'
     label: '404'
     type: file

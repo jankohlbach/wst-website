@@ -63,10 +63,6 @@ content:
         label: Title (Meta)
         type: string
         required: true
-      - name: content
-        label: Content
-        type: rich-text
-        required: true
       - name: sections
         label: Page Sections
         type: object

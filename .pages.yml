@@ -70,7 +70,9 @@ content:
       - name: sections
         label: Page Sections
         type: object
-        list: true
+        list:
+          collapsible:
+            summary: 'Section'
         fields:
           - name: modules
             label: Modules

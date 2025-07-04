@@ -1,19 +1,27 @@
+---
+import { marked } from 'marked';
+
+import globals from '../data/globals.json';
+
+const parsedContent = await marked(globals.footerContent);
+const parsedLegal = await marked(globals.footerLegal);
+
+const images = import.meta.glob('../media/*', { eager: true });
+const logoImagePath = `../${globals.footerLogo}`;
+const logoImage = images[logoImagePath] as { default: { src: string } };
+---
+
 <footer>
   <div class="container">
     <div class="top">
-      <div class="content">
-        <p>Waldstraße | 76133 Karlsruhe</p>
-        <p>
-          <a href="mailto:hello@diewaldstrasse.com">hello@diewaldstrasse.com</a>
-        </p>
-      </div>
+      <div class="content" set:html={parsedContent} />
     </div>
     <div class="bottom">
       <div class="socials">
         <ul>
           <li>
             <a
-              href="https://www.facebook.com/Suedliche.Waldstrasse.Karlsruhe/?locale=de_DE"
+              href={globals.footerLinkFacebook}
               target="_blank"
               aria-label="Facebook"
             >
@@ -26,7 +34,7 @@
           </li>
           <li>
             <a
-              href="https://instagram.com/diewaldstrasse?igshid=YmMyMTA2M2Y="
+              href={globals.footerLinkInstagram}
               target="_blank"
               aria-label="Instagram"
             >
@@ -39,13 +47,9 @@
           </li>
         </ul>
       </div>
-      <p class="legal">
-        ©2025 | <a href="/impressum">Impressum</a> | <a href="/datenschutz"
-          >Datenschutz</a
-        >
-      </p>
+      <div class="legal" set:html={parsedLegal} />
       <a href="/" class="logo" aria-label="Zur Startseite">
-        <img src="/texture.jpg" alt="Logo der Waldstraße" />
+        <img src={logoImage.default.src} alt="Logo der Waldstraße" />
       </a>
     </div>
   </div>

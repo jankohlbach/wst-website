@@ -106,8 +106,8 @@ content:
         type: string
         required: true
 components:
-  moduleTitle:
-    label: Title (Heading 1)
+  title:
+    label: Title
     type: object
     fields:
       - name: title

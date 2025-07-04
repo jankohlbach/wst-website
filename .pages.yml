@@ -52,7 +52,7 @@ content:
       fields: [ slug, title ]
     fields:
       - name: slug
-        label: Slug
+        label: Slug (Meta)
         type: string
         required: true
       - name: layout
@@ -60,7 +60,7 @@ content:
         default: '../layouts/PageGeneric.astro'
         hidden: true
       - name: title
-        label: Title
+        label: Title (Meta)
         type: string
         required: true
       - name: content

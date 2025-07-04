@@ -78,9 +78,9 @@ content:
             blockKey: type
             list: true
             blocks:
-              - name: moduleitle
+              - name: title
                 label: Title
-                component: title
+                component: moduleitle
               - name: richText
                 label: Rich-Text
                 component: richText

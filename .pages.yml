@@ -69,13 +69,18 @@ content:
         required: true
       - name: sections
         label: Page Sections
-        type: block
-        blockKey: type
+        type: object
         list: true
-        blocks:
-          - name: richText
-            label: Rich-Text
-            component: richText
+        fields:
+          - name: modules
+            label: Modules
+            type: block
+            blockKey: type
+            list: true
+            blocks:
+              - name: richText
+                label: Rich-Text
+                component: richText
   - name: '404'
     label: '404'
     type: file

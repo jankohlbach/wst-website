@@ -108,8 +108,11 @@ content:
 components:
   moduleTitle:
     label: Title (Heading 1)
-    type: string
-    required: true
+    type: object
+    fields:
+      - name: title
+        label: Title
+        type: string
   richText:
     label: Rich-Text
     type: object

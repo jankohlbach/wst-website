@@ -70,26 +70,12 @@ content:
       - name: sections
         label: Page Sections
         type: block
-        list: true # Often used with type: block to allow multiple sections
-        blockKey: type # Optional: customize the key used to store the block name, defaults to `_block`
+        blockKey: type
+        list: true
         blocks:
-          # Each item defines a possible block structure the user can select.
-          # These typically use 'component' or define 'fields' directly.
-          - name: hero
-            label: Hero
-            fields:
-              - name: title
-                label: Title
-                type: string
-              - name: image
-                label: Image
-                type: image
-          - name: content
-            label: Content
-            fields:
-              - name: content
-                label: Text Content
-                type: rich-text
+          - name: richText
+            label: Rich-Text
+            component: richText
   - name: '404'
     label: '404'
     type: file
@@ -110,4 +96,13 @@ content:
       - name: linkText
         label: Back Home Link Text
         type: string
+        required: true
+components:
+  richText:
+    label: Rich-Text
+    type: object
+    fields:
+      - name: content
+        label: Content
+        type: rich-text
         required: true

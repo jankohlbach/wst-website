@@ -1,4 +1,15 @@
 ---
+import type { CollectionEntry } from 'astro:content';
+
+type ModuleRichText = Extract<
+  CollectionEntry<'pagesGeneric'>['data']['sections'][0]['modules'][0],
+  { type: 'richText' }
+>;
+
+interface Props {
+  fields: ModuleRichText;
+}
+
 import { marked } from 'marked';
 
 const { fields } = Astro.props;

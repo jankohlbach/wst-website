@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 
 import Layout from '../layouts/Layout.astro';
 import Title from '../components/Title.astro';
-import Richtext from '../components/Richtext.astro';
+import RichText from '../components/RichText.astro';
 
 export async function getStaticPaths() {
   const pages = await getCollection('pagesGeneric');
@@ -19,22 +19,18 @@ const { page } = Astro.props;
 <Layout>
   <main>
     {
-      // @ts-expect-error not yet typed
       page?.data?.sections?.map((section) => (
         <section>
-          {
-            // @ts-expect-error not yet typed
-            section?.modules?.map((module) => {
-              switch (module.type) {
-                case 'title':
-                  return <Title fields={module} />;
-                case 'richText':
-                  return <Richtext fields={module} />;
-                default:
-                  return null;
-              }
-            })
-          }
+          {section?.modules?.map((module) => {
+            switch (module.type) {
+              case 'title':
+                return <Title fields={module} />;
+              case 'richText':
+                return <RichText fields={module} />;
+              default:
+                return null;
+            }
+          })}
         </section>
       ))
     }

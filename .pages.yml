@@ -147,6 +147,12 @@ content:
               - name: richText
                 label: Rich-Text
                 component: richText
+              - name: moduleTitle
+                label: Title (Heading 1)
+                component: title
+              - name: moduleRichText
+                label: Rich-Text
+                component: richText
 
 
 components:
@@ -160,6 +166,23 @@ components:
         required: true
 
   richText:
+    label: Rich-Text
+    type: object
+    fields:
+      - name: content
+        label: Content
+        type: rich-text
+        required: true
+  moduleTitle:
+    label: Title
+    type: object
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+
+  moduleRichText:
     label: Rich-Text
     type: object
     fields:

@@ -42,8 +42,49 @@ content:
         label: Link to Instagram
         type: string
         required: true
+  - name: generictest
+    label: Generic Test
+    type: collection
+    path: src/content/pagesGeneric
+    filename: '{primary}.md'
+    view:
+      fields: [ slug, title ]
+    fields:
+      - name: slug
+        label: Slug (Meta)
+        type: string
+        required: true
+      - name: layout
+        type: string
+        default: '../layouts/PageGeneric.astro'
+        hidden: true
+      - name: title
+        label: Title (Meta)
+        type: string
+        required: true
+      - name: sections
+        label: Page Sections
+        type: object
+        list:
+          collapsible:
+            summary: 'Section'
+        fields:
+          - name: modules
+            label: Modules
+            type: block
+            blockKey: type
+            list:
+              collapsible:
+                summary: 'Module {index}'
+            blocks:
+              - name: title
+                label: Title (Heading 1)
+                component: title
+              - name: richText
+                label: Rich-Text
+                component: richText
   - name: generic
-    label: Generic
+    label: Generic Pages
     type: collection
     path: src/pages
     filename: '{primary}.md'
@@ -85,7 +126,7 @@ content:
                 label: Rich-Text
                 component: richText
   - name: '404'
-    label: '404'
+    label: 404 Page
     type: file
     path: src/pages/404.md
     fields:

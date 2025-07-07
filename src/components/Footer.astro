@@ -1,7 +1,7 @@
 ---
 import { marked } from 'marked';
 
-import globals from '../data/globals.json';
+import globals from '../content/globals.json';
 
 const parsedContent = await marked(globals.footerContent);
 const parsedLegal = await marked(globals.footerLegal);

@@ -23,9 +23,9 @@ const { page } = Astro.props;
         <section>
           {section?.modules?.map((module) => {
             switch (module.type) {
-              case 'title':
+              case 'moduleTitle':
                 return <Title fields={module} />;
-              case 'richText':
+              case 'moduleRichText':
                 return <RichText fields={module} />;
               default:
                 return null;

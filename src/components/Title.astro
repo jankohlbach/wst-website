@@ -3,7 +3,7 @@ import type { CollectionEntry } from 'astro:content';
 
 type ModuleTitle = Extract<
   CollectionEntry<'pagesGeneric'>['data']['sections'][0]['modules'][0],
-  { type: 'title' }
+  { type: 'moduleTitle' }
 >;
 
 interface Props {

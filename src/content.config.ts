@@ -12,11 +12,11 @@ const pagesGeneric = defineCollection({
         modules: z.array(
           z.discriminatedUnion('type', [
             z.object({
-              type: z.literal('title'),
+              type: z.literal('moduleTitle'),
               title: z.string()
             }),
             z.object({
-              type: z.literal('richText'),
+              type: z.literal('moduleRichText'),
               content: z.string()
             })
           ])

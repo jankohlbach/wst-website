@@ -88,6 +88,28 @@ content:
             type: string
             required: true
 
+      - name: '404'
+        label: 404 Page
+        type: object
+        list:
+          min: 1
+          max: 1
+          collapsible:
+            summary: 404 Page
+        fields:
+          - name: title
+            label: Title
+            type: string
+            required: true
+          - name: subline
+            label: Subline
+            type: string
+            required: true
+          - name: linkText
+            label: Back Home Link Text
+            type: string
+            required: true
+
   - name: generic
     label: Generic Pages
     type: collection

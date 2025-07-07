@@ -1,11 +1,4 @@
 {
-  "404": [
-    {
-      "title": "404",
-      "subline": "Seite konnte nicht gefunden werden ...",
-      "linkText": "Zurück zur Startseite"
-    }
-  ],
   "general": [
     {
       "siteTitle": "Südliche Waldstraße Karlsruhe - Einkaufen in Karlsruhe",
@@ -29,6 +22,13 @@
     {
       "linkFacebook": "https://www.facebook.com/Suedliche.Waldstrasse.Karlsruhe/?locale=de_DE",
       "linkInstagram": "https://instagram.com/diewaldstrasse?igshid=YmMyMTA2M2Y="
+    }
+  ],
+  "page404": [
+    {
+      "title": "404",
+      "subline": "Seite konnte nicht gefunden werden ...",
+      "linkText": "Zurück zur Startseite"
     }
   ]
 }

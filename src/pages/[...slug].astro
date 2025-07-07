@@ -1,16 +1,26 @@
 ---
+import { getCollection } from 'astro:content';
+
 import Layout from '../layouts/Layout.astro';
 import Title from '../components/Title.astro';
 import Richtext from '../components/Richtext.astro';
 
-const { frontmatter } = Astro.props;
+export async function getStaticPaths() {
+  const pages = await getCollection('pagesGeneric');
+  return pages.map((page) => ({
+    params: { slug: page.id },
+    props: { page },
+  }));
+}
+
+const { page } = Astro.props;
 ---
 
 <Layout>
   <main>
     {
       // @ts-expect-error not yet typed
-      frontmatter?.sections?.map((section) => (
+      page?.data?.sections?.map((section) => (
         <section>
           {
             // @ts-expect-error not yet typed

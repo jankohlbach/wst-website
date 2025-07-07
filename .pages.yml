@@ -88,7 +88,7 @@ content:
             type: string
             required: true
 
-      - name: '404'
+      - name: page404
         label: 404 Page
         type: object
         list:

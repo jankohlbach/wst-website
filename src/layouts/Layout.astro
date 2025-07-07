@@ -1,7 +1,7 @@
 ---
 import '../styles/index.scss';
 
-import globals from '../content/globals.json';
+import { general } from '../content/globals';
 
 import Cursor from '../components/Cursor.astro';
 import Header from '../components/Header.astro';
@@ -13,7 +13,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 // TODO: fix image loading
 const images = import.meta.glob('../media/*', { eager: true });
-const ogImagePath = `../${globals.siteImage}`;
+const ogImagePath = `../${general.siteImage}`;
 const ogImage = images[ogImagePath] as { default: { src: string } };
 ---
 
@@ -24,7 +24,7 @@ const ogImage = images[ogImagePath] as { default: { src: string } };
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#000000" />
     <!-- TODO: add page title -->
-    <title>{globals.siteTitle}</title>
+    <title>{general.siteTitle}</title>
     <link rel="icon" href="/favicon.ico" sizes="32x32" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -33,10 +33,10 @@ const ogImage = images[ogImagePath] as { default: { src: string } };
     <link rel="canonical" href={canonicalURL} />
     <!-- TODO: remove when going live -->
     <meta name="robots" content="noindex, nofollow" />
-    <meta name="description" content={globals.siteDescription} />
+    <meta name="description" content={general.siteDescription} />
     <meta property="og:url" content={Astro.url} />
-    <meta property="og:title" content={globals.siteTitle} />
-    <meta property="og:description" content={globals.siteDescription} />
+    <meta property="og:title" content={general.siteTitle} />
+    <meta property="og:description" content={general.siteDescription} />
     <meta
       property="og:image"
       content={new URL(ogImage.default.src, Astro.url)}

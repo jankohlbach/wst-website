@@ -1,13 +1,13 @@
 ---
 import { marked } from 'marked';
 
-import globals from '../content/globals.json';
+import { footer, socials } from '../content/globals';
 
-const parsedContent = await marked(globals.footerContent);
-const parsedLegal = await marked(globals.footerLegal);
+const parsedContent = await marked(footer.content);
+const parsedLegal = await marked(footer.legal);
 
 const images = import.meta.glob('../media/*', { eager: true });
-const logoImagePath = `../${globals.footerLogo}`;
+const logoImagePath = `../${footer.logo}`;
 const logoImage = images[logoImagePath] as { default: { src: string } };
 ---
 
@@ -22,7 +22,7 @@ const logoImage = images[logoImagePath] as { default: { src: string } };
           <!-- TODO: dynamic list in backend -->
           <li>
             <a
-              href={globals.footerLinkFacebook}
+              href={socials.linkFacebook}
               target="_blank"
               aria-label="Facebook"
             >
@@ -35,7 +35,7 @@ const logoImage = images[logoImagePath] as { default: { src: string } };
           </li>
           <li>
             <a
-              href={globals.footerLinkInstagram}
+              href={socials.linkInstagram}
               target="_blank"
               aria-label="Instagram"
             >

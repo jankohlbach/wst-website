@@ -151,6 +151,7 @@ content:
 
 components:
   moduleTitle:
+    label: Title
     type: object
     fields:
       - name: title
@@ -159,6 +160,7 @@ components:
         required: true
 
   moduleRichText:
+    label: Rich-Text
     type: object
     fields:
       - name: content

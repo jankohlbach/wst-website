@@ -22,5 +22,5 @@ sections:
 
           [hello@diewaldstrasse.com](mailto:hello@diewaldstrasse.com)  
 
-          [https://diewaldstrasse.de](https://diewaldstrasse.de]\(https://diewaldstrasse.de/\))
+          [https://diewaldstrasse.de](https://diewaldstrasse.de)
 ---

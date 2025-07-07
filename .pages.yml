@@ -87,39 +87,6 @@ content:
             label: Link to Instagram
             type: string
             required: true
-          
-      - name: siteTitle
-        label: Site Title
-        type: string
-        required: true
-      - name: siteDescription
-        label: Site Description
-        type: string
-        required: true
-      - name: siteImage
-        label: Site Image (1200x630)
-        type: image
-        required: true
-      - name: footerContent
-        label: Footer Content
-        type: rich-text
-        required: true
-      - name: footerLogo
-        label: Footer Logo (linked to Home Page)
-        type: image
-        required: true
-      - name: footerLegal
-        label: Copyright and Links to Legal Pages
-        type: rich-text
-        required: true
-      - name: footerLinkFacebook
-        label: Link to Facebook
-        type: string
-        required: true
-      - name: footerLinkInstagram
-        label: Link to Instagram
-        type: string
-        required: true
 
   - name: generic
     label: Generic Pages

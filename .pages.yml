@@ -7,7 +7,7 @@ content:
   - name: globals
     label: Global Settings
     type: file
-    path: src/data/globals.json
+    path: src/content/globals.json
     format: json
     fields:
       - name: siteTitle

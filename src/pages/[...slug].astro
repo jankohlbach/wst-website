@@ -19,9 +19,9 @@ const { page } = Astro.props;
 <Layout pageTitle={page?.data?.title}>
   <main>
     {
-      page?.data?.sections?.map((section) => (
+      page.data.sections.map((section) => (
         <section>
-          {section?.modules?.map((module) => {
+          {section.modules.map((module) => {
             switch (module.type) {
               case 'moduleTitle':
                 return <Title fields={module} />;

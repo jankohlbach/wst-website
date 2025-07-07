@@ -130,6 +130,7 @@ content:
         label: Page Sections
         type: object
         list:
+          min: 1
           collapsible:
             summary: 'Section'
         fields:

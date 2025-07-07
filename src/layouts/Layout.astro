@@ -15,6 +15,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const images = import.meta.glob('../media/*', { eager: true });
 const ogImagePath = `../${general.siteImage}`;
 const ogImage = images[ogImagePath] as { default: { src: string } };
+
+const { pageTitle } = Astro.props;
 ---
 
 <!doctype html>
@@ -23,8 +25,7 @@ const ogImage = images[ogImagePath] as { default: { src: string } };
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#000000" />
-    <!-- TODO: add page title -->
-    <title>{general.siteTitle}</title>
+    <title>{`${pageTitle ? pageTitle + ' | ' : ''}${general.siteTitle}`}</title>
     <link rel="icon" href="/favicon.ico" sizes="32x32" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />

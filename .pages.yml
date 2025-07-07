@@ -139,6 +139,7 @@ content:
             type: block
             blockKey: type
             list:
+              min: 1
               collapsible:
                 summary: 'Module {index}'
             blocks:

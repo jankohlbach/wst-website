@@ -1,6 +1,43 @@
 import { defineCollection, z } from 'astro:content';
-
 import { glob } from 'astro/loaders';
+
+const globals = defineCollection({
+  loader: glob({base: './src/content', pattern: 'globals.json'}),
+  schema: ({ image }) => z.object({
+    general: z.array(
+      z.object({
+        siteTitle: z.string(),
+        siteDescription: z.string(),
+        siteImage: image(),
+      })
+    ),
+    header: z.array(
+      z.object({
+        logo: image(),
+      })
+    ),
+    footer: z.array(
+      z.object({
+        content: z.string(),
+        logo: image(),
+        legal: z.string(),
+      })
+    ),
+    socials: z.array(
+      z.object({
+        linkFacebook: z.string(),
+        linkInstagram: z.string(),
+      })
+    ),
+    page404: z.array(
+      z.object({
+        title: z.string(),
+        subline: z.string(),
+        linkText: z.string(),
+      })
+    ),
+  })
+});
 
 const pagesGeneric = defineCollection({
   loader: glob({base: './src/content/pagesGeneric', pattern: '**/*.md'}),
@@ -26,4 +63,4 @@ const pagesGeneric = defineCollection({
   })
 });
 
-export const collections = { pagesGeneric };
+export const collections = { globals, pagesGeneric };

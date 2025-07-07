@@ -1,14 +1,11 @@
 ---
 import { marked } from 'marked';
+import { Image } from 'astro:assets';
 
 import { footer, socials } from '../content/globals';
 
 const parsedContent = await marked(footer.content);
 const parsedLegal = await marked(footer.legal);
-
-const images = import.meta.glob('../media/*', { eager: true });
-const logoImagePath = `../${footer.logo}`;
-const logoImage = images[logoImagePath] as { default: { src: string } };
 ---
 
 <footer>
@@ -51,7 +48,7 @@ const logoImage = images[logoImagePath] as { default: { src: string } };
       <div class="legal" set:html={parsedLegal} />
       <a href="/" class="logo" aria-label="Zur Startseite">
         <!-- TODO: alt text in cms -->
-        <img src={logoImage.default.src} alt="Logo der Waldstraße" />
+        <Image src={footer.logo} alt="" />
       </a>
     </div>
   </div>

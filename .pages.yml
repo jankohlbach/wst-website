@@ -3,6 +3,8 @@ media:
     label: Media
     input: src/media
     output: media
+
+
 content:
   - name: globals
     label: Global Settings
@@ -10,6 +12,82 @@ content:
     path: src/content/globals.json
     format: json
     fields:
+      - name: general
+        label: General
+        type: object
+        list:
+          min: 1
+          max: 1
+          collapsible:
+            summary: General
+        fields:
+          - name: siteTitle
+            label: Site Title
+            type: string
+            required: true
+          - name: siteDescription
+            label: Site Description
+            type: string
+            required: true
+          - name: siteImage
+            label: Site Image (1200x630)
+            type: image
+            required: true
+
+      - name: header
+        label: Header
+        type: object
+        list:
+          min: 1
+          max: 1
+          collapsible:
+            summary: Header
+        fields:
+          - name: logo
+            label: Logo (linked to Home Page)
+            type: image
+            required: true
+
+      - name: footer
+        label: Footer
+        type: object
+        list:
+          min: 1
+          max: 1
+          collapsible:
+            summary: Footer
+        fields:
+          - name: content
+            label: Content
+            type: rich-text
+            required: true
+          - name: logo
+            label: Logo (linked to Home Page)
+            type: image
+            required: true
+          - name: legal
+            label: Copyright and Links to Legal Pages
+            type: rich-text
+            required: true
+
+      - name: socials
+        label: Social Links
+        type: object
+        list:
+          min: 1
+          max: 1
+          collapsible:
+            summary: Social Links
+        fields:
+          - name: linkFacebook
+            label: Link to Facebook
+            type: string
+            required: true
+          - name: linkInstagram
+            label: Link to Instagram
+            type: string
+            required: true
+          
       - name: siteTitle
         label: Site Title
         type: string
@@ -42,6 +120,7 @@ content:
         label: Link to Instagram
         type: string
         required: true
+
   - name: generic
     label: Generic Pages
     type: collection
@@ -79,6 +158,7 @@ content:
               - name: richText
                 label: Rich-Text
                 component: richText
+
   - name: '404'
     label: 404 Page
     type: file
@@ -100,6 +180,8 @@ content:
         label: Back Home Link Text
         type: string
         required: true
+
+
 components:
   title:
     label: Title
@@ -109,6 +191,7 @@ components:
         label: Title
         type: string
         required: true
+
   richText:
     label: Rich-Text
     type: object

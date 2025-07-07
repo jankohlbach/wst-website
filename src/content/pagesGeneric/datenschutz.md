@@ -3,8 +3,8 @@ slug: datenschutz
 title: Datenschutz
 sections:
   - modules:
-      - type: title
+      - type: moduleTitle
         title: Datenschutz
-      - type: richText
+      - type: moduleRichText
         content: Datenschutzerklärung hier
 ---

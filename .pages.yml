@@ -148,28 +148,6 @@ content:
                 label: Rich-Text
                 component: richText
 
-  - name: '404'
-    label: 404 Page
-    type: file
-    path: src/pages/404.md
-    fields:
-      - name: layout
-        type: string
-        default: '../layouts/Page404.astro'
-        hidden: true
-      - name: title
-        label: Title
-        type: string
-        required: true
-      - name: subline
-        label: Subline
-        type: string
-        required: true
-      - name: linkText
-        label: Back Home Link Text
-        type: string
-        required: true
-
 
 components:
   title:

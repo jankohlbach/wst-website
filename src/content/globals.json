@@ -1,4 +1,11 @@
 {
+  "404": [
+    {
+      "title": "404",
+      "subline": "Seite konnte nicht gefunden werden ...",
+      "linkText": "s"
+    }
+  ],
   "general": [
     {
       "siteTitle": "Südliche Waldstraße Karlsruhe - Einkaufen in Karlsruhe",

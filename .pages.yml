@@ -141,10 +141,10 @@ content:
               collapsible:
                 summary: 'Module {index}'
             blocks:
-              - name: title
+              - name: moduleTitle
                 label: Title (Heading 1)
                 component: moduleTitle
-              - name: richText
+              - name: moduleRichText
                 label: Rich-Text
                 component: moduleRichText
 

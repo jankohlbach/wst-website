@@ -1,18 +1,35 @@
+---
+import { Image } from 'astro:assets';
+
+import { header } from '../content/globals';
+
+import Socials from './Socials.astro';
+---
+
 <header>
   <div class="container">
-    <a href="/">astro creative base</a>
+    <a href="/" class="logo" aria-label="Zur Startseite">
+      <Image src={header.logo.image} alt={header.logo.alt} />
+    </a>
     <nav>
       <ul>
         <li><a href="/impressum">Impressum</a></li>
         <li><a href="/datenschutz">Datenschutz</a></li>
       </ul>
     </nav>
+    <div class="socials">
+      <Socials />
+    </div>
   </div>
 </header>
 
 <style lang="scss">
   header {
-    padding-block: to-rem(20);
+    padding-block: to-rem(32);
+  }
+
+  a {
+    text-decoration: none;
   }
 
   .container {
@@ -20,13 +37,7 @@
     justify-content: space-between;
   }
 
-  a {
-    text-decoration: none;
-  }
-
-  ul {
-    display: flex;
-    gap: to-rem(20);
-    list-style: none;
+  .logo {
+    max-width: to-rem(150);
   }
 </style>

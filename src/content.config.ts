@@ -13,7 +13,10 @@ const globals = defineCollection({
     ),
     header: z.array(
       z.object({
-        logo: image(),
+        logo: z.object({
+          image: image(),
+          alt: z.string(),
+        }),
       })
     ),
     footer: z.array(

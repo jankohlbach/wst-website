@@ -45,8 +45,7 @@ content:
         fields:
           - name: logo
             label: Logo (linked to Home Page)
-            type: image
-            required: true
+            component: utilImage
 
       - name: footer
         label: Footer

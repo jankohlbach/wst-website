@@ -35,4 +35,15 @@ import { socials } from '../content/globals';
     width: clamp-fluid(40, 48);
     height: clamp-fluid(40, 48);
   }
+
+  a {
+    display: block;
+    transition: scale 0.4s var(--ease-smooth);
+
+    @include has-hover {
+      &:hover {
+        scale: 0.9;
+      }
+    }
+  }
 </style>

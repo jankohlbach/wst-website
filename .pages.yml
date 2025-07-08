@@ -63,10 +63,6 @@ content:
             required: true
           - name: logo
             label: Logo (linked to Home Page)
-            type: image
-            required: true
-          - name: logo
-            label: Logo (linked to Home Page)
             component: utilImage
           - name: legal
             label: Copyright and Links to Legal Pages

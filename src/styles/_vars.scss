@@ -49,6 +49,16 @@
   // colors
   --c-light: #FAFAFA;
   --c-dark: #101010;
+  --c-pink: #F490C5;
+  --c-pink-dark: #DF6DA9;
+  --c-green: #79D2B2;
+  --c-green-dark: #4CB38E;
+  --c-orange: #FFA07A;
+  --c-orange-dark: #ED794B;
+  --c-blue: #79C5E8;
+  --c-blue-dark: #328FBB;
+  --c-yellow: #F5D76E;
+  --c-yellow-dark: #D8B53B;
 
   // animations
   // in-out
@@ -61,6 +71,7 @@
   --ease-spring: linear(0, .009, .035 2.1%, .141 4.4%, .723 12.9%, .938 16.7%, 1.017, 1.077, 1.121, 1.149 24.3%, 1.159, 1.163, 1.161, 1.154 29.9%, 1.129 32.8%, 1.051 39.6%, 1.017 43.1%, .991, .977 51%, .974 53.8%, .975 57.1%, .997 69.8%, 1.003 76.9%, 1);
 
   // z-index
-  --zi-cursor: 20000;
+  --zi-header: 10000;
+  --zi-cursor: 50000;
   --zi-splash: 80000;
 }

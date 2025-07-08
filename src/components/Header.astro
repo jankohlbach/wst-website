@@ -11,10 +11,51 @@ import Socials from './Socials.astro';
     <a href="/" class="logo" aria-label="Zur Startseite">
       <Image src={header.logo.image} alt={header.logo.alt} />
     </a>
+    <!-- TODO: mobile & finetune -->
     <nav>
-      <ul>
-        <li><a href="/impressum">Impressum</a></li>
-        <li><a href="/datenschutz">Datenschutz</a></li>
+      <svg class="string" viewBox="0 0 1434 135" fill="none" aria-hidden="true">
+        <path
+          d="M2 103C373 145 868.5 167 1432 2"
+          stroke="#FAFAFA"
+          stroke-width="3"
+          stroke-linecap="round"></path>
+      </svg>
+      <ul class="lanterns">
+        <li class="lantern">
+          <div class="lantern-inner">
+            <span class="lantern-top"></span>
+            <a href="#" class="lantern-link">Shopping</a>
+            <span class="lantern-bottom"></span>
+          </div>
+        </li>
+        <li class="lantern">
+          <div class="lantern-inner">
+            <span class="lantern-top"></span>
+            <a href="#" class="lantern-link">Living</a>
+            <span class="lantern-bottom"></span>
+          </div>
+        </li>
+        <li class="lantern">
+          <div class="lantern-inner">
+            <span class="lantern-top"></span>
+            <a href="#" class="lantern-link">Kulinarik</a>
+            <span class="lantern-bottom"></span>
+          </div>
+        </li>
+        <li class="lantern">
+          <div class="lantern-inner">
+            <span class="lantern-top"></span>
+            <a href="#" class="lantern-link">Office</a>
+            <span class="lantern-bottom"></span>
+          </div>
+        </li>
+        <li class="lantern">
+          <div class="lantern-inner">
+            <span class="lantern-top"></span>
+            <a href="#" class="lantern-link">Events</a>
+            <span class="lantern-bottom"></span>
+          </div>
+        </li>
       </ul>
     </nav>
     <div class="socials">
@@ -25,7 +66,9 @@ import Socials from './Socials.astro';
 
 <style lang="scss">
   header {
-    padding-block: to-rem(32);
+    position: sticky;
+    top: 0;
+    z-index: var(--zi-header);
   }
 
   a {
@@ -37,7 +80,178 @@ import Socials from './Socials.astro';
     justify-content: space-between;
   }
 
+  .logo,
+  .socials {
+    margin-block: to-rem(32);
+  }
+
   .logo {
     max-width: to-rem(150);
+  }
+
+  nav {
+    position: relative;
+    flex-grow: 1;
+    align-self: flex-start;
+    font-size: to-rem(16);
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+    color: var(--c-dark);
+    white-space: nowrap;
+    overflow-x: clip;
+  }
+
+  .string {
+    width: 100%;
+  }
+
+  .lanterns {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+  }
+
+  .lantern {
+    --fluid-min: 1280;
+    --fluid-max: 1920;
+
+    display: grid;
+    place-items: center;
+    width: to-rem(115);
+    aspect-ratio: 115 / 108;
+    border-radius: 100%;
+
+    &:nth-child(1) {
+      translate: 0 clamp-fluid(-11, -19);
+      rotate: 5deg;
+
+      .lantern-inner {
+        --color: var(--c-pink);
+        --color-dark: var(--c-pink-dark);
+      }
+    }
+
+    &:nth-child(2) {
+      translate: 0 clamp-fluid(-1, -2);
+      rotate: 1deg;
+
+      .lantern-inner {
+        --color: var(--c-green);
+        --color-dark: var(--c-green-dark);
+      }
+    }
+
+    &:nth-child(3) {
+      translate: 0 clamp-fluid(-5, -8);
+      rotate: -4deg;
+
+      .lantern-inner {
+        --color: var(--c-orange);
+        --color-dark: var(--c-orange-dark);
+      }
+    }
+
+    &:nth-child(4) {
+      translate: 0 clamp-fluid(-25, -42);
+      rotate: -8deg;
+
+      .lantern-inner {
+        --color: var(--c-blue);
+        --color-dark: var(--c-blue-dark);
+      }
+    }
+
+    &:nth-child(5) {
+      translate: 0 clamp-fluid(-63, -104);
+      rotate: -13deg;
+
+      .lantern-inner {
+        --color: var(--c-yellow);
+        --color-dark: var(--c-yellow-dark);
+      }
+    }
+  }
+
+  .lantern-inner,
+  .lantern-link {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+  }
+
+  .lantern-inner {
+    --color: var(--c-pink);
+    --color-dark: var(--c-pink-dark);
+
+    position: relative;
+    background-color: var(--color);
+    transition: box-shadow var(--ease-smooth) 0.4s;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(
+        circle at 50% -100%,
+        var(--color) 0%,
+        var(--color) 55%,
+        var(--color-dark) 55%,
+        var(--color-dark) 56%,
+        var(--color) 56%,
+        var(--color) 63%,
+        var(--color-dark) 63%,
+        var(--color-dark) 64%,
+        var(--color) 64%,
+        var(--color) 82%,
+        var(--color-dark) 82%,
+        var(--color-dark) 83%,
+        var(--color) 83%,
+        var(--color) 90%,
+        var(--color-dark) 90%,
+        var(--color-dark) 91%,
+        var(--color) 91%,
+        var(--color) 100%
+      );
+      border-radius: inherit;
+    }
+
+    @include has-hover {
+      &:hover {
+        box-shadow: 0 0 to-rem(30) color(from var(--color) srgb r g b / 0.5);
+      }
+    }
+  }
+
+  .lantern-top,
+  .lantern-bottom {
+    position: absolute;
+    top: to-rem(-2);
+    left: 50%;
+    translate: -50% 0;
+    z-index: 2;
+    display: block;
+    width: 30%;
+    height: 6%;
+    background-color: var(--color-dark);
+    border-radius: 20%;
+  }
+
+  .lantern-bottom {
+    top: auto;
+    bottom: to-rem(-2);
+  }
+
+  .lantern-link {
+    z-index: 10;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
   }
 </style>

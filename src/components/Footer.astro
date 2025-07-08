@@ -16,7 +16,6 @@ const parsedLegal = await marked(footer.legal);
     <div class="bottom">
       <div class="socials">
         <ul>
-          <!-- TODO: dynamic list in backend -->
           <li>
             <a
               href={socials.linkFacebook}
@@ -47,8 +46,7 @@ const parsedLegal = await marked(footer.legal);
       </div>
       <div class="legal" set:html={parsedLegal} />
       <a href="/" class="logo" aria-label="Zur Startseite">
-        <!-- TODO: alt text in cms -->
-        <Image src={footer.logo} alt="" />
+        <Image src={footer.logo.image} alt={footer.logo.alt} />
       </a>
     </div>
   </div>

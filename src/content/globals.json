@@ -3,19 +3,19 @@
     {
       "siteTitle": "Südliche Waldstraße Karlsruhe - Einkaufen in Karlsruhe",
       "siteDescription": "Südliche Waldstraße Karlsruhe - The Tast of goodness. Im „SÜDEN“ der Karlsruher Waldstraße trifft Exklusives auf Alltägliches.",
-      "siteImage": "media/opengraph.jpg"
+      "siteImage": "../media/opengraph.jpg"
     }
   ],
   "header": [
     {
-      "logo": "media/logo.jpg"
+      "logo": "../media/logo.jpg"
     }
   ],
   "footer": [
     {
       "content": "Waldstraße | 76133 Karlsruhe  \n[hello@diewaldstrasse.com](mailto:hello@diewaldstrasse.com)",
       "logo": {
-        "image": "media/logo.jpg",
+        "image": "../media/logo.jpg",
         "alt": "Logo der Waldstrasse"
       },
       "legal": "©2025 | [Impressum](/impressum) | [Datenschutz](/datenschutz)"

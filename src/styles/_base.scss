@@ -100,6 +100,23 @@ body {
   white-space: nowrap;
 }
 
+.link-animated,
+.link-animated-container a,
+.richtext a {
+  text-decoration: none;
+  background-image: linear-gradient(to right, currentColor, currentColor);
+  background-size: 100% 0.05em;
+  background-repeat: no-repeat;
+  background-position: 20% bottom;
+  transition: background-size 0.4s var(--ease-smooth);
+
+  @include has-hover {
+    &:hover {
+      background-size: 0% 0.05em;
+    }
+  }
+}
+
 // native page-transition as progressive enhancement
 @view-transition {
   navigation: auto;

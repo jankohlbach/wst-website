@@ -13,13 +13,13 @@ const parsedLegal = await marked(footer.legal);
 <footer>
   <div class="container">
     <div class="top">
-      <div class="content" set:html={parsedContent} />
+      <div class="content link-animated-container" set:html={parsedContent} />
     </div>
     <div class="bottom">
       <a href="/" class="logo" aria-label="Zur Startseite">
         <Image src={footer.logo.image} alt={footer.logo.alt} />
       </a>
-      <div class="legal" set:html={parsedLegal} />
+      <div class="legal link-animated-container" set:html={parsedLegal} />
       <div class="socials">
         <Socials />
       </div>

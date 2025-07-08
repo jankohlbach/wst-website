@@ -65,6 +65,9 @@ content:
             label: Logo (linked to Home Page)
             type: image
             required: true
+          - name: logo
+            label: Logo (linked to Home Page)
+            component: utilImage
           - name: legal
             label: Copyright and Links to Legal Pages
             type: rich-text
@@ -166,4 +169,16 @@ components:
       - name: content
         label: Content
         type: rich-text
+        required: true
+
+  utilImage:
+    type: object
+    fields:
+      - name: image
+        label: Image
+        type: image
+        required: true
+      - name: alt
+        label: Alt-Text
+        type: string
         required: true

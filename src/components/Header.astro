@@ -128,6 +128,7 @@ import Socials from './Socials.astro';
       .lantern-inner {
         --color: var(--c-pink);
         --color-dark: var(--c-pink-dark);
+        animation-delay: -0.2s;
       }
     }
 
@@ -138,6 +139,7 @@ import Socials from './Socials.astro';
       .lantern-inner {
         --color: var(--c-green);
         --color-dark: var(--c-green-dark);
+        animation-delay: 0s;
       }
     }
 
@@ -148,6 +150,7 @@ import Socials from './Socials.astro';
       .lantern-inner {
         --color: var(--c-orange);
         --color-dark: var(--c-orange-dark);
+        animation-delay: -0.8s;
       }
     }
 
@@ -158,6 +161,7 @@ import Socials from './Socials.astro';
       .lantern-inner {
         --color: var(--c-blue);
         --color-dark: var(--c-blue-dark);
+        animation-delay: 0s;
       }
     }
 
@@ -168,6 +172,7 @@ import Socials from './Socials.astro';
       .lantern-inner {
         --color: var(--c-yellow);
         --color-dark: var(--c-yellow-dark);
+        animation-delay: -0.4s;
       }
     }
   }
@@ -188,6 +193,8 @@ import Socials from './Socials.astro';
     position: relative;
     background-color: var(--color);
     transition: box-shadow var(--ease-smooth) 0.4s;
+    transform-origin: top;
+    animation: swing 2s ease-in-out 0s infinite alternate forwards;
 
     &::after {
       content: '';
@@ -253,5 +260,15 @@ import Socials from './Socials.astro';
     width: 100%;
     height: 100%;
     border-radius: inherit;
+  }
+
+  @keyframes swing {
+    0% {
+      transform: rotate(-7deg);
+    }
+
+    100% {
+      transform: rotate(8deg);
+    }
   }
 </style>

@@ -108,6 +108,36 @@ content:
             type: string
             required: true
 
+  - name: home
+    label: Home Page
+    type: file
+    path: src/content/pageHome.md
+    fields:
+      - name: title
+        label: Title (Meta)
+        type: string
+        required: true
+      - name: sections
+        label: Page Sections
+        type: object
+        list:
+          min: 1
+          collapsible:
+            summary: 'Section'
+        fields:
+          - name: modules
+            label: Modules
+            type: block
+            blockKey: type
+            list:
+              min: 1
+              collapsible:
+                summary: 'Module {index}'
+            blocks:
+              - name: moduleIntro
+                label: Intro
+                component: moduleIntro
+
   - name: generic
     label: Generic Pages
     type: collection
@@ -147,9 +177,6 @@ content:
               - name: moduleRichText
                 label: Rich-Text
                 component: moduleRichText
-              - name: moduleIntro
-                label: Intro
-                component: moduleIntro
 
 
 components:

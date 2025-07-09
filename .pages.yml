@@ -116,7 +116,7 @@ content:
       - name: title
         label: Title (Meta)
         type: string
-        required: true
+        required: false
       - name: sections
         label: Page Sections
         type: object

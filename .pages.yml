@@ -199,6 +199,12 @@ components:
   moduleIntro:
     type: object
     fields:
+      - name: video
+        label: Video
+        type: file
+        required: true
+        options:
+          categories: [ video ]
       - name: content
         label: Content
         type: rich-text

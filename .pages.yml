@@ -3,6 +3,10 @@ media:
     label: Media
     input: src/media
     output: ../media
+  - name: videos
+    label: Videos
+    input: public/videos
+    output: /videos
 
 
 content:
@@ -204,6 +208,7 @@ components:
         type: file
         required: true
         options:
+          media: videos
           categories: [ video ]
       - name: content
         label: Content

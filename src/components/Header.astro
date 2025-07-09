@@ -82,6 +82,8 @@ import Socials from './Socials.astro';
 
   .logo,
   .socials {
+    position: relative;
+    z-index: 1;
     margin-block: to-rem(32);
   }
 
@@ -99,6 +101,16 @@ import Socials from './Socials.astro';
     color: var(--c-dark);
     white-space: nowrap;
     overflow-x: clip;
+    scale: 1.25;
+    translate: 0 to-rem(200);
+    transition:
+      scale 0.7s var(--ease-smooth),
+      translate 0.7s var(--ease-smooth);
+  }
+
+  :global(.has-scrolled):not(.scrolling-up) nav {
+    scale: 1;
+    translate: 0;
   }
 
   .string {
@@ -229,7 +241,7 @@ import Socials from './Socials.astro';
 
     @include has-hover {
       &:hover {
-        box-shadow: 0 0 to-rem(30) color(from var(--color) srgb r g b / 0.5);
+        box-shadow: 0 0 to-rem(50) color(from var(--color) srgb r g b / 0.7);
       }
     }
   }
@@ -264,11 +276,11 @@ import Socials from './Socials.astro';
 
   @keyframes swing {
     0% {
-      transform: rotate(-7deg);
+      rotate: -7deg;
     }
 
     100% {
-      transform: rotate(8deg);
+      rotate: 8deg;
     }
   }
 </style>

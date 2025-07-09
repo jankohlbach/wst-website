@@ -22,3 +22,17 @@ export const scrollStart = () => {
   document.body.style.paddingRight = ''
   document.body.style.overflowY = ''
 };
+
+lenis.on('scroll', (e) => {
+  if (e.scroll > 10) {
+    document.documentElement.classList.add('has-scrolled');
+  } else {
+    document.documentElement.classList.remove('has-scrolled');
+  }
+
+  if (e.direction === -1 && e.scroll < 150) {
+    document.documentElement.classList.add('scrolling-up');
+  } else {
+    document.documentElement.classList.remove('scrolling-up');
+  }
+});

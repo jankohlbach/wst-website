@@ -45,6 +45,25 @@ const globals = defineCollection({
   })
 });
 
+const pageHome = defineCollection({
+  loader: glob({base: './src/content', pattern: 'pageHome.md'}),
+  schema: z.object({
+    title: z.string(),
+    sections: z.array(
+      z.object({
+        modules: z.array(
+          z.discriminatedUnion('type', [
+            z.object({
+              type: z.literal('moduleIntro'),
+              content: z.string()
+            })
+          ])
+        )
+      })
+    )
+  })
+});
+
 const pagesGeneric = defineCollection({
   loader: glob({base: './src/content/pagesGeneric', pattern: '**/*.md'}),
   schema: z.object({
@@ -69,4 +88,4 @@ const pagesGeneric = defineCollection({
   })
 });
 
-export const collections = { globals, pagesGeneric };
+export const collections = { globals, pageHome, pagesGeneric };

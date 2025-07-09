@@ -3,6 +3,7 @@ title: Home
 sections:
   - modules:
       - type: moduleIntro
+        video: ../media/pineapple.mp4
         content: Im „SÜDEN“ der Karlsruher WALDSTRASSE trifft Exklusives auf
           Alltägliches. Der besondere Charme begeistert die Besucher einer
           zauberhaften Strasse, in der man noch kleine inhabergeführte

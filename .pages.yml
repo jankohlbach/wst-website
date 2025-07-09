@@ -147,6 +147,9 @@ content:
               - name: moduleRichText
                 label: Rich-Text
                 component: moduleRichText
+              - name: moduleIntro
+                label: Intro
+                component: moduleIntro
 
 
 components:
@@ -159,6 +162,14 @@ components:
         required: true
 
   moduleRichText:
+    type: object
+    fields:
+      - name: content
+        label: Content
+        type: rich-text
+        required: true
+
+  moduleIntro:
     type: object
     fields:
       - name: content

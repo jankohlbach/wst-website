@@ -55,6 +55,7 @@ const pageHome = defineCollection({
           z.discriminatedUnion('type', [
             z.object({
               type: z.literal('moduleIntro'),
+              video: z.string(),
               content: z.string()
             })
           ])

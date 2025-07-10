@@ -17,18 +17,83 @@ const { fields } = Astro.props;
 const parsedContent = await marked(fields.content);
 ---
 
-<div class="module container" data-module={fields.type}>
+<script>
+  import { gsap } from 'gsap';
+  import { ScrollTrigger, Flip } from 'gsap/all';
+
+  gsap.registerPlugin(ScrollTrigger, Flip);
+
+  const intro = document.querySelector('[data-js="intro"]');
+  const video = intro?.querySelector('video');
+  const title: HTMLElement | null | undefined =
+    intro?.querySelector('h1 strong');
+
+  if (video && title) {
+    gsap.set(intro, {
+      marginTop: `${(title.getBoundingClientRect().bottom - title.offsetHeight * 0.25 + window.scrollY - window.innerHeight) * -1}px)`,
+    });
+
+    video.classList.add('initial');
+
+    const state = Flip.getState(video);
+
+    video.classList.remove('initial');
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: intro,
+        start: `top ${video.getBoundingClientRect().top + window.scrollY}px`,
+        end: 'bottom 50%',
+        scrub: true,
+        pin: true,
+      },
+    });
+
+    tl.add(
+      Flip.from(state, {
+        scale: true,
+        transformOrigin: '50% 150%',
+      }),
+    );
+  }
+</script>
+
+<div class="module container" data-module={fields.type} data-js="intro">
+  <video
+    src={fields.video}
+    muted
+    loop
+    autoplay
+    playsinline
+    disablepictureinpicture></video>
   <h1>
     <strong>Die Waldstraße</strong>
     <br />
-    Karlsruhe
+    <span data-inview>Karlsruhe</span>
   </h1>
   <div class="content-block richtext" set:html={parsedContent} data-inview />
 </div>
 
 <style lang="scss">
+  video {
+    width: max(70%, to-rem(560));
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: to-rem(24);
+
+    &.initial {
+      width: max(30%, to-rem(400));
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
+
   h1 {
-    font-size: clamp-fluid(30, 170);
+    --fluid-min: 375;
+    --fluid-max: 1920;
+
+    margin-top: to-rem(16);
+    font-size: clamp-fluid(30, 195);
     font-weight: var(--fw-light);
     line-height: 1;
     text-transform: uppercase;

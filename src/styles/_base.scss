@@ -101,7 +101,11 @@ body {
 }
 
 main {
-  padding-top: to-rem(220);
+  padding-top: to-rem(40);
+
+  @media (min-width: 1024px) {
+    padding-top: to-rem(220);
+  }
 }
 
 .link-animated,

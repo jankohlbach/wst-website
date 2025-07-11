@@ -11,7 +11,7 @@ import Socials from './Socials.astro';
     <a href="/" class="logo" aria-label="Zur Startseite">
       <Image src={header.logo.image} alt={header.logo.alt} />
     </a>
-    <nav>
+    <nav class="nav-desktop">
       <svg class="string" viewBox="0 0 1434 135" fill="none" aria-hidden="true">
         <path
           d="M2 103C373 145 868.5 167 1432 2"
@@ -60,6 +60,15 @@ import Socials from './Socials.astro';
     <div class="socials">
       <Socials />
     </div>
+    <div class="menu-mobile">
+      <button class="lantern">
+        <span class="lantern-inner">
+          <span class="lantern-top"></span>
+          <span class="lantern-link">Menu</span>
+          <span class="lantern-bottom"></span>
+        </span>
+      </button>
+    </div>
   </div>
 </header>
 
@@ -87,189 +96,223 @@ import Socials from './Socials.astro';
   }
 
   .logo {
-    max-width: to-rem(150);
+    width: clamp-fluid(80, 150);
   }
 
-  nav {
-    position: relative;
-    flex-grow: 1;
-    align-self: flex-start;
-    font-size: to-rem(16);
-    font-weight: var(--fw-bold);
-    text-transform: uppercase;
-    color: var(--c-dark);
-    white-space: nowrap;
-    overflow-x: clip;
-    scale: 1.25;
-    translate: 0 to-rem(200);
-    transition:
-      scale 0.7s var(--ease-smooth),
-      translate 0.7s var(--ease-smooth);
-  }
-
-  :global(.has-scrolled):not(.scrolling-up) nav {
-    scale: 1;
-    translate: 0;
-  }
-
-  .string {
-    width: 100%;
-  }
-
-  .lanterns {
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
+  .socials {
+    display: none;
   }
 
   .lantern {
-    --fluid-min: 1024;
-    --fluid-max: 1920;
-
     display: grid;
     place-items: center;
     width: clamp-fluid(100, 115);
     aspect-ratio: 115 / 108;
     border-radius: 100%;
 
-    &:nth-child(1) {
-      translate: 0 clamp-fluid(-7, -19);
-      rotate: 5deg;
-
-      .lantern-inner {
-        --color: var(--c-pink);
-        --color-dark: var(--c-pink-dark);
-        animation: swing 5.6s ease-in-out -2.9s infinite alternate forwards;
-      }
-    }
-
-    &:nth-child(2) {
-      translate: 0 clamp-fluid(0, -2);
-      rotate: 1deg;
-
-      .lantern-inner {
-        --color: var(--c-green);
-        --color-dark: var(--c-green-dark);
-        animation: swing 4.6s ease-in-out -1.3s infinite alternate forwards;
-      }
-    }
-
-    &:nth-child(3) {
-      translate: 0 clamp-fluid(-2, -8);
-      rotate: -4deg;
-
-      .lantern-inner {
-        --color: var(--c-orange);
-        --color-dark: var(--c-orange-dark);
-        animation: swing 5.2s ease-in-out -2.1s infinite alternate forwards;
-      }
-    }
-
-    &:nth-child(4) {
-      translate: 0 clamp-fluid(-17, -42);
-      rotate: -8deg;
-
-      .lantern-inner {
-        --color: var(--c-blue);
-        --color-dark: var(--c-blue-dark);
-        animation: swing 6s ease-in-out -3.9s infinite alternate forwards;
-      }
-    }
-
-    &:nth-child(5) {
-      translate: 0 clamp-fluid(-44, -104);
-      rotate: -13deg;
-
-      .lantern-inner {
-        --color: var(--c-yellow);
-        --color-dark: var(--c-yellow-dark);
-        animation: swing 4.8s ease-in-out -1.1s infinite alternate forwards;
-      }
-    }
-  }
-
-  .lantern-inner,
-  .lantern-link {
-    display: grid;
-    place-items: center;
-    width: 100%;
-    height: 100%;
-    border-radius: inherit;
-  }
-
-  .lantern-inner {
-    --color: var(--c-pink);
-    --color-dark: var(--c-pink-dark);
-
-    position: relative;
-    background-color: var(--color);
-    transition: box-shadow var(--ease-smooth) 0.4s;
-    transform-origin: top;
-
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      z-index: 1;
+    .lantern-inner,
+    .lantern-link {
+      display: grid;
+      place-items: center;
       width: 100%;
       height: 100%;
-      background: radial-gradient(
-        circle at 50% -100%,
-        var(--color) 0%,
-        var(--color) 55%,
-        var(--color-dark) 55%,
-        var(--color-dark) 56%,
-        var(--color) 56%,
-        var(--color) 63%,
-        var(--color-dark) 63%,
-        var(--color-dark) 64%,
-        var(--color) 64%,
-        var(--color) 82%,
-        var(--color-dark) 82%,
-        var(--color-dark) 83%,
-        var(--color) 83%,
-        var(--color) 90%,
-        var(--color-dark) 90%,
-        var(--color-dark) 91%,
-        var(--color) 91%,
-        var(--color) 100%
-      );
+      border-radius: inherit;
+      font-size: to-rem(16);
+      font-weight: var(--fw-bold);
+      text-transform: uppercase;
+      color: var(--c-dark);
+      white-space: nowrap;
+    }
+
+    .lantern-inner {
+      position: relative;
+      background-color: var(--color);
+      transform-origin: top;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(
+          circle at 50% -100%,
+          var(--color) 0%,
+          var(--color) 55%,
+          var(--color-dark) 55%,
+          var(--color-dark) 56%,
+          var(--color) 56%,
+          var(--color) 63%,
+          var(--color-dark) 63%,
+          var(--color-dark) 64%,
+          var(--color) 64%,
+          var(--color) 82%,
+          var(--color-dark) 82%,
+          var(--color-dark) 83%,
+          var(--color) 83%,
+          var(--color) 90%,
+          var(--color-dark) 90%,
+          var(--color-dark) 91%,
+          var(--color) 91%,
+          var(--color) 100%
+        );
+        border-radius: inherit;
+      }
+    }
+
+    .lantern-link {
+      z-index: 10;
+      display: grid;
+      place-items: center;
+      width: 100%;
+      height: 100%;
       border-radius: inherit;
     }
 
-    @include has-hover {
-      &:hover {
-        box-shadow: 0 0 to-rem(50) color(from var(--color) srgb r g b / 0.7);
+    .lantern-top,
+    .lantern-bottom {
+      position: absolute;
+      top: to-rem(-2);
+      left: 50%;
+      translate: -50% 0;
+      z-index: 2;
+      display: block;
+      width: 30%;
+      height: 6%;
+      background-color: var(--color-dark);
+      border-radius: 20%;
+    }
+
+    .lantern-bottom {
+      top: auto;
+      bottom: to-rem(-2);
+    }
+  }
+
+  .nav-desktop {
+    display: none;
+    position: relative;
+    flex-grow: 1;
+    align-self: flex-start;
+    overflow-x: clip;
+    scale: 1.25;
+    translate: 0 to-rem(200);
+    transition:
+      scale 0.7s var(--ease-smooth),
+      translate 0.7s var(--ease-smooth);
+
+    .string {
+      width: 100%;
+    }
+
+    .lanterns {
+      display: flex;
+      justify-content: space-around;
+      list-style: none;
+    }
+
+    .lantern {
+      --fluid-min: 1024;
+      --fluid-max: 1920;
+
+      &:nth-child(1) {
+        translate: 0 clamp-fluid(-7, -19);
+        rotate: 5deg;
+
+        .lantern-inner {
+          --color: var(--c-pink);
+          --color-dark: var(--c-pink-dark);
+          animation: swing 5.6s ease-in-out -2.9s infinite alternate forwards;
+        }
+      }
+
+      &:nth-child(2) {
+        translate: 0 clamp-fluid(0, -2);
+        rotate: 1deg;
+
+        .lantern-inner {
+          --color: var(--c-green);
+          --color-dark: var(--c-green-dark);
+          animation: swing 4.6s ease-in-out -1.3s infinite alternate forwards;
+        }
+      }
+
+      &:nth-child(3) {
+        translate: 0 clamp-fluid(-2, -8);
+        rotate: -4deg;
+
+        .lantern-inner {
+          --color: var(--c-orange);
+          --color-dark: var(--c-orange-dark);
+          animation: swing 5.2s ease-in-out -2.1s infinite alternate forwards;
+        }
+      }
+
+      &:nth-child(4) {
+        translate: 0 clamp-fluid(-17, -42);
+        rotate: -8deg;
+
+        .lantern-inner {
+          --color: var(--c-blue);
+          --color-dark: var(--c-blue-dark);
+          animation: swing 6s ease-in-out -3.9s infinite alternate forwards;
+        }
+      }
+
+      &:nth-child(5) {
+        translate: 0 clamp-fluid(-44, -104);
+        rotate: -13deg;
+
+        .lantern-inner {
+          --color: var(--c-yellow);
+          --color-dark: var(--c-yellow-dark);
+          animation: swing 4.8s ease-in-out -1.1s infinite alternate forwards;
+        }
+      }
+    }
+
+    .lantern-inner {
+      --color: var(--c-pink);
+      --color-dark: var(--c-pink-dark);
+
+      transition: box-shadow var(--ease-smooth) 0.4s;
+
+      @include has-hover {
+        &:hover {
+          box-shadow: 0 0 to-rem(50) color(from var(--color) srgb r g b / 0.7);
+        }
       }
     }
   }
 
-  .lantern-top,
-  .lantern-bottom {
-    position: absolute;
-    top: to-rem(-2);
-    left: 50%;
-    translate: -50% 0;
-    z-index: 2;
-    display: block;
-    width: 30%;
-    height: 6%;
-    background-color: var(--color-dark);
-    border-radius: 20%;
+  :global(.has-scrolled):not(.scrolling-up) .nav-desktop {
+    scale: 1;
+    translate: 0;
   }
 
-  .lantern-bottom {
-    top: auto;
-    bottom: to-rem(-2);
-  }
+  .menu-mobile {
+    position: relative;
+    margin-top: to-rem(32);
 
-  .lantern-link {
-    z-index: 10;
-    display: grid;
-    place-items: center;
-    width: 100%;
-    height: 100%;
-    border-radius: inherit;
+    // TODO: more dynamic string
+    &::after {
+      content: '';
+      position: absolute;
+      top: to-rem(-32);
+      left: 50%;
+      z-index: -1;
+      width: to-rem(2);
+      height: calc(100% + to-rem(16));
+      background-color: var(--c-light);
+    }
+
+    .lantern-inner {
+      --color: var(--c-yellow);
+      --color-dark: var(--c-yellow-dark);
+
+      animation: swing 5.6s ease-in-out -2.9s infinite alternate forwards;
+    }
   }
 
   @keyframes swing {
@@ -287,6 +330,17 @@ import Socials from './Socials.astro';
 
     100% {
       rotate: 7deg;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .nav-desktop,
+    .socials {
+      display: block;
+    }
+
+    .menu-mobile {
+      display: none;
     }
   }
 </style>

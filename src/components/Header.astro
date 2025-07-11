@@ -11,7 +11,6 @@ import Socials from './Socials.astro';
     <a href="/" class="logo" aria-label="Zur Startseite">
       <Image src={header.logo.image} alt={header.logo.alt} />
     </a>
-    <!-- TODO: mobile & finetune -->
     <nav>
       <svg class="string" viewBox="0 0 1434 135" fill="none" aria-hidden="true">
         <path
@@ -124,17 +123,17 @@ import Socials from './Socials.astro';
   }
 
   .lantern {
-    --fluid-min: 1280;
+    --fluid-min: 1024;
     --fluid-max: 1920;
 
     display: grid;
     place-items: center;
-    width: to-rem(115);
+    width: clamp-fluid(100, 115);
     aspect-ratio: 115 / 108;
     border-radius: 100%;
 
     &:nth-child(1) {
-      translate: 0 clamp-fluid(-11, -19);
+      translate: 0 clamp-fluid(-7, -19);
       rotate: 5deg;
 
       .lantern-inner {
@@ -145,7 +144,7 @@ import Socials from './Socials.astro';
     }
 
     &:nth-child(2) {
-      translate: 0 clamp-fluid(-1, -2);
+      translate: 0 clamp-fluid(0, -2);
       rotate: 1deg;
 
       .lantern-inner {
@@ -156,7 +155,7 @@ import Socials from './Socials.astro';
     }
 
     &:nth-child(3) {
-      translate: 0 clamp-fluid(-5, -8);
+      translate: 0 clamp-fluid(-2, -8);
       rotate: -4deg;
 
       .lantern-inner {
@@ -167,7 +166,7 @@ import Socials from './Socials.astro';
     }
 
     &:nth-child(4) {
-      translate: 0 clamp-fluid(-25, -42);
+      translate: 0 clamp-fluid(-17, -42);
       rotate: -8deg;
 
       .lantern-inner {
@@ -178,7 +177,7 @@ import Socials from './Socials.astro';
     }
 
     &:nth-child(5) {
-      translate: 0 clamp-fluid(-63, -104);
+      translate: 0 clamp-fluid(-44, -104);
       rotate: -13deg;
 
       .lantern-inner {

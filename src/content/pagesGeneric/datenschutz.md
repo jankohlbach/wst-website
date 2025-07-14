@@ -110,4 +110,115 @@ sections:
           „Auftragsverarbeiter“ eine natürliche oder juristische Person,
           Behörde, Einrichtung oder andere Stelle, die personenbezogene Daten im
           Auftrag des Verantwortlichen verarbeitet.
+
+
+          ## Maßgebliche Rechtsgrundlagen
+
+
+          Nach Maßgabe des Art. 13 DSGVO teilen wir Ihnen die Rechtsgrundlagen
+          unserer Datenverarbeitungen mit. Sofern die Rechtsgrundlage in der
+          Datenschutzerklärung nicht genannt wird, gilt Folgendes: Die
+          Rechtsgrundlage für die Einholung von Einwilligungen ist Art. 6 Abs. 1
+          lit. a und Art. 7 DSGVO, die Rechtsgrundlage für die Verarbeitung zur
+          Erfüllung unserer Leistungen und Durchführung vertraglicher Maßnahmen
+          sowie Beantwortung von Anfragen ist Art. 6 Abs. 1 lit. b DSGVO, die
+          Rechtsgrundlage für die Verarbeitung zur Erfüllung unserer rechtlichen
+          Verpflichtungen ist Art. 6 Abs. 1 lit. c DSGVO, und die
+          Rechtsgrundlage für die Verarbeitung zur Wahrung unserer berechtigten
+          Interessen ist Art. 6 Abs. 1 lit. f DSGVO. Für den Fall, dass
+          lebenswichtige Interessen der betroffenen Person oder einer anderen
+          natürlichen Person eine Verarbeitung personenbezogener Daten
+          erforderlich machen, dient Art. 6 Abs. 1 lit. d DSGVO als
+          Rechtsgrundlage.
+
+
+          ## Sicherheitsmaßnahmen
+
+
+          Wir treffen nach Maßgabe des Art. 32 DSGVO unter Berücksichtigung des
+          Stands der Technik, der Implementierungskosten und der Art, des
+          Umfangs, der Umstände und der Zwecke der Verarbeitung sowie der
+          unterschiedlichen Eintrittswahrscheinlichkeit und Schwere des Risikos
+          für die Rechte und Freiheiten natürlicher Personen, geeignete
+          technische und organisatorische Maßnahmen, um ein dem Risiko
+          angemessenes Schutzniveau zu gewährleisten.
+
+
+          Zu den Maßnahmen gehören insbesondere die Sicherung der
+          Vertraulichkeit, Integrität und Verfügbarkeit von Daten durch
+          Kontrolle des physischen Zugangs zu den Daten, als auch des sie
+          betreffenden Zugriffs, der Eingabe, Weitergabe, der Sicherung der
+          Verfügbarkeit und ihrer Trennung. Des Weiteren haben wir Verfahren
+          eingerichtet, die eine Wahrnehmung von Betroffenenrechten, Löschung
+          von Daten und Reaktion auf Gefährdung der Daten gewährleisten. Ferner
+          berücksichtigen wir den Schutz personenbezogener Daten bereits bei der
+          Entwicklung, bzw. Auswahl von Hardware, Software sowie Verfahren,
+          entsprechend dem Prinzip des Datenschutzes durch Technikgestaltung und
+          durch datenschutzfreundliche Voreinstellungen (Art. 25 DSGVO).
+
+
+          ## Zusammenarbeit mit Auftragsverarbeitern und Dritten
+
+
+          Sofern wir im Rahmen unserer Verarbeitung Daten gegenüber anderen
+          Personen und Unternehmen (Auftragsverarbeitern oder Dritten)
+          offenbaren, sie an diese übermitteln oder ihnen sonst Zugriff auf die
+          Daten gewähren, erfolgt dies nur auf Grundlage einer gesetzlichen
+          Erlaubnis (z.B. wenn eine Übermittlung der Daten an Dritte, wie an
+          Zahlungsdienstleister, gem. Art. 6 Abs. 1 lit. b DSGVO zur
+          Vertragserfüllung erforderlich ist), Sie eingewilligt haben, eine
+          rechtliche Verpflichtung dies vorsieht oder auf Grundlage unserer
+          berechtigten Interessen (z.B. beim Einsatz von Beauftragten,
+          Webhostern, etc.).   
+            
+          Sofern wir Dritte mit der Verarbeitung von Daten auf Grundlage eines
+          sog. „Auftragsverarbeitungsvertrages“ beauftragen, geschieht dies auf
+          Grundlage des Art. 28 DSGVO.
+
+
+          ## Übermittlungen in Drittländer
+
+
+          Sofern wir Daten in einem Drittland (d.h. außerhalb der Europäischen
+          Union (EU) oder des Europäischen Wirtschaftsraums (EWR)) verarbeiten
+          oder dies im Rahmen der Inanspruchnahme von Diensten Dritter oder
+          Offenlegung, bzw. Übermittlung von Daten an Dritte geschieht, erfolgt
+          dies nur, wenn es zur Erfüllung unserer (vor)vertraglichen Pflichten,
+          auf Grundlage Ihrer Einwilligung, aufgrund einer rechtlichen
+          Verpflichtung oder auf Grundlage unserer berechtigten Interessen
+          geschieht. Vorbehaltlich gesetzlicher oder vertraglicher Erlaubnisse,
+          verarbeiten oder lassen wir die Daten in einem Drittland nur beim
+          Vorliegen der besonderen Voraussetzungen der Art. 44 ff. DSGVO
+          verarbeiten. D.h. die Verarbeitung erfolgt z.B. auf Grundlage
+          besonderer Garantien, wie der offiziell anerkannten Feststellung eines
+          der EU entsprechenden Datenschutzniveaus (z.B. für die USA durch das
+          „Privacy Shield“) oder Beachtung offiziell anerkannter spezieller
+          vertraglicher Verpflichtungen (so genannte
+          „Standardvertragsklauseln“).
+
+
+          ## Rechte der betroffenen Personen
+
+
+          Sie haben das Recht, eine Bestätigung darüber zu verlangen, ob
+          betreffende Daten verarbeitet werden und auf Auskunft über diese Daten
+          sowie auf weitere Informationen und Kopie der Daten entsprechend Art.
+          15 DSGVO.  
+            
+          Sie haben entsprechend. Art. 16 DSGVO das Recht, die Vervollständigung
+          der Sie betreffenden Daten oder die Berichtigung der Sie betreffenden
+          unrichtigen Daten zu verlangen.  
+            
+          Sie haben nach Maßgabe des Art. 17 DSGVO das Recht zu verlangen, dass
+          betreffende Daten unverzüglich gelöscht werden, bzw. alternativ nach
+          Maßgabe des Art. 18 DSGVO eine Einschränkung der Verarbeitung der
+          Daten zu verlangen.  
+            
+          Sie haben das Recht zu verlangen, dass die Sie betreffenden Daten, die
+          Sie uns bereitgestellt haben nach Maßgabe des Art. 20 DSGVO zu
+          erhalten und deren Übermittlung an andere Verantwortliche zu
+          fordern.   
+            
+          Sie haben ferner gem. Art. 77 DSGVO das Recht, eine Beschwerde bei der
+          zuständigen Aufsichtsbehörde einzureichen.
 ---

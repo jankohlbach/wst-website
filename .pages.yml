@@ -121,6 +121,12 @@ content:
         label: Title (Meta)
         type: string
         required: false
+      - name: moduleIntro
+        label: Intro
+        component: moduleIntro
+      - name: moduleEvents
+        label: Events
+        component: moduleEvents
       - name: sections
         label: Page Sections
         type: object

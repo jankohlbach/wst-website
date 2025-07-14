@@ -26,9 +26,4 @@ moduleEvents:
       image:
         image: ../media/opengraph.jpg
         alt: alt
-    - title: neuer Titel
-      date: irgendein datum
-      image:
-        image: ../media/opengraph.jpg
-        alt: alt
 ---

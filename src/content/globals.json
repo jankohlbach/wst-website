@@ -9,7 +9,7 @@
   "header": [
     {
       "logo": {
-        "image": "../media/logo.jpg",
+        "image": "../media/logo-1.jpg",
         "alt": "Logo der Waldstrasse"
       }
     }
@@ -18,7 +18,7 @@
     {
       "content": "Waldstraße | 76133 Karlsruhe  \n[hello@diewaldstrasse.com](mailto:hello@diewaldstrasse.com)",
       "logo": {
-        "image": "../media/logo.jpg",
+        "image": "../media/logo-1.jpg",
         "alt": "Logo der Waldstrasse"
       },
       "legal": "©2025 | [Impressum](/impressum) | [Datenschutz](/datenschutz)"

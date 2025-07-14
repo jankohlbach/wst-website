@@ -208,6 +208,29 @@ components:
         label: Title
         type: string
         required: true
+      - name: events
+        label: Events
+        type: object
+        list:
+          min: 1
+          collapsible:
+            summary: 'Event'
+        fields:
+          - name: title
+            label: Title
+            type: string
+            required: true
+          - name: date
+            label: Date
+            type: string
+            required: true
+          - name: description
+            label: Description
+            type: text
+          - name: image
+            label: Image
+            type: image
+            required: true
 
   utilImage:
     type: object

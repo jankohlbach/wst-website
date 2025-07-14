@@ -32,35 +32,35 @@ import Socials from './Socials.astro';
         <li class="lantern">
           <div class="lantern-inner">
             <span class="lantern-top"></span>
-            <a href="#" class="lantern-link">Shopping</a>
+            <a href="/#shopping" class="lantern-link">Shopping</a>
             <span class="lantern-bottom"></span>
           </div>
         </li>
         <li class="lantern">
           <div class="lantern-inner">
             <span class="lantern-top"></span>
-            <a href="#" class="lantern-link">Living</a>
+            <a href="/#living" class="lantern-link">Living</a>
             <span class="lantern-bottom"></span>
           </div>
         </li>
         <li class="lantern">
           <div class="lantern-inner">
             <span class="lantern-top"></span>
-            <a href="#" class="lantern-link">Kulinarik</a>
+            <a href="/#kulinarik" class="lantern-link">Kulinarik</a>
             <span class="lantern-bottom"></span>
           </div>
         </li>
         <li class="lantern">
           <div class="lantern-inner">
             <span class="lantern-top"></span>
-            <a href="#" class="lantern-link">Office</a>
+            <a href="/#office" class="lantern-link">Office</a>
             <span class="lantern-bottom"></span>
           </div>
         </li>
         <li class="lantern">
           <div class="lantern-inner">
             <span class="lantern-top"></span>
-            <a href="#" class="lantern-link">Events</a>
+            <a href="/#newsevents" class="lantern-link">Events</a>
             <span class="lantern-bottom"></span>
           </div>
         </li>
@@ -82,35 +82,35 @@ import Socials from './Socials.astro';
           <li class="lantern">
             <div class="lantern-inner">
               <span class="lantern-top"></span>
-              <a href="#" class="lantern-link">Shopping</a>
+              <a href="/#shopping" class="lantern-link">Shopping</a>
               <span class="lantern-bottom"></span>
             </div>
           </li>
           <li class="lantern">
             <div class="lantern-inner">
               <span class="lantern-top"></span>
-              <a href="#" class="lantern-link">Living</a>
+              <a href="/#living" class="lantern-link">Living</a>
               <span class="lantern-bottom"></span>
             </div>
           </li>
           <li class="lantern">
             <div class="lantern-inner">
               <span class="lantern-top"></span>
-              <a href="#" class="lantern-link">Kulinarik</a>
+              <a href="/#kulinarik" class="lantern-link">Kulinarik</a>
               <span class="lantern-bottom"></span>
             </div>
           </li>
           <li class="lantern">
             <div class="lantern-inner">
               <span class="lantern-top"></span>
-              <a href="#" class="lantern-link">Office</a>
+              <a href="/#office" class="lantern-link">Office</a>
               <span class="lantern-bottom"></span>
             </div>
           </li>
           <li class="lantern">
             <div class="lantern-inner">
               <span class="lantern-top"></span>
-              <a href="#" class="lantern-link">Events</a>
+              <a href="/#newsevents" class="lantern-link">Events</a>
               <span class="lantern-bottom"></span>
             </div>
           </li>
@@ -392,6 +392,11 @@ import Socials from './Socials.astro';
       .lantern {
         transition: translate 0.7s var(--ease-smooth);
 
+        a {
+          opacity: 0;
+          transition-delay: 0.7s;
+        }
+
         &:nth-child(1) {
           z-index: 5;
           translate: 0 calc(100% * -1 - to-rem(16));
@@ -427,6 +432,11 @@ import Socials from './Socials.astro';
       .lanterns {
         .lantern {
           translate: 0 0;
+
+          a {
+            opacity: 1;
+            transition-delay: 0s;
+          }
         }
       }
     }

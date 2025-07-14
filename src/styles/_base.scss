@@ -100,11 +100,11 @@ body {
   white-space: nowrap;
 }
 
-main {
-  padding-top: to-rem(40);
+main:not(.home) {
+  padding-top: to-rem(200);
 
   @media (min-width: 1024px) {
-    padding-top: to-rem(220);
+    padding-top: to-rem(475);
   }
 }
 

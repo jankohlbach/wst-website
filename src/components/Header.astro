@@ -122,9 +122,10 @@ import Socials from './Socials.astro';
 
 <style lang="scss">
   header {
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: var(--zi-header);
+    width: calc(100% - var(--scroll-bar-width, 0px));
   }
 
   a {

@@ -180,7 +180,8 @@ section {
 
 // inview
 [data-inview],
-[data-inview-manual] {
+[data-inview-manual],
+[data-inview-no-offset] {
   --delay: 0s;
 
   filter: blur(5px);

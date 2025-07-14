@@ -76,4 +76,7 @@
   --zi-header: 10000;
   --zi-cursor: 50000;
   --zi-splash: 80000;
+
+  // border-radius
+  --br-default: #{clamp-fluid(8, 24)};
 }

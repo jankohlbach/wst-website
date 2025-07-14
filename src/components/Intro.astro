@@ -21,32 +21,60 @@ const parsedContent = await marked(fields.content);
   import { gsap } from 'gsap';
   import { ScrollTrigger, Flip } from 'gsap/all';
 
+  const mm = gsap.matchMedia();
+
   gsap.registerPlugin(ScrollTrigger, Flip);
 
   const intro = document.querySelector('[data-js="intro"]');
   const video = intro?.querySelector('video');
 
-  if (intro && video) {
-    const state = Flip.getState(video);
+  mm.add('(max-width: 1023px)', () => {
+    if (intro && video) {
+      const state = Flip.getState(video);
 
-    intro.classList.add('final');
+      intro.classList.add('final');
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: intro,
-        start: 'top top',
-        end: 'bottom 50%',
-        scrub: true,
-        pin: true,
-      },
-    });
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: intro,
+          start: 'top top',
+          endTrigger: video,
+          end: 'top 30%',
+          scrub: true,
+        },
+      });
 
-    tl.add(
-      Flip.from(state, {
-        scale: true,
-      }),
-    );
-  }
+      tl.add(
+        Flip.from(state, {
+          scale: true,
+        }),
+      );
+    }
+  });
+
+  mm.add('(min-width: 1024px)', () => {
+    if (intro && video) {
+      const state = Flip.getState(video);
+
+      intro.classList.add('final');
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: intro,
+          start: 'top top',
+          end: 'bottom 50%',
+          scrub: true,
+          pin: true,
+        },
+      });
+
+      tl.add(
+        Flip.from(state, {
+          scale: true,
+        }),
+      );
+    }
+  });
 </script>
 
 <div class="intro container" data-module={fields.type} data-js="intro">
@@ -57,10 +85,11 @@ const parsedContent = await marked(fields.content);
       loop
       autoplay
       playsinline
-      disablepictureinpicture></video>
+      disablepictureinpicture
+      data-inview-no-offset></video>
   </div>
   <h1>
-    <strong>Die Waldstraße</strong>
+    <strong data-inview-no-offset>Die Waldstraße</strong>
     <br />
     <span data-inview>Karlsruhe</span>
   </h1>
@@ -72,12 +101,9 @@ const parsedContent = await marked(fields.content);
     margin-top: clamp-fluid(-60, -120);
 
     &.final {
-      .media {
-        justify-items: center;
-
-        video {
-          width: max(70%, to-rem(560));
-        }
+      video {
+        width: 100%;
+        margin-bottom: to-rem(32);
       }
     }
   }
@@ -86,19 +112,20 @@ const parsedContent = await marked(fields.content);
     display: grid;
     justify-items: end;
     align-items: end;
-    height: calc(100vh - (clamp-fluid(38, 247) * 0.65));
+    height: 65vh;
   }
 
   video {
-    width: max(30%, to-rem(400));
-    border-radius: to-rem(24);
+    width: 75%;
+    border-radius: var(--br-default);
   }
 
   h1 {
     --fluid-min: 375;
     --fluid-max: 1920;
 
-    font-size: clamp-fluid(30, 195);
+    margin-top: clamp-fluid(48, 128);
+    font-size: clamp-fluid(35, 195);
     font-weight: var(--fw-light);
     line-height: 1;
     text-transform: uppercase;
@@ -112,5 +139,31 @@ const parsedContent = await marked(fields.content);
   .richtext {
     margin-top: clamp-fluid(64, 128);
     text-align: center;
+  }
+
+  @media (min-width: 1024px) {
+    .intro {
+      &.final {
+        .media {
+          justify-items: center;
+        }
+
+        video {
+          width: max(70%, to-rem(560));
+        }
+      }
+    }
+
+    .media {
+      height: calc(100vh - (clamp-fluid(38, 247) * 0.65));
+    }
+
+    video {
+      width: max(30%, to-rem(400));
+    }
+
+    h1 {
+      margin-top: 0;
+    }
   }
 </style>

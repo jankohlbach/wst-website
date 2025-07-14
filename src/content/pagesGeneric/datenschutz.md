@@ -221,4 +221,364 @@ sections:
             
           Sie haben ferner gem. Art. 77 DSGVO das Recht, eine Beschwerde bei der
           zuständigen Aufsichtsbehörde einzureichen.
+
+
+          ## Widerrufsrecht
+
+
+          Sie haben das Recht, erteilte Einwilligungen gem. Art. 7 Abs. 3 DSGVO
+          mit Wirkung für die Zukunft zu widerrufen.
+
+
+          ## Widerspruchsrecht
+
+
+          Sie können der künftigen Verarbeitung der Sie betreffenden Daten nach
+          Maßgabe des Art. 21 DSGVO jederzeit widersprechen. Der Widerspruch
+          kann insbesondere gegen die Verarbeitung für Zwecke der Direktwerbung
+          erfolgen.
+
+
+          ## Cookies und Widerspruchsrecht bei Direktwerbung
+
+
+          Als „Cookies“ werden kleine Dateien bezeichnet, die auf Rechnern der
+          Nutzer gespeichert werden. Innerhalb der Cookies können
+          unterschiedliche Angaben gespeichert werden. Ein Cookie dient primär
+          dazu, die Angaben zu einem Nutzer (bzw. dem Gerät auf dem das Cookie
+          gespeichert ist) während oder auch nach seinem Besuch innerhalb eines
+          Onlineangebotes zu speichern. Als temporäre Cookies, bzw.
+          „Session-Cookies“ oder „transiente Cookies“, werden Cookies
+          bezeichnet, die gelöscht werden, nachdem ein Nutzer ein Onlineangebot
+          verlässt und seinen Browser schließt. In einem solchen Cookie kann
+          z.B. der Inhalt eines Warenkorbs in einem Onlineshop oder ein
+          Login-Status gespeichert werden. Als „permanent“ oder „persistent“
+          werden Cookies bezeichnet, die auch nach dem Schließen des Browsers
+          gespeichert bleiben. So kann z.B. der Login-Status gespeichert werden,
+          wenn die Nutzer diese nach mehreren Tagen aufsuchen. Ebenso können in
+          einem solchen Cookie die Interessen der Nutzer gespeichert werden, die
+          für Reichweitenmessung oder Marketingzwecke verwendet werden. Als
+          „Third-Party-Cookie“ werden Cookies bezeichnet, die von anderen
+          Anbietern als dem Verantwortlichen, der das Onlineangebot betreibt,
+          angeboten werden (andernfalls, wenn es nur dessen Cookies sind spricht
+          man von „First-Party Cookies“).  
+            
+          Wir können temporäre und permanente Cookies einsetzen und klären
+          hierüber im Rahmen unserer Datenschutzerklärung auf.  
+            
+          Falls die Nutzer nicht möchten, dass Cookies auf ihrem Rechner
+          gespeichert werden, werden sie gebeten die entsprechende Option in den
+          Systemeinstellungen ihres Browsers zu deaktivieren. Gespeicherte
+          Cookies können in den Systemeinstellungen des Browsers gelöscht
+          werden. Der Ausschluss von Cookies kann zu Funktionseinschränkungen
+          dieses Onlineangebotes führen.  
+            
+          Ein genereller Widerspruch gegen den Einsatz der zu Zwecken des
+          Onlinemarketing eingesetzten Cookies kann bei einer Vielzahl der
+          Dienste, vor allem im Fall des Trackings, über die US-amerikanische
+          Seite [http://www.aboutads.info/choices/](http://www.aboutads.info/choices/oder)
+          oder die
+          EU-Seite [http://www.youronlinechoices.com/](http://www.youronlinechoices.com/)
+          erklärt werden. Des Weiteren kann die Speicherung von Cookies mittels
+          deren Abschaltung in den Einstellungen des Browsers erreicht werden.
+          Bitte beachten Sie, dass dann gegebenenfalls nicht alle Funktionen
+          dieses Onlineangebotes genutzt werden können.
+
+
+          ## Löschung von Daten
+
+
+          Die von uns verarbeiteten Daten werden nach Maßgabe der Art. 17 und 18
+          DSGVO gelöscht oder in ihrer Verarbeitung eingeschränkt. Sofern nicht
+          im Rahmen dieser Datenschutzerklärung ausdrücklich angegeben, werden
+          die bei uns gespeicherten Daten gelöscht, sobald sie für ihre
+          Zweckbestimmung nicht mehr erforderlich sind und der Löschung keine
+          gesetzlichen Aufbewahrungspflichten entgegenstehen. Sofern die Daten
+          nicht gelöscht werden, weil sie für andere und gesetzlich zulässige
+          Zwecke erforderlich sind, wird deren Verarbeitung eingeschränkt. D.h.
+          die Daten werden gesperrt und nicht für andere Zwecke verarbeitet. Das
+          gilt z.B. für Daten, die aus handels- oder steuerrechtlichen Gründen
+          aufbewahrt werden müssen.  
+            
+          Nach gesetzlichen Vorgaben in Deutschland, erfolgt die Aufbewahrung
+          insbesondere für 10 Jahre gemäß §§ 147 Abs. 1 AO, 257 Abs. 1 Nr. 1 und
+          4, Abs. 4 HGB (Bücher, Aufzeichnungen, Lageberichte, Buchungsbelege,
+          Handelsbücher, für Besteuerung relevanter Unterlagen, etc.) und 6
+          Jahre gemäß § 257 Abs. 1 Nr. 2 und 3, Abs. 4 HGB (Handelsbriefe).   
+            
+          Nach gesetzlichen Vorgaben in Österreich erfolgt die Aufbewahrung
+          insbesondere für 7 J gemäß § 132 Abs. 1 BAO (Buchhaltungsunterlagen,
+          Belege/Rechnungen, Konten, Belege, Geschäftspapiere, Aufstellung der
+          Einnahmen und Ausgaben, etc.), für 22 Jahre im Zusammenhang mit
+          Grundstücken und für 10 Jahre bei Unterlagen im Zusammenhang mit
+          elektronisch erbrachten Leistungen, Telekommunikations-, Rundfunk- und
+          Fernsehleistungen, die an Nichtunternehmer in EU-Mitgliedstaaten
+          erbracht werden und für die der Mini-One-Stop-Shop (MOSS) in Anspruch
+          genommen wird.
+
+
+          ## Externe Zahlungsdienstleister
+
+
+          Wir setzen externe Zahlungsdienstleister ein, über deren Plattformen
+          die Nutzer und wir Zahlungstransaktionen vornehmen können (z.B.,
+          jeweils mit Link zur Datenschutzerklärung, Paypal
+          ([https://www.paypal.com/de/webapps/mpp/ua/privacy-full](https://www.paypal.com/de/webapps/mpp/ua/privacy-full)),
+          Klarna
+          ([https://www.klarna.com/de/datenschutz/](https://www.klarna.com/de/datenschutz/)),
+          Skrill
+          ([https://www.skrill.com/de/fusszeile/datenschutzrichtlinie/](https://www.skrill.com/de/fusszeile/datenschutzrichtlinie/)),
+          Giropay
+          ([https://www.giropay.de/rechtliches/datenschutz-agb/](https://www.giropay.de/rechtliches/datenschutz-agb/)),
+          Visa
+          ([https://www.visa.de/datenschutz](https://www.visa.de/datenschutz)),
+          Mastercard
+          ([https://www.mastercard.de/de-de/datenschutz.html](https://www.mastercard.de/de-de/datenschutz.html)),
+          American Express
+          ([https://www.americanexpress.com/de/content/privacy-policy-statement.html)  
+            
+          Im](https://www.americanexpress.com/de/content/privacy-policy-statement.html\)￼￼Im)
+          Rahmen der Erfüllung von Verträgen setzen wir die
+          Zahlungsdienstleister auf Grundlage des Art. 6 Abs. 1 lit. b. DSGVO
+          ein. Im Übrigen setzen wir externe Zahlungsdienstleister auf Grundlage
+          unserer berechtigten Interessen gem. Art. 6 Abs. 1 lit. b. DSGVO ein,
+          um unseren Nutzern effektive und sichere Zahlungsmöglichkeit zu
+          bieten.  
+            
+          Zu den, durch die Zahlungsdienstleister verarbeiteten Daten gehören
+          Bestandsdaten, wie z.B. der Name und die Adresse, Bankdaten, wie z.B.
+          Kontonummern oder Kreditkartennummern, Passwörter, TANs und Prüfsummen
+          sowie die Vertrags-, Summen und empfängerbezogenen Angaben. Die
+          Angaben sind erforderlich, um die Transaktionen durchzuführen. Die
+          eingegebenen Daten werden jedoch nur durch die Zahlungsdienstleister
+          verarbeitet und bei diesen gespeichert. D.h. wir erhalten keine konto-
+          oder kreditkartenbezogenen Informationen, sondern lediglich
+          Informationen mit Bestätigung oder Negativbeauskunftung der Zahlung.
+          Unter Umständen werden die Daten seitens der Zahlungsdienstleister an
+          Wirtschaftsauskunfteien übermittelt. Diese Übermittlung bezweckt die
+          Identitäts- und Bonitätsprüfung. Hierzu verweisen wir auf die AGB und
+          Datenschutzhinweise der Zahlungsdienstleister.  
+            
+          Für die Zahlungsgeschäfte gelten die Geschäftsbedingungen und die
+          Datenschutzhinweise der jeweiligen Zahlungsdienstleister, welche
+          innerhalb der jeweiligen Webseiten, bzw. Transaktionsapplikationen
+          abrufbar sind. Wir verweisen auf diese ebenfalls zwecks weiterer
+          Informationen und Geltendmachung von Widerrufs-, Auskunfts- und
+          anderen Betroffenenrechten.
+
+
+          ## Administration, Finanzbuchhaltung, Büroorganisation,
+          Kontaktverwaltung
+
+
+          Wir verarbeiten Daten im Rahmen von Verwaltungsaufgaben sowie
+          Organisation unseres Betriebs, Finanzbuchhaltung und Befolgung der
+          gesetzlichen Pflichten, wie z.B. der Archivierung. Hierbei verarbeiten
+          wir dieselben Daten, die wir im Rahmen der Erbringung unserer
+          vertraglichen Leistungen verarbeiten. Die Verarbeitungsgrundlagen sind
+          Art. 6 Abs. 1 lit. c. DSGVO, Art. 6 Abs. 1 lit. f. DSGVO. Von der
+          Verarbeitung sind Kunden, Interessenten, Geschäftspartner und
+          Websitebesucher betroffen. Der Zweck und unser Interesse an der
+          Verarbeitung liegt in der Administration, Finanzbuchhaltung,
+          Büroorganisation, Archivierung von Daten, also Aufgaben die der
+          Aufrechterhaltung unserer Geschäftstätigkeiten, Wahrnehmung unserer
+          Aufgaben und Erbringung unserer Leistungen dienen. Die Löschung der
+          Daten im Hinblick auf vertragliche Leistungen und die vertragliche
+          Kommunikation entspricht den, bei diesen Verarbeitungstätigkeiten
+          genannten Angaben.  
+            
+          Wir offenbaren oder übermitteln hierbei Daten an die Finanzverwaltung,
+          Berater, wie z.B., Steuerberater oder Wirtschaftsprüfer sowie weitere
+          Gebührenstellen und Zahlungsdienstleister.  
+            
+          Ferner speichern wir auf Grundlage unserer betriebswirtschaftlichen
+          Interessen Angaben zu Lieferanten, Veranstaltern und sonstigen
+          Geschäftspartnern, z.B. zwecks späterer Kontaktaufnahme. Diese
+          mehrheitlich unternehmensbezogenen Daten, speichern wir grundsätzlich
+          dauerhaft.
+
+
+          ## Newsletter
+
+
+          Mit den nachfolgenden Hinweisen informieren wir Sie über die Inhalte
+          unseres Newsletters sowie das Anmelde-, Versand- und das statistische
+          Auswertungsverfahren sowie Ihre Widerspruchsrechte auf. Indem Sie
+          unseren Newsletter abonnieren, erklären Sie sich mit dem Empfang und
+          den beschriebenen Verfahren einverstanden.  
+            
+          Inhalt des Newsletters: Wir versenden Newsletter, E-Mails und weitere
+          elektronische Benachrichtigungen mit werblichen Informationen
+          (nachfolgend „Newsletter“) nur mit der Einwilligung der Empfänger oder
+          einer gesetzlichen Erlaubnis. Sofern im Rahmen einer Anmeldung zum
+          Newsletter dessen Inhalte konkret umschrieben werden, sind sie für die
+          Einwilligung der Nutzer maßgeblich. Im Übrigen enthalten unsere
+          Newsletter Informationen zu unseren Leistungen und uns.  
+            
+          Double-Opt-In und Protokollierung: Die Anmeldung zu unserem Newsletter
+          erfolgt in einem sog. Double-Opt-In-Verfahren. D.h. Sie erhalten nach
+          der Anmeldung eine E-Mail, in der Sie um die Bestätigung Ihrer
+          Anmeldung gebeten werden. Diese Bestätigung ist notwendig, damit sich
+          niemand mit fremden E-Mailadressen anmelden kann. Die Anmeldungen zum
+          Newsletter werden protokolliert, um den Anmeldeprozess entsprechend
+          den rechtlichen Anforderungen nachweisen zu können. Hierzu gehört die
+          Speicherung des Anmelde- und des Bestätigungszeitpunkts, als auch der
+          IP-Adresse. Ebenso werden die Änderungen Ihrer bei dem
+          Versanddienstleister gespeicherten Daten protokolliert.  
+            
+          Anmeldedaten: Um sich für den Newsletter anzumelden, reicht es aus,
+          wenn Sie Ihre E-Mailadresse angeben. Optional bitten wir Sie einen
+          Namen, zwecks persönlicher Ansprache im Newsletters anzugeben.  
+            
+          Der Versand des Newsletters und die mit ihm verbundene Erfolgsmessung
+          erfolgen auf Grundlage einer Einwilligung der Empfänger gem. Art. 6
+          Abs. 1 lit. a, Art. 7 DSGVO i.V.m § 7 Abs. 2 Nr. 3 UWG oder falls eine
+          Einwilligung nicht erforderlich ist, auf Grundlage unserer
+          berechtigten Interessen am Direktmarketing gem. Art. 6 Abs. 1 lt. f.
+          DSGVO i.V.m. § 7 Abs. 3 UWG.   
+            
+          Die Protokollierung des Anmeldeverfahrens erfolgt auf Grundlage
+          unserer berechtigten Interessen gem. Art. 6 Abs. 1 lit. f DSGVO. Unser
+          Interesse richtet sich auf den Einsatz eines nutzerfreundlichen sowie
+          sicheren Newslettersystems, das sowohl unseren geschäftlichen
+          Interessen dient, als auch den Erwartungen der Nutzer entspricht und
+          uns ferner den Nachweis von Einwilligungen erlaubt.  
+            
+          Kündigung/Widerruf – Sie können den Empfang unseres Newsletters
+          jederzeit kündigen, d.h. Ihre Einwilligungen widerrufen. Einen Link
+          zur Kündigung des Newsletters finden Sie am Ende eines jeden
+          Newsletters. Wir können die ausgetragenen E-Mailadressen bis zu drei
+          Jahren auf Grundlage unserer berechtigten Interessen speichern bevor
+          wir sie löschen, um eine ehemals gegebene Einwilligung nachweisen zu
+          können. Die Verarbeitung dieser Daten wird auf den Zweck einer
+          möglichen Abwehr von Ansprüchen beschränkt. Ein individueller
+          Löschungsantrag ist jederzeit möglich, sofern zugleich das ehemalige
+          Bestehen einer Einwilligung bestätigt wird.
+
+
+          ## Onlinepräsenz in sozialen Medien
+
+
+          Wir unterhalten Onlinepräsenzen innerhalb sozialer Netzwerke und
+          Plattformen, um mit den dort aktiven Kunden, Interessenten und Nutzern
+          kommunizieren und sie dort über unsere Leistungen informieren zu
+          können. Beim Aufruf der jeweiligen Netzwerke und Plattformen gelten
+          die Geschäftsbedingungen und die Datenverarbeitungsrichtlinien deren
+          jeweiligen Betreiber.   
+            
+          Soweit nicht anders im Rahmen unserer Datenschutzerklärung angegeben,
+          verarbeiten wir die Daten der Nutzer, sofern diese mit uns innerhalb
+          der sozialen Netzwerke und Plattformen kommunizieren, z.B. Beiträge
+          auf unseren Onlinepräsenzen verfassen oder uns Nachrichten zusenden.
+
+
+          ## Einbindung von Diensten und Inhalten Dritter
+
+
+          Wir setzen innerhalb unseres Onlineangebotes auf Grundlage unserer
+          berechtigten Interessen (d.h. Interesse an der Analyse, Optimierung
+          und wirtschaftlichem Betrieb unseres Onlineangebotes im Sinne des Art.
+          6 Abs. 1 lit. f. DSGVO) Inhalts- oder Serviceangebote von
+          Drittanbietern ein, um deren Inhalte und Services, wie z.B. Videos
+          oder Schriftarten einzubinden (nachfolgend einheitlich bezeichnet als
+          “Inhalte”).   
+            
+          Dies setzt immer voraus, dass die Drittanbieter dieser Inhalte, die
+          IP-Adresse der Nutzer wahrnehmen, da sie ohne die IP-Adresse die
+          Inhalte nicht an deren Browser senden könnten. Die IP-Adresse ist
+          damit für die Darstellung dieser Inhalte erforderlich. Wir bemühen
+          uns, nur solche Inhalte zu verwenden, deren jeweilige Anbieter die
+          IP-Adresse lediglich zur Auslieferung der Inhalte verwenden.
+          Drittanbieter können ferner sogenannte Pixel-Tags (unsichtbare
+          Grafiken, auch als „Web Beacons“ bezeichnet) für statistische oder
+          Marketingzwecke verwenden. Durch die „Pixel-Tags“ können
+          Informationen, wie der Besucherverkehr auf den Seiten dieser Website
+          ausgewertet werden. Die pseudonymen Informationen können ferner in
+          Cookies auf dem Gerät der Nutzer gespeichert werden und unter anderem
+          technische Informationen zum Browser und Betriebssystem, verweisende
+          Webseiten, Besuchszeit sowie weitere Angaben zur Nutzung unseres
+          Onlineangebotes enthalten, als auch mit solchen Informationen aus
+          anderen Quellen verbunden werden.
+
+
+          ## Google Maps
+
+
+          Wir binden die Landkarten des Dienstes “Google Maps” des Anbieters
+          Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA,
+          ein. Zu den verarbeiteten Daten können insbesondere IP-Adressen und
+          Standortdaten der Nutzer gehören, die jedoch nicht ohne deren
+          Einwilligung (im Regelfall im Rahmen der Einstellungen ihrer
+          Mobilgeräte vollzogen), erhoben werden. Die Daten können in den USA
+          verarbeitet werden.
+          Datenschutzerklärung: [https://www.google.com/policies/privacy/](https://www.google.com/policies/privacy/),
+          Opt-Out: [https://adssettings.google.com/authenticated](https://adssettings.google.com/authenticated).
+
+
+          ## Verwendung von Facebook Social Plugins
+
+
+          Wir nutzen auf Grundlage unserer berechtigten Interessen (d.h.
+          Interesse an der Analyse, Optimierung und wirtschaftlichem Betrieb
+          unseres Onlineangebotes im Sinne des Art. 6 Abs. 1 lit. f. DSGVO)
+          Social Plugins („Plugins“) des sozialen Netzwerkes
+          [facebook.com](http://facebook.com), welches von der Facebook Ireland
+          Ltd., 4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Irland
+          betrieben wird („Facebook“). Die Plugins können Interaktionselemente
+          oder Inhalte (z.B. Videos, Grafiken oder Textbeiträge) darstellen und
+          sind an einem der Facebook Logos erkennbar (weißes „f“ auf blauer
+          Kachel, den Begriffen „Like“, „Gefällt mir“ oder einem „Daumen
+          hoch“-Zeichen) oder sind mit dem Zusatz „Facebook Social Plugin“
+          gekennzeichnet. Die Liste und das Aussehen der Facebook Social Plugins
+          kann hier eingesehen
+          werden: [https://developers.facebook.com/docs/plugins/.  
+            
+          Facebook](https://developers.facebook.com/docs/plugins/.￼￼Facebook)
+          ist unter dem Privacy-Shield-Abkommen zertifiziert und bietet
+          hierdurch eine Garantie, das europäische Datenschutzrecht einzuhalten
+          ([https://www.privacyshield.gov/participant?id=a2zt0000000GnywAAC&status=Active).  
+            
+          Wenn](https://www.privacyshield.gov/participant?id=a2zt0000000GnywAAC&status=Active\).￼￼Wenn)
+          ein Nutzer eine Funktion dieses Onlineangebotes aufruft, die ein
+          solches Plugin enthält, baut sein Gerät eine direkte Verbindung mit
+          den Servern von Facebook auf. Der Inhalt des Plugins wird von Facebook
+          direkt an das Gerät des Nutzers übermittelt und von diesem in das
+          Onlineangebot eingebunden. Dabei können aus den verarbeiteten Daten
+          Nutzungsprofile der Nutzer erstellt werden. Wir haben daher keinen
+          Einfluss auf den Umfang der Daten, die Facebook mit Hilfe dieses
+          Plugins erhebt und informiert die Nutzer daher entsprechend unserem
+          Kenntnisstand.  
+            
+          Durch die Einbindung der Plugins erhält Facebook die Information, dass
+          ein Nutzer die entsprechende Seite des Onlineangebotes aufgerufen hat.
+          Ist der Nutzer bei Facebook eingeloggt, kann Facebook den Besuch
+          seinem Facebook-Konto zuordnen. Wenn Nutzer mit den Plugins
+          interagieren, zum Beispiel den Like Button betätigen oder einen
+          Kommentar abgeben, wird die entsprechende Information von Ihrem Gerät
+          direkt an Facebook übermittelt und dort gespeichert. Falls ein Nutzer
+          kein Mitglied von Facebook ist, besteht trotzdem die Möglichkeit, dass
+          Facebook seine IP-Adresse in Erfahrung bringt und speichert. Laut
+          Facebook wird in Deutschland nur eine anonymisierte IP-Adresse
+          gespeichert.  
+            
+          Zweck und Umfang der Datenerhebung und die weitere Verarbeitung und
+          Nutzung der Daten durch Facebook sowie die diesbezüglichen Rechte und
+          Einstellungsmöglichkeiten zum Schutz der Privatsphäre der Nutzer,
+          können diese den Datenschutzhinweisen von Facebook
+          entnehmen: [https://www.facebook.com/about/privacy/.  
+            
+          Wenn](https://www.facebook.com/about/privacy/.￼￼Wenn) ein Nutzer
+          Facebookmitglied ist und nicht möchte, dass Facebook über dieses
+          Onlineangebot Daten über ihn sammelt und mit seinen bei Facebook
+          gespeicherten Mitgliedsdaten verknüpft, muss er sich vor der Nutzung
+          unseres Onlineangebotes bei Facebook ausloggen und seine Cookies
+          löschen. Weitere Einstellungen und Widersprüche zur Nutzung von Daten
+          für Werbezwecke, sind innerhalb der Facebook-Profileinstellungen
+          möglich: [https://www.facebook.com/settings?tab=ads](https://www.facebook.com/settings?tab=ads) 
+          oder über die US-amerikanische
+          Seite [http://www.aboutads.info/choices/](http://www.aboutads.info/choices/) 
+          oder die
+          EU-Seite [http://www.youronlinechoices.com/](http://www.youronlinechoices.com/).
+          Die Einstellungen erfolgen plattformunabhängig, d.h. sie werden für
+          alle Geräte, wie Desktopcomputer oder mobile Geräte übernommen.
 ---

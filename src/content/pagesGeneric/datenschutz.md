@@ -538,7 +538,7 @@ sections:
           hierdurch eine Garantie, das europäische Datenschutzrecht einzuhalten
           ([https://www.privacyshield.gov/participant?id=a2zt0000000GnywAAC&status=Active).  
             
-          Wenn](https://www.privacyshield.gov/participant?id=a2zt0000000GnywAAC&status=Active\).￼￼Wenn)
+          ](https://www.privacyshield.gov/participant?id=a2zt0000000GnywAAC&status=Active\).￼￼Wenn)Wenn
           ein Nutzer eine Funktion dieses Onlineangebotes aufruft, die ein
           solches Plugin enthält, baut sein Gerät eine direkte Verbindung mit
           den Servern von Facebook auf. Der Inhalt des Plugins wird von Facebook
@@ -567,7 +567,7 @@ sections:
           können diese den Datenschutzhinweisen von Facebook
           entnehmen: [https://www.facebook.com/about/privacy/.  
             
-          Wenn](https://www.facebook.com/about/privacy/.￼￼Wenn) ein Nutzer
+          ](https://www.facebook.com/about/privacy/.￼￼Wenn)Wenn ein Nutzer
           Facebookmitglied ist und nicht möchte, dass Facebook über dieses
           Onlineangebot Daten über ihn sammelt und mit seinen bei Facebook
           gespeicherten Mitgliedsdaten verknüpft, muss er sich vor der Nutzung

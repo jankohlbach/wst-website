@@ -215,6 +215,14 @@ components:
         type: rich-text
         required: true
 
+  moduleEvents:
+    type: object
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+
   utilImage:
     type: object
     fields:

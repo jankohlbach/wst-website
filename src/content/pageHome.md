@@ -20,4 +20,16 @@ moduleIntro:
     öffentlichen Verkehrsmitteln laden Sie zum nächsten Besuch bei uns ein.
 moduleEvents:
   title: Events
+  events:
+    - title: Mid Summer Night
+      date: 21. Juni 2025
+      description: LÄNGER SOMMER, LÄNGER WALDSTRASSE – Shopping bis 22 Uhr
+      image: ../media/opengraph.jpg
+    - title: Das Waldstraßenfest
+      date: 05. + 06 September 2025
+      description: MUSIC | LATE NIGHT SHOPPING | KULINARIK
+      image: ../media/opengraph.jpg
+    - title: neuer Titel
+      date: irgendein datum
+      image: ../media/opengraph.jpg
 ---

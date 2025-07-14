@@ -153,11 +153,11 @@ html.lenis body {
 }
 
 // grid + layout
-section {
-  margin-block: clamp-fluid(60, 120);
+.section {
+  margin-block: clamp-fluid(128, 256);
 
   > .module {
-    margin-block: clamp-fluid(40, 80)
+    margin-block: clamp-fluid(48, 128);
   }
 }
 

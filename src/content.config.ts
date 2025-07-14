@@ -47,21 +47,18 @@ const globals = defineCollection({
 
 const pageHome = defineCollection({
   loader: glob({base: './src/content', pattern: 'pageHome.md'}),
-  schema: z.object({
+  schema: ({ image }) => z.object({
     title: z.string(),
-    sections: z.array(
-      z.object({
-        modules: z.array(
-          z.discriminatedUnion('type', [
-            z.object({
-              type: z.literal('moduleIntro'),
-              video: z.string(),
-              content: z.string()
-            })
-          ])
-        )
-      })
-    )
+    moduleIntro: z.object({
+      video: z.string(),
+      content: z.string()
+    }),
+    moduleEvents: z.object({
+      title: z.string(),
+      date: z.string(),
+      description: z.string().optional(),
+      image: image(),
+    }),
   })
 });
 

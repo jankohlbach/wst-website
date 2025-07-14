@@ -1,0 +1,32 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+type ModuleEvents = CollectionEntry<'pageHome'>['data']['moduleEvents'];
+
+interface Props {
+  fields: ModuleEvents;
+}
+
+const { fields } = Astro.props;
+---
+
+<div class="events container">
+  <h2 data-inview>{fields.title}</h2>
+  <div class="grid">
+    {
+      fields.events.map((event) => (
+        <div class="card" data-inview>
+          <h3>{event.title}</h3>
+          <p>{event.description}</p>
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<style lang="scss">
+  h2 {
+    text-transform: uppercase;
+    text-align: center;
+  }
+</style>

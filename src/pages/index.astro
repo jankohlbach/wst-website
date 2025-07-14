@@ -3,25 +3,18 @@ import { getCollection } from 'astro:content';
 
 import Layout from '../layouts/Layout.astro';
 import Intro from '../components/Intro.astro';
+import Events from '../components/Events.astro';
 
 const [page] = await getCollection('pageHome');
 ---
 
 <Layout>
   <main class="home">
-    {
-      page.data.sections.map((section) => (
-        <section>
-          {section.modules.map((module) => {
-            switch (module.type) {
-              case 'moduleIntro':
-                return <Intro fields={module} />;
-              default:
-                return null;
-            }
-          })}
-        </section>
-      ))
-    }
+    <section>
+      <Intro fields={page.data.moduleIntro} />
+    </section>
+    <section class="section">
+      <Events fields={page.data.moduleEvents} />
+    </section>
   </main>
 </Layout>

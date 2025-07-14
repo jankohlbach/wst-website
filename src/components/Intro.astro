@@ -1,10 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 
-type ModuleIntro = Extract<
-  CollectionEntry<'pageHome'>['data']['sections'][0]['modules'][0],
-  { type: 'moduleIntro' }
->;
+type ModuleIntro = CollectionEntry<'pageHome'>['data']['moduleIntro'];
 
 interface Props {
   fields: ModuleIntro;
@@ -77,7 +74,7 @@ const parsedContent = await marked(fields.content);
   });
 </script>
 
-<div class="intro container" data-module={fields.type} data-js="intro">
+<div class="intro container" data-js="intro">
   <div class="media">
     <video
       src={fields.video}
@@ -98,8 +95,6 @@ const parsedContent = await marked(fields.content);
 
 <style lang="scss">
   .intro {
-    margin-top: clamp-fluid(-60, -120);
-
     &.final {
       video {
         width: 100%;

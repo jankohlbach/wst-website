@@ -18,12 +18,12 @@ moduleEvents:
       date: 21. Juni 2025
       description: LÄNGER SOMMER, LÄNGER WALDSTRASSE – Shopping bis 22 Uhr
       image:
-        image: ../media/opengraph.jpg
-        alt: alt
+        image: ../media/midsummernight.webp
+        alt: Menschen, die an Kleiderstangen einkaufen und Kleidung anschauen
     - title: Das Waldstraßenfest
       date: 05. + 06 September 2025
       description: MUSIC | LATE NIGHT SHOPPING | KULINARIK
       image:
-        image: ../media/opengraph.jpg
-        alt: alt
+        image: ../media/waldstrassenfest.webp
+        alt: Feiernde Menschen in der Waldstraße bei dem letzten Fest
 ---

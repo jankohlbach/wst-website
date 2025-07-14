@@ -9,7 +9,7 @@ const globals = defineCollection({
         siteTitle: z.string(),
         siteDescription: z.string(),
         siteImage: image(),
-      })
+      }),
     ),
     header: z.array(
       z.object({
@@ -17,7 +17,7 @@ const globals = defineCollection({
           image: image(),
           alt: z.string(),
         }),
-      })
+      }),
     ),
     footer: z.array(
       z.object({
@@ -27,22 +27,22 @@ const globals = defineCollection({
           alt: z.string(),
         }),
         legal: z.string(),
-      })
+      }),
     ),
     socials: z.array(
       z.object({
         linkFacebook: z.string(),
         linkInstagram: z.string(),
-      })
+      }),
     ),
     page404: z.array(
       z.object({
         title: z.string(),
         subline: z.string(),
         linkText: z.string(),
-      })
+      }),
     ),
-  })
+  }),
 });
 
 const pageHome = defineCollection({
@@ -51,15 +51,23 @@ const pageHome = defineCollection({
     title: z.string(),
     moduleIntro: z.object({
       video: z.string(),
-      content: z.string()
+      content: z.string(),
     }),
     moduleEvents: z.object({
       title: z.string(),
-      date: z.string(),
-      description: z.string().optional(),
-      image: image(),
+      events: z.array(
+        z.object({
+          title: z.string(),
+          date: z.string(),
+          description: z.string().optional(),
+          image: z.object({
+            image: image(),
+            alt: z.string(),
+          }),
+        }),
+      ),
     }),
-  })
+  }),
 });
 
 const pagesGeneric = defineCollection({
@@ -73,17 +81,17 @@ const pagesGeneric = defineCollection({
           z.discriminatedUnion('type', [
             z.object({
               type: z.literal('moduleTitle'),
-              title: z.string()
+              title: z.string(),
             }),
             z.object({
               type: z.literal('moduleRichText'),
-              content: z.string()
-            })
-          ])
-        )
-      })
-    )
-  })
+              content: z.string(),
+            }),
+          ]),
+        ),
+      }),
+    ),
+  }),
 });
 
 export const collections = { globals, pageHome, pagesGeneric };

@@ -12,6 +12,7 @@ h6,
 .h6 {
   font-weight: var(--fw-black);
   line-height: 1.2;
+  hyphens: auto;
 }
 
 h1,
@@ -29,6 +30,7 @@ h2,
 h3,
 .h3 {
   font-size: var(--fs-3);
+  font-weight: var(--fw-bold);
 }
 
 h4,

@@ -13,7 +13,7 @@ const [page] = await getCollection('pageHome');
     <section>
       <Intro fields={page.data.moduleIntro} />
     </section>
-    <section class="section">
+    <section id="newsevents" class="section">
       <Events fields={page.data.moduleEvents} />
     </section>
   </main>

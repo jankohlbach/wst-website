@@ -7,26 +7,135 @@ interface Props {
   fields: ModuleEvents;
 }
 
+import { Image } from 'astro:assets';
+
 const { fields } = Astro.props;
 ---
 
 <div class="events container">
   <h2 data-inview>{fields.title}</h2>
-  <div class="grid">
-    {
-      fields.events.map((event) => (
-        <div class="card" data-inview>
-          <h3>{event.title}</h3>
-          <p>{event.description}</p>
+
+  {
+    fields.events.map((event) => (
+      <div class="grid">
+        <Image
+          src={event.image.image}
+          alt={event.image.alt}
+          class="image"
+          data-inview
+        />
+        <div class="content">
+          <h3 data-inview>{event.title}</h3>
+          <p class="date" data-inview>
+            {event.date}
+          </p>
+          {event.description && (
+            <p class="description" data-inview>
+              {event.description}
+            </p>
+          )}
         </div>
-      ))
-    }
-  </div>
+      </div>
+    ))
+  }
 </div>
 
 <style lang="scss">
   h2 {
     text-transform: uppercase;
     text-align: center;
+
+    + .grid {
+      margin-top: clamp-fluid(64, 128);
+    }
+  }
+
+  .grid {
+    row-gap: to-rem(32);
+    align-items: center;
+
+    + .grid {
+      margin-top: to-rem(64);
+    }
+  }
+
+  .image,
+  .content {
+    grid-column: span 12;
+  }
+
+  .image {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: var(--br-default);
+  }
+
+  h3 {
+    text-transform: uppercase;
+    color: var(--c-yellow);
+  }
+
+  .date {
+    margin-top: clamp-fluid(8, 32);
+    font-size: var(--fs-4);
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+  }
+
+  .description {
+    margin-top: clamp-fluid(32, 64);
+  }
+
+  @media (min-width: 560px) {
+    .grid {
+      .image {
+        grid-column: 1 / span 10;
+      }
+
+      .content {
+        grid-column: 3 / span 10;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .grid {
+      .image {
+        grid-column: 2 / span 7;
+      }
+
+      .content {
+        grid-column: 5 / span 7;
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .grid {
+      .image,
+      .content {
+        grid-row: 1;
+      }
+
+      &:nth-child(even) {
+        .image {
+          grid-column: 1 / span 5;
+        }
+
+        .content {
+          grid-column: 7 / span 5;
+        }
+      }
+
+      &:nth-child(odd) {
+        .image {
+          grid-column: 8 / span 5;
+        }
+
+        .content {
+          grid-column: 2 / span 5;
+        }
+      }
+    }
   }
 </style>

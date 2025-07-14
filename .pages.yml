@@ -229,8 +229,7 @@ components:
             type: text
           - name: image
             label: Image
-            type: image
-            required: true
+            component: utilImage
 
   utilImage:
     type: object

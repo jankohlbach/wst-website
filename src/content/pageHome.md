@@ -33,4 +33,9 @@ moduleEvents:
       image:
         image: ../media/waldstrassenfest.webp
         alt: Feiernde Menschen in der Waldstraße bei dem letzten Fest
+moduleKeywords:
+  words:
+    - word: Shop local.
+    - word: Be urban.
+    - word: In the heart of the city.
 ---

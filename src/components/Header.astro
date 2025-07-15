@@ -9,13 +9,19 @@ import Socials from './Socials.astro';
 <script>
   const menuMobile = document.querySelector('[data-js="menu-mobile"]');
   const menuTrigger = menuMobile?.querySelector('[data-js="menu-trigger"]');
+  const mobileLinks = menuMobile?.querySelectorAll('a');
 
   menuTrigger?.addEventListener('click', () => {
     menuMobile?.classList.toggle('is-open');
   });
+
+  mobileLinks?.forEach((link) => {
+    link.addEventListener('click', () => {
+      menuMobile?.classList.remove('is-open');
+    });
+  });
 </script>
 
-<!-- TODO: add smooth anchor scroll, anchor scroll on load, scroll padding -->
 <header>
   <div class="container">
     <a href="/" class="logo" aria-label="Zur Startseite">

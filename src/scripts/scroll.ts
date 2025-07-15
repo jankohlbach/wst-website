@@ -1,9 +1,19 @@
 import Lenis from 'lenis';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
 
 export const lenis = new Lenis({
-  autoRaf: true,
   lerp: 0.07,
 });
+
+// Add Lenis's requestAnimationFrame (raf) method to GSAP's ticker
+// This ensures Lenis's smooth scroll animation updates on each GSAP tick
+gsap.ticker.add((time) => {
+  lenis.raf(time * 1000); // Convert time from seconds to milliseconds
+});
+
+// Disable lag smoothing in GSAP to prevent any delay in scroll animations
+gsap.ticker.lagSmoothing(0);
 
 export const scrollStop = () => {
   if (!lenis.isStopped) {
@@ -24,6 +34,8 @@ export const scrollStart = () => {
 };
 
 lenis.on('scroll', (e) => {
+  ScrollTrigger.update();
+
   if (e.scroll > 10) {
     document.documentElement.classList.add('has-scrolled');
   } else {
@@ -36,3 +48,12 @@ lenis.on('scroll', (e) => {
     document.documentElement.classList.remove('scrolling-up');
   }
 });
+
+window.addEventListener('load', () => {
+  if (window.location.hash) {
+    const target = document.querySelector(window.location.hash);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+})

@@ -2,8 +2,8 @@
 import { getCollection } from 'astro:content';
 
 import Layout from '../layouts/Layout.astro';
-import Title from '../components/Title.astro';
-import RichText from '../components/RichText.astro';
+import ModuleTitle from '../components/ModuleTitle.astro';
+import ModuleRichText from '../components/ModuleRichText.astro';
 
 export async function getStaticPaths() {
   const pages = await getCollection('pagesGeneric');
@@ -24,9 +24,9 @@ const { page } = Astro.props;
           {section.modules.map((module) => {
             switch (module.type) {
               case 'moduleTitle':
-                return <Title fields={module} />;
+                return <ModuleTitle fields={module} />;
               case 'moduleRichText':
-                return <RichText fields={module} />;
+                return <ModuleRichText fields={module} />;
               default:
                 return null;
             }

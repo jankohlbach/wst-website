@@ -150,7 +150,7 @@ content:
         list:
           min: 1
           collapsible:
-            summary: 'Section'
+            summary: Section
         fields:
           - name: modules
             label: Modules
@@ -214,7 +214,7 @@ components:
         list:
           min: 1
           collapsible:
-            summary: 'Event'
+            summary: Event
         fields:
           - name: title
             label: Title
@@ -230,6 +230,23 @@ components:
           - name: image
             label: Image
             component: utilImage
+
+  moduleKeywords:
+    type: object
+    fields:
+      - name: words
+        label: Words
+        type: object
+        list:
+          min: 3
+          max: 3
+          collapsible:
+            summary: Word
+        fields:
+          - name: word
+            label: Word
+            type: string
+            required: true
 
   utilImage:
     type: object

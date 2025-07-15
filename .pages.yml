@@ -127,6 +127,9 @@ content:
       - name: moduleEvents
         label: Events
         component: moduleEvents
+      - name: moduleKeywords
+        label: Keywords
+        component: moduleKeywords
 
   - name: generic
     label: Generic Pages

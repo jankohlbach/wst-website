@@ -1,0 +1,42 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+type ModuleKeywords = CollectionEntry<'pageHome'>['data']['moduleKeywords'];
+
+interface Props {
+  fields: ModuleKeywords;
+}
+
+const { fields } = Astro.props;
+---
+
+<div class="keywords module container">
+  {
+    fields.words.map((item) => (
+      <p class="h2" data-inview>
+        {item.word}
+      </p>
+    ))
+  }
+</div>
+
+<style lang="scss">
+  p {
+    text-transform: uppercase;
+
+    &:nth-child(1) {
+      padding-left: clamp-fluid(10, 100);
+      text-align: left;
+    }
+
+    &:nth-child(2) {
+      padding-right: clamp-fluid(10, 100);
+      text-align: right;
+    }
+
+    &:nth-child(3) {
+      margin-top: clamp-fluid(32, 64);
+      text-align: center;
+    }
+  }
+</style>

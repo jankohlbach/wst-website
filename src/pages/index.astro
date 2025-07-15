@@ -4,6 +4,7 @@ import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import ModuleIntro from '../components/ModuleIntro.astro';
 import ModuleEvents from '../components/ModuleEvents.astro';
+import ModuleKeywords from '../components/ModuleKeywords.astro';
 
 const [page] = await getCollection('pageHome');
 ---
@@ -15,6 +16,7 @@ const [page] = await getCollection('pageHome');
     </section>
     <section id="newsevents" class="section">
       <ModuleEvents fields={page.data.moduleEvents} />
+      <ModuleKeywords fields={page.data.moduleKeywords} />
     </section>
   </main>
 </Layout>

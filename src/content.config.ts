@@ -67,6 +67,13 @@ const pageHome = defineCollection({
         }),
       ),
     }),
+    moduleKeywords: z.object({
+      words: z.array(
+        z.object({
+          word: z.string(),
+        }),
+      ),
+    }),
   }),
 });
 

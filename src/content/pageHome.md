@@ -203,11 +203,41 @@ moduleCompanies:
         alt: Pomodoro Logo
       category: Restaurant
   office:
-    - link: https://www.tascadojose.de
+    - link: https://gerwinmedia.de
       image:
         image: ../media/logo.jpg
-        alt: alt text
-      category: a
+        alt: Gerwin Media Logo
+      category: Media
+    - link: https://syd.media
+      image:
+        image: ../media/logo.jpg
+        alt: SYD Media Logo
+      category: Media
+    - link: https://einsagentur.de
+      image:
+        image: ../media/logo.jpg
+        alt: einsagentur Schäuble GmbH Logo
+      category: Konzept
+    - link: https://myimmofinanz.de
+      image:
+        image: ../media/logo.jpg
+        alt: MyImmoFinanz Logo
+      category: Immobilien
+    - link: https://ant-reisen.de/site/startseite
+      image:
+        image: ../media/logo.jpg
+        alt: Antiochia Reisen Logo
+      category: Reisen
+    - link: https://www.issaka-holzbau.de
+      image:
+        image: ../media/logo.jpg
+        alt: Issaka Holzbau Logo
+      category: Bau
+    - link: https://k46.team
+      image:
+        image: ../media/logo.jpg
+        alt: K46 Logo
+      category: Media
 moduleEvents:
   title: Events
   events:

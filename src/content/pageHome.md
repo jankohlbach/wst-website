@@ -81,10 +81,54 @@ moduleCompanies:
         image: ../media/logo.jpg
         alt: CEPAKA Logo
   living:
-    - link: link
+    - link: https://www.roter-punkt.de
       image:
         image: ../media/logo.jpg
-        alt: alt text
+        alt: roter punkt Logo
+    - link: https://www.ergonomie-und-wohnen.de
+      image:
+        image: ../media/logo.jpg
+        alt: Ergonomie und Wohnen Logo
+    - link: https://pfeiffer-may.de/ausstellungen/stil-impulse
+      image:
+        image: ../media/logo.jpg
+        alt: Stil Impulse Logo
+    - link: https://kreischer-hairstyling.de
+      image:
+        image: ../media/logo.jpg
+        alt: Kreischer Hairstyling Logo
+    - link: https://www.marvin-meyer.art
+      image:
+        image: ../media/logo.jpg
+        alt: Marvin Meyer Art Logo
+    - link: https://serkansari.de
+      image:
+        image: ../media/logo.jpg
+        alt: Serkan Sari Logo
+    - link: https://www.burger.de
+      image:
+        image: ../media/logo.jpg
+        alt: Burger Logo
+    - link: https://www.donato-haircreations.de
+      image:
+        image: ../media/logo.jpg
+        alt: Donato Logo
+    - link: https://www.galerie-elwert.de
+      image:
+        image: ../media/logo.jpg
+        alt: Galerie Elwert Logo
+    - link: https://www.hofmeister.de/standort-karlsruhe
+      image:
+        image: ../media/logo.jpg
+        alt: Hofmeister Logo
+    - link: https://www.galeriemarkaj.com
+      image:
+        image: ../media/logo.jpg
+        alt: Galerie Markaj Logo
+    - link: https://www.achtsam-sensibel.de
+      image:
+        image: ../media/logo.jpg
+        alt: Achtsam Sensibel Logo
   kulinarik:
     - link: link
       image:

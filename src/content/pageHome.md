@@ -157,13 +157,53 @@ moduleCompanies:
         alt: Achtsam Sensibel Logo
       category: Coaching
   kulinarik:
-    - link: link
+    - link: https://www.instagram.com/espressobar_karlsruhe
       image:
         image: ../media/logo.jpg
-        alt: alt text
-      category: a
+        alt: Espressobar Logo
+      category: Café
+    - link: https://www.tascadojose.de
+      image:
+        image: ../media/logo.jpg
+        alt: Tasca do José Logo
+      category: Restaurant
+    - link: https://www.stoevchen.com
+      image:
+        image: ../media/logo.jpg
+        alt: Stövchen Logo
+      category: Restaurant
+    - link: http://www.dersaftladen.de
+      image:
+        image: ../media/logo.jpg
+        alt: Café mit Flair Logo
+      category: Café
+    - link: https://www.astartcafe.com
+      image:
+        image: ../media/logo.jpg
+        alt: Ast Art Café Logo
+      category: Café
+    - link: https://www.karlsruhe-erleben.de/media/gastronomie/Le-Renard#/article/2e9df15c-06d8-4734-8c57-5430815b5736
+      image:
+        image: ../media/logo.jpg
+        alt: Le Renard Bistro Logo
+      category: Café
+    - link: https://www.brickandbone.de
+      image:
+        image: ../media/logo.jpg
+        alt: Brick + Bone Logo
+      category: Restaurant
+    - link: https://www.yollie.cafe
+      image:
+        image: ../media/logo.jpg
+        alt: Yollie Café Logo
+      category: Café
+    - link: http://www.pomodoro-karlsruhe.de
+      image:
+        image: ../media/logo.jpg
+        alt: Pomodoro Logo
+      category: Restaurant
   office:
-    - link: link
+    - link: https://www.tascadojose.de
       image:
         image: ../media/logo.jpg
         alt: alt text

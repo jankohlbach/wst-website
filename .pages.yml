@@ -225,6 +225,51 @@ components:
           - name: image
             label: Image
             component: utilImage
+      - name: living
+        label: Living
+        type: object
+        list:
+          min: 1
+          collapsible:
+            summary: Company
+        fields:
+          - name: link
+            label: Link
+            type: string
+            required: true
+          - name: image
+            label: Image
+            component: utilImage
+      - name: kulinarik
+        label: Kulinarik
+        type: object
+        list:
+          min: 1
+          collapsible:
+            summary: Company
+        fields:
+          - name: link
+            label: Link
+            type: string
+            required: true
+          - name: image
+            label: Image
+            component: utilImage
+      - name: office
+        label: Office
+        type: object
+        list:
+          min: 1
+          collapsible:
+            summary: Company
+        fields:
+          - name: link
+            label: Link
+            type: string
+            required: true
+          - name: image
+            label: Image
+            component: utilImage
 
   moduleEvents:
     type: object

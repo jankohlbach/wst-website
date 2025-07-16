@@ -225,6 +225,10 @@ components:
           - name: image
             label: Image
             component: utilImage
+          - name: category
+            label: Category
+            type: string
+            required: true
       - name: living
         label: Living
         type: object
@@ -240,6 +244,10 @@ components:
           - name: image
             label: Image
             component: utilImage
+          - name: category
+            label: Category
+            type: string
+            required: true
       - name: kulinarik
         label: Kulinarik
         type: object
@@ -255,6 +263,10 @@ components:
           - name: image
             label: Image
             component: utilImage
+          - name: category
+            label: Category
+            type: string
+            required: true
       - name: office
         label: Office
         type: object
@@ -270,6 +282,10 @@ components:
           - name: image
             label: Image
             component: utilImage
+          - name: category
+            label: Category
+            type: string
+            required: true
 
   moduleEvents:
     type: object

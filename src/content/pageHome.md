@@ -18,6 +18,27 @@ moduleIntro:
 
     Drei Parkhäuser in unmittelbarer Nähe und eine schnelle Erreichbarkeit mit
     öffentlichen Verkehrsmitteln laden Sie zum nächsten Besuch bei uns ein.
+moduleCompanies:
+  shopping:
+    - link: link
+      image:
+        image: ../media/logo.jpg
+        alt: alt text
+  living:
+    - link: link
+      image:
+        image: ../media/logo.jpg
+        alt: alt text
+  kulinarik:
+    - link: link
+      image:
+        image: ../media/logo.jpg
+        alt: alt text
+  office:
+    - link: link
+      image:
+        image: ../media/logo.jpg
+        alt: alt text
 moduleEvents:
   title: Events
   events:

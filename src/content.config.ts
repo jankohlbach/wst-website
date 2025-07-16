@@ -54,7 +54,43 @@ const pageHome = defineCollection({
       content: z.string(),
     }),
     moduleCompanies: z.object({
-    }).optional(),
+      shopping: z.array(
+        z.object({
+          link: z.string(),
+          image: z.object({
+            image: image(),
+            alt: z.string(),
+          }),
+        }),
+      ),
+      living: z.array(
+        z.object({
+          link: z.string(),
+          image: z.object({
+            image: image(),
+            alt: z.string(),
+          }),
+        }),
+      ),
+      kulinarik: z.array(
+        z.object({
+          link: z.string(),
+          image: z.object({
+            image: image(),
+            alt: z.string(),
+          }),
+        }),
+      ),
+      office: z.array(
+        z.object({
+          link: z.string(),
+          image: z.object({
+            image: image(),
+            alt: z.string(),
+          }),
+        }),
+      ),
+    }),
     moduleEvents: z.object({
       title: z.string(),
       events: z.array(

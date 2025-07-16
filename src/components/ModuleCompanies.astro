@@ -11,7 +11,7 @@ import { Image } from 'astro:assets';
 
 import dummyImage from '../media/logo.jpg';
 
-// const { fields } = Astro.props;
+const { fields } = Astro.props;
 ---
 
 <script>
@@ -40,44 +40,72 @@ import dummyImage from '../media/logo.jpg';
     <div class="card-container">
       <div class="card" data-js="pinned-card"></div>
       <div class="content" data-js="masked-content">
-        <div class="group">
+        <div id="shopping" class="group">
           <h2 class="group-title" data-inview>Shopping</h2>
           <div class="logos">
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <Image src={dummyImage} alt="Logo" data-inview />
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <Image src={dummyImage} alt="Logo" data-inview />
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <Image src={dummyImage} alt="Logo" data-inview />
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <Image src={dummyImage} alt="Logo" data-inview />
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <Image src={dummyImage} alt="Logo" data-inview />
-            </a>
+            {
+              fields.shopping.map((company) => (
+                <a
+                  href={company.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-inview
+                >
+                  <Image src={company.image.image} alt={company.image.alt} />
+                </a>
+              ))
+            }
           </div>
         </div>
-        <div class="group">
+        <div id="living" class="group">
           <h2 class="group-title" data-inview>Living</h2>
           <div class="logos">
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <Image src={dummyImage} alt="Logo" data-inview />
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <Image src={dummyImage} alt="Logo" data-inview />
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <Image src={dummyImage} alt="Logo" data-inview />
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <Image src={dummyImage} alt="Logo" data-inview />
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-              <Image src={dummyImage} alt="Logo" data-inview />
-            </a>
+            {
+              fields.living.map((company) => (
+                <a
+                  href={company.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-inview
+                >
+                  <Image src={company.image.image} alt={company.image.alt} />
+                </a>
+              ))
+            }
+          </div>
+        </div>
+        <div id="kulinarik" class="group">
+          <h2 class="group-title" data-inview>Kulinarik</h2>
+          <div class="logos">
+            {
+              fields.kulinarik.map((company) => (
+                <a
+                  href={company.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-inview
+                >
+                  <Image src={company.image.image} alt={company.image.alt} />
+                </a>
+              ))
+            }
+          </div>
+        </div>
+        <div id="office" class="group">
+          <h2 class="group-title" data-inview>Office</h2>
+          <div class="logos">
+            {
+              fields.office.map((company) => (
+                <a
+                  href={company.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-inview
+                >
+                  <Image src={company.image.image} alt={company.image.alt} />
+                </a>
+              ))
+            }
           </div>
         </div>
       </div>

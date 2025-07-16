@@ -16,7 +16,7 @@ const [page] = await getCollection('pageHome');
       <ModuleIntro fields={page.data.moduleIntro} />
     </section>
     <section class="section">
-      <ModuleCompanies fields={undefined} />
+      <ModuleCompanies fields={page.data.moduleCompanies} />
     </section>
     <section id="newsevents" class="section">
       <ModuleEvents fields={page.data.moduleEvents} />

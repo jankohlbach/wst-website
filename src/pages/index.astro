@@ -5,6 +5,7 @@ import Layout from '../layouts/Layout.astro';
 import ModuleIntro from '../components/ModuleIntro.astro';
 import ModuleEvents from '../components/ModuleEvents.astro';
 import ModuleKeywords from '../components/ModuleKeywords.astro';
+import ModuleCompanies from '../components/ModuleCompanies.astro';
 
 const [page] = await getCollection('pageHome');
 ---
@@ -13,6 +14,9 @@ const [page] = await getCollection('pageHome');
   <main class="home">
     <section>
       <ModuleIntro fields={page.data.moduleIntro} />
+    </section>
+    <section class="section">
+      <ModuleCompanies fields={undefined} />
     </section>
     <section id="newsevents" class="section">
       <ModuleEvents fields={page.data.moduleEvents} />

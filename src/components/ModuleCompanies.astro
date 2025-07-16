@@ -1,0 +1,156 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+type ModuleCompanies = CollectionEntry<'pageHome'>['data']['moduleCompanies'];
+
+interface Props {
+  fields: ModuleCompanies;
+}
+
+import { Image } from 'astro:assets';
+
+import dummyImage from '../media/logo.jpg';
+
+// const { fields } = Astro.props;
+---
+
+<script>
+  import { lenis } from '../scripts/scroll';
+
+  const pinnedCard = document.querySelector('[data-js="pinned-card"]');
+  const maskedContent: HTMLElement | null = document.querySelector(
+    '[data-js="masked-content"]',
+  );
+
+  if (pinnedCard && maskedContent) {
+    lenis.on('scroll', () => {
+      const dist =
+        pinnedCard.getBoundingClientRect().top -
+        maskedContent.getBoundingClientRect().top;
+      maskedContent.style.setProperty('--pinned-card-top', `${dist}px`);
+    });
+  }
+</script>
+
+<div class="companies module">
+  <div class="background-wrap">
+    <Image src={dummyImage} alt="Logo" class="background" />
+  </div>
+  <div class="container">
+    <div class="card-container">
+      <div class="card" data-js="pinned-card"></div>
+      <div class="content" data-js="masked-content">
+        <div class="group">
+          <h2 class="group-title" data-inview>Shopping</h2>
+          <div class="logos">
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <Image src={dummyImage} alt="Logo" data-inview />
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <Image src={dummyImage} alt="Logo" data-inview />
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <Image src={dummyImage} alt="Logo" data-inview />
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <Image src={dummyImage} alt="Logo" data-inview />
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <Image src={dummyImage} alt="Logo" data-inview />
+            </a>
+          </div>
+        </div>
+        <div class="group">
+          <h2 class="group-title" data-inview>Living</h2>
+          <div class="logos">
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <Image src={dummyImage} alt="Logo" data-inview />
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <Image src={dummyImage} alt="Logo" data-inview />
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <Image src={dummyImage} alt="Logo" data-inview />
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <Image src={dummyImage} alt="Logo" data-inview />
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <Image src={dummyImage} alt="Logo" data-inview />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style lang="scss">
+  .companies {
+    position: relative;
+    padding-block: 10svh;
+  }
+
+  .background-wrap {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .background {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100svh;
+    object-fit: cover;
+  }
+
+  .card-container {
+    display: grid;
+    width: min(100%, 650px);
+    margin-left: auto;
+    color: var(--c-dark);
+  }
+
+  .card,
+  .content {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+  }
+
+  .card {
+    position: sticky;
+    top: 18svh;
+    height: 80svh;
+    background-color: var(--c-light);
+    border-radius: var(--br-default);
+  }
+
+  .content {
+    z-index: 1;
+    padding: clamp-fluid(16, 64);
+    clip-path: rect(
+      var(--pinned-card-top, 0px) auto calc(80svh + var(--pinned-card-top, 0px))
+        0
+    );
+  }
+
+  .group {
+    + .group {
+      margin-top: clamp-fluid(48, 64);
+    }
+  }
+
+  .group-title {
+    font-size: clamp-fluid(32, 64);
+    text-transform: uppercase;
+  }
+
+  .logos {
+    margin-top: clamp-fluid(32, 48);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: clamp-fluid(32, 48) clamp-fluid(16, 32);
+  }
+</style>

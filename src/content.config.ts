@@ -53,6 +53,8 @@ const pageHome = defineCollection({
       video: z.string(),
       content: z.string(),
     }),
+    moduleCompanies: z.object({
+    }).optional(),
     moduleEvents: z.object({
       title: z.string(),
       events: z.array(

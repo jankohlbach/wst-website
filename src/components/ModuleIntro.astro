@@ -18,9 +18,9 @@ const parsedContent = await marked(fields.content);
   import { gsap } from 'gsap';
   import { ScrollTrigger, Flip } from 'gsap/all';
 
-  const mm = gsap.matchMedia();
-
   gsap.registerPlugin(ScrollTrigger, Flip);
+
+  const mm = gsap.matchMedia();
 
   const intro = document.querySelector('[data-js="intro"]');
   const video = intro?.querySelector('video');

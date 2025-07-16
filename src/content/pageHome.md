@@ -20,10 +20,66 @@ moduleIntro:
     öffentlichen Verkehrsmitteln laden Sie zum nächsten Besuch bei uns ein.
 moduleCompanies:
   shopping:
-    - link: link
+    - link: https://www.sentner-schmuck.de
       image:
         image: ../media/logo.jpg
-        alt: alt text
+        alt: Sentner Schmuck Logo
+    - link: https://bassmann-optik.de
+      image:
+        image: ../media/logo.jpg
+        alt: Bassmann Optik Logo
+    - link: https://sarawinter-schmuck.de
+      image:
+        image: ../media/logo.jpg
+        alt: Sara Winter Logo
+    - link: https://www.staudt-mode.de
+      image:
+        image: ../media/logo.jpg
+        alt: Staudt Mode Logo
+    - link: https://www.glore.de/Concept-Stores/Karlsruhe
+      image:
+        image: ../media/logo.jpg
+        alt: Glore Logo
+    - link: https://radundtat.net
+      image:
+        image: ../media/logo.jpg
+        alt: Rad und Tat Logo
+    - link: https://www.facebook.com/dosul.store
+      image:
+        image: ../media/logo.jpg
+        alt: do Sul Logo
+    - link: https://www.minette-store.de
+      image:
+        image: ../media/logo.jpg
+        alt: Minette Logo
+    - link: https://www.luis-karlsruhe.de
+      image:
+        image: ../media/logo.jpg
+        alt: Luis Logo
+    - link: https://feinkost-karlsruhe.de
+      image:
+        image: ../media/logo.jpg
+        alt: el corazón Logo
+    - link: https://dupario.de
+      image:
+        image: ../media/logo.jpg
+        alt: dupario Logo
+    - link: https://www.karlsruhe-erleben.de/attraktion/goldschmiede-nitzschke-793c073f41
+      image:
+        image: ../media/logo.jpg
+        alt: Goldschmiede Nitzschke Logo
+    - link: https://www.google.com/maps/place/Schneiderei''Avanti''/@49.0072994,8.38985,17z/data=!3m1!4b1!4m6!3m5!1s0x4797076ef614ae37:0x15dae01c57d6912d!8m2!3d49.0072994!4d8.38985!16s%2Fg%2F11h6ngg9dv?entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoASAFQAw%3D%3D
+      image:
+        image: ../media/logo.jpg
+        alt: Schneiderei Avanti Logo
+    - link: https://www.instagram.com/kontr.ast_shop
+      image:
+        image: ../media/logo.jpg
+        alt: kontr:AST Logo
+    - link: https://www.instagram.com/avantgardeexclusive/?hl=en
+      image:
+        image: ../media/logo.jpg
+        alt: CEPAKA Logo
   living:
     - link: link
       image:

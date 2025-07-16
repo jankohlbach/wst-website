@@ -9,7 +9,7 @@ interface Props {
 
 import { Image } from 'astro:assets';
 
-import dummyImage from '../media/logo.jpg';
+import dummyImage from '../media/waldstrassenfest.webp';
 
 const { fields } = Astro.props;
 ---
@@ -17,17 +17,29 @@ const { fields } = Astro.props;
 <script>
   import { lenis } from '../scripts/scroll';
 
-  const pinnedCard = document.querySelector('[data-js="pinned-card"]');
+  const pinnedCard: HTMLElement | null = document.querySelector(
+    '[data-js="pinned-card"]',
+  );
   const maskedContent: HTMLElement | null = document.querySelector(
     '[data-js="masked-content"]',
   );
 
   if (pinnedCard && maskedContent) {
     lenis.on('scroll', () => {
-      const dist =
-        pinnedCard.getBoundingClientRect().top -
-        maskedContent.getBoundingClientRect().top;
+      const pinnedCartRect = pinnedCard.getBoundingClientRect();
+      const maskedContentRect = maskedContent.getBoundingClientRect();
+
+      const dist = pinnedCartRect.top - maskedContentRect.top;
       maskedContent.style.setProperty('--pinned-card-top', `${dist}px`);
+
+      const maxScrollDistance =
+        maskedContentRect.height - pinnedCartRect.height;
+
+      const scrollProgress =
+        100 -
+        Math.max(0, Math.min(100, (Math.abs(dist) / maxScrollDistance) * 100));
+
+      pinnedCard.style.setProperty('--clip-progress', `${scrollProgress}%`);
     });
   }
 </script>
@@ -116,7 +128,8 @@ const { fields } = Astro.props;
 <style lang="scss">
   .companies {
     position: relative;
-    padding-block: 10svh;
+    padding-top: 18svh;
+    padding-bottom: 2svh;
   }
 
   .background-wrap {
@@ -137,6 +150,7 @@ const { fields } = Astro.props;
   .card-container {
     display: grid;
     width: min(100%, 650px);
+    padding-right: clamp-fluid(16, 32);
     margin-left: auto;
     color: var(--c-dark);
   }
@@ -153,6 +167,38 @@ const { fields } = Astro.props;
     height: 80svh;
     background-color: var(--c-light);
     border-radius: var(--br-default);
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: clamp-fluid(16, 32);
+      height: 100%;
+      background: linear-gradient(
+        to bottom,
+        var(--c-pink) 0%,
+        var(--c-pink) 25%,
+        var(--c-green) 25%,
+        var(--c-green) 50%,
+        var(--c-orange) 50%,
+        var(--c-orange) 75%,
+        var(--c-blue) 75%,
+        var(--c-blue) 100%
+      );
+      border-radius: inherit;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    &::before {
+      opacity: 0.5;
+    }
+
+    &::after {
+      clip-path: inset(0 0 var(--clip-progress, 0%) 0);
+    }
   }
 
   .content {

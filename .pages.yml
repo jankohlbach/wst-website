@@ -124,6 +124,9 @@ content:
       - name: moduleIntro
         label: Intro
         component: moduleIntro
+      - name: moduleCompanies
+        label: Companies
+        component: moduleCompanies
       - name: moduleEvents
         label: Events
         component: moduleEvents
@@ -203,6 +206,25 @@ components:
         label: Content
         type: rich-text
         required: true
+
+  moduleCompanies:
+    type: object
+    fields:
+      - name: shopping
+        label: Shopping
+        type: object
+        list:
+          min: 1
+          collapsible:
+            summary: Company
+        fields:
+          - name: link
+            label: Link
+            type: string
+            required: true
+          - name: image
+            label: Image
+            component: utilImage
 
   moduleEvents:
     type: object

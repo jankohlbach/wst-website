@@ -232,7 +232,7 @@ moduleCompanies:
       image:
         image: ../media/logo.jpg
         alt: Issaka Holzbau Logo
-      category: Bau
+      category: Konstruktion
     - link: https://k46.team
       image:
         image: ../media/logo.jpg

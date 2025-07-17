@@ -37,9 +37,11 @@ const { fields } = Astro.props;
       .timeline({
         scrollTrigger: {
           trigger: backgroundImage,
-          start: 'top 50%',
-          end: 'top top',
+          start: 'top top',
+          endTrigger: maskedContent,
+          end: 'top 50%',
           scrub: true,
+          markers: true,
         },
       })
       .to(backgroundImage, {
@@ -210,6 +212,7 @@ const { fields } = Astro.props;
   .card-container {
     display: grid;
     width: min(100%, 650px);
+    padding-top: 100svh;
     margin-left: auto;
     color: var(--c-dark);
   }

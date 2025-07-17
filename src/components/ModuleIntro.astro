@@ -44,6 +44,7 @@ const parsedContent = await marked(fields.content);
       tl.add(
         Flip.from(state, {
           scale: true,
+          ease: 'power1.inOut',
         }),
       );
     }

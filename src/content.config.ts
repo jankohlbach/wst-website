@@ -61,6 +61,7 @@ const pageHome = defineCollection({
             image: image(),
             alt: z.string(),
           }),
+          category: z.string(),
         }),
       ),
       living: z.array(
@@ -70,6 +71,7 @@ const pageHome = defineCollection({
             image: image(),
             alt: z.string(),
           }),
+          category: z.string(),
         }),
       ),
       kulinarik: z.array(
@@ -79,6 +81,7 @@ const pageHome = defineCollection({
             image: image(),
             alt: z.string(),
           }),
+          category: z.string(),
         }),
       ),
       office: z.array(
@@ -88,6 +91,7 @@ const pageHome = defineCollection({
             image: image(),
             alt: z.string(),
           }),
+          category: z.string(),
         }),
       ),
     }),

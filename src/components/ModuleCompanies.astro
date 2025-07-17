@@ -9,7 +9,7 @@ interface Props {
 
 import { Image } from 'astro:assets';
 
-import mapImage from '../content/map.webp';
+import MapImage from '../content/map.svg';
 
 const { fields } = Astro.props;
 ---
@@ -22,9 +22,7 @@ const { fields } = Astro.props;
 
   gsap.registerPlugin(ScrollTrigger);
 
-  const backgroundImage: HTMLElement | null = document.querySelector(
-    '[data-js="background-image"]',
-  );
+  const map: HTMLElement | null = document.querySelector('[data-js="map"]');
   const pinnedCard: HTMLElement | null = document.querySelector(
     '[data-js="pinned-card"]',
   );
@@ -32,23 +30,69 @@ const { fields } = Astro.props;
     '[data-js="masked-content"]',
   );
 
-  if (backgroundImage && pinnedCard && maskedContent) {
+  if (map && pinnedCard && maskedContent) {
+    const progressStop1 = parseInt(
+      pinnedCard.style.getPropertyValue('--progress-stop-1'),
+    );
+    const progressStop2 = parseInt(
+      pinnedCard.style.getPropertyValue('--progress-stop-2'),
+    );
+    const progressStop3 = parseInt(
+      pinnedCard.style.getPropertyValue('--progress-stop-3'),
+    );
+
+    const pins: NodeListOf<HTMLElement> =
+      map.querySelectorAll('[data-js^="pin-"]');
+
+    let currentSection = '';
+
+    const resetPins = () => {
+      return gsap.to(pins, {
+        scale: 0,
+        autoAlpha: 0,
+        transformOrigin: 'center bottom',
+        duration: 0.2,
+        stagger: 0.02,
+        ease: 'power2.inOut',
+      });
+    };
+
+    const animatePins = (pins: HTMLElement[]) => {
+      gsap.fromTo(
+        pins,
+        {
+          scale: 0,
+          autoAlpha: 0,
+          transformOrigin: 'center bottom',
+        },
+        {
+          scale: 1,
+          autoAlpha: 1,
+          transformOrigin: 'center bottom',
+          duration: 0.3,
+          stagger: 0.025,
+        },
+      );
+    };
+
+    resetPins();
+
     gsap
       .timeline({
         scrollTrigger: {
-          trigger: backgroundImage,
+          trigger: map,
           start: 'top top',
           endTrigger: maskedContent,
           end: 'top 50%',
           scrub: true,
         },
       })
-      .to(backgroundImage, {
+      .to(map, {
         scale: 1.5,
         ease: 'power1.inOut',
       });
 
-    lenis.on('scroll', () => {
+    lenis.on('scroll', async () => {
       const pinnedCartRect = pinnedCard.getBoundingClientRect();
       const maskedContentRect = maskedContent.getBoundingClientRect();
 
@@ -58,22 +102,59 @@ const { fields } = Astro.props;
       const maxScrollDistance =
         maskedContentRect.height - pinnedCartRect.height;
 
-      const scrollProgress =
-        100 -
-        Math.max(0, Math.min(100, (Math.abs(dist) / maxScrollDistance) * 100));
+      const scrollProgress = Math.max(
+        0,
+        Math.min(100, (Math.abs(dist) / maxScrollDistance) * 100),
+      );
 
-      pinnedCard.style.setProperty('--clip-progress', `${scrollProgress}%`);
+      pinnedCard.style.setProperty(
+        '--clip-progress',
+        `${100 - scrollProgress}%`,
+      );
+
+      let newSection = '';
+
+      if (scrollProgress >= 100) {
+        newSection = 'all';
+      } else if (scrollProgress > progressStop3) {
+        newSection = 'office';
+      } else if (scrollProgress > progressStop2) {
+        newSection = 'kulinarik';
+      } else if (scrollProgress > progressStop1) {
+        newSection = 'living';
+      } else if (scrollProgress > 0) {
+        newSection = 'shopping';
+      } else {
+        newSection = 'none';
+      }
+
+      if (newSection !== currentSection) {
+        currentSection = newSection;
+
+        if (newSection === 'all') {
+          await resetPins();
+          animatePins([...pins]);
+        } else if (newSection === 'none') {
+          resetPins();
+        } else {
+          await resetPins();
+          animatePins(
+            [...pins].filter(
+              (pin) => pin.dataset.js === `pin-${currentSection}`,
+            ),
+          );
+        }
+      }
     });
   }
 </script>
 
 <div class="companies module">
   <div class="background-wrap">
-    <Image
-      src={mapImage}
-      alt="Karte von Karlsruhe mit der Waldstraße visuell hervorgehoben"
+    <MapImage
+      aria-label="Karte von Karlsruhe mit der Waldstraße visuell hervorgehoben"
       class="background"
-      data-js="background-image"
+      data-js="map"
     />
   </div>
   <div class="container">
@@ -183,6 +264,10 @@ const { fields } = Astro.props;
 </div>
 
 <style lang="scss">
+  [id] {
+    scroll-margin-top: 20svh;
+  }
+
   .companies {
     position: relative;
     padding-top: 18svh;

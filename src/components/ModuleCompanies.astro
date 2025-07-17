@@ -50,7 +50,16 @@ const { fields } = Astro.props;
   </div>
   <div class="container">
     <div class="card-container">
-      <div class="card" data-js="pinned-card"></div>
+      <div
+        class="card"
+        style={`
+          --progress-stop-1: ${((fields.shopping.length / (fields.shopping.length + fields.living.length + fields.kulinarik.length + fields.office.length)) * 100).toFixed(0)}%;
+          --progress-stop-2: ${(((fields.shopping.length + fields.living.length) / (fields.shopping.length + fields.living.length + fields.kulinarik.length + fields.office.length)) * 100).toFixed(0)}%;
+          --progress-stop-3: ${(((fields.shopping.length + fields.living.length + fields.kulinarik.length) / (fields.shopping.length + fields.living.length + fields.kulinarik.length + fields.office.length)) * 100).toFixed(0)}%;
+        `}
+        data-js="pinned-card"
+      >
+      </div>
       <div class="content" data-js="masked-content">
         <div id="shopping" class="group">
           <h2 class="group-title" data-inview>Shopping</h2>
@@ -170,7 +179,6 @@ const { fields } = Astro.props;
   .card-container {
     display: grid;
     width: min(100%, 650px);
-    padding-right: clamp-fluid(16, 32);
     margin-left: auto;
     color: var(--c-dark);
   }
@@ -199,12 +207,12 @@ const { fields } = Astro.props;
       background: linear-gradient(
         to bottom,
         var(--c-pink) 0%,
-        var(--c-pink) 25%,
-        var(--c-green) 25%,
-        var(--c-green) 50%,
-        var(--c-orange) 50%,
-        var(--c-orange) 75%,
-        var(--c-blue) 75%,
+        var(--c-pink) var(--progress-stop-1, 25%),
+        var(--c-green) var(--progress-stop-1, 25%),
+        var(--c-green) var(--progress-stop-2, 50%),
+        var(--c-orange) var(--progress-stop-2, 50%),
+        var(--c-orange) var(--progress-stop-3, 75%),
+        var(--c-blue) var(--progress-stop-3, 75%),
         var(--c-blue) 100%
       );
       border-radius: inherit;
@@ -223,7 +231,8 @@ const { fields } = Astro.props;
 
   .content {
     z-index: 1;
-    padding: clamp-fluid(16, 64);
+    padding: clamp-fluid(24, 64);
+    padding-right: clamp-fluid(32, 64);
     clip-path: rect(
       var(--pinned-card-top, 0px) auto calc(80svh + var(--pinned-card-top, 0px))
         0
@@ -259,6 +268,7 @@ const { fields } = Astro.props;
     margin-top: clamp-fluid(8, 16);
     font-size: clamp-fluid(14, 18);
     font-weight: var(--fw-light);
+    line-height: 1.1;
     text-transform: uppercase;
     text-align: center;
   }

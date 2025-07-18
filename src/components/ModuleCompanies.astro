@@ -93,14 +93,14 @@ const { fields } = Astro.props;
       });
 
     lenis.on('scroll', async () => {
-      const pinnedCartRect = pinnedCard.getBoundingClientRect();
+      const pinnedCardRect = pinnedCard.getBoundingClientRect();
       const maskedContentRect = maskedContent.getBoundingClientRect();
 
-      const dist = pinnedCartRect.top - maskedContentRect.top;
+      const dist = pinnedCardRect.top - maskedContentRect.top;
       maskedContent.style.setProperty('--pinned-card-top', `${dist}px`);
 
       const maxScrollDistance =
-        maskedContentRect.height - pinnedCartRect.height;
+        maskedContentRect.height - pinnedCardRect.height;
 
       const scrollProgress = Math.max(
         0,
@@ -112,37 +112,50 @@ const { fields } = Astro.props;
         `${100 - scrollProgress}%`,
       );
 
-      let newSection = '';
+      if (window.innerWidth >= 1024) {
+        let newSection = '';
 
-      if (scrollProgress >= 100) {
-        newSection = 'all';
-      } else if (scrollProgress > progressStop3) {
-        newSection = 'office';
-      } else if (scrollProgress > progressStop2) {
-        newSection = 'kulinarik';
-      } else if (scrollProgress > progressStop1) {
-        newSection = 'living';
-      } else if (scrollProgress > 0) {
-        newSection = 'shopping';
-      } else {
-        newSection = 'none';
-      }
-
-      if (newSection !== currentSection) {
-        currentSection = newSection;
-
-        if (newSection === 'all') {
-          await resetPins();
-          animatePins([...pins]);
-        } else if (newSection === 'none') {
-          resetPins();
+        if (scrollProgress >= 100) {
+          newSection = 'all';
+        } else if (scrollProgress > progressStop3) {
+          newSection = 'office';
+        } else if (scrollProgress > progressStop2) {
+          newSection = 'kulinarik';
+        } else if (scrollProgress > progressStop1) {
+          newSection = 'living';
+        } else if (scrollProgress > 0) {
+          newSection = 'shopping';
         } else {
-          await resetPins();
-          animatePins(
-            [...pins].filter(
-              (pin) => pin.dataset.js === `pin-${currentSection}`,
-            ),
-          );
+          newSection = 'none';
+        }
+
+        if (newSection !== currentSection) {
+          currentSection = newSection;
+
+          if (newSection === 'all') {
+            await resetPins();
+            animatePins([...pins]);
+          } else if (newSection === 'none') {
+            resetPins();
+          } else {
+            await resetPins();
+            animatePins(
+              [...pins].filter(
+                (pin) => pin.dataset.js === `pin-${currentSection}`,
+              ),
+            );
+          }
+        }
+      } else {
+        if (pinnedCardRect.top < window.innerHeight && !currentSection) {
+          animatePins([...pins]);
+          currentSection = 'all';
+        } else if (
+          pinnedCardRect.top >= window.innerHeight &&
+          currentSection !== ''
+        ) {
+          resetPins();
+          currentSection = '';
         }
       }
     });
@@ -290,7 +303,7 @@ const { fields } = Astro.props;
     height: 100svh;
     object-fit: cover;
     object-position: left bottom;
-    transform-origin: left bottom;
+    transform-origin: to-rem(225) bottom;
   }
 
   .card-container {

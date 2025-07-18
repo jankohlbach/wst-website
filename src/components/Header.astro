@@ -7,19 +7,62 @@ import Socials from './Socials.astro';
 ---
 
 <script>
+  const menuDesktop = document.querySelector('[data-js="nav-desktop"]');
+  const linksDesktop = menuDesktop?.querySelectorAll('a');
   const menuMobile = document.querySelector('[data-js="menu-mobile"]');
   const menuTrigger = menuMobile?.querySelector('[data-js="menu-trigger"]');
-  const mobileLinks = menuMobile?.querySelectorAll('a');
+  const linksMobile = menuMobile?.querySelectorAll('a');
 
   menuTrigger?.addEventListener('click', () => {
     menuMobile?.classList.toggle('is-open');
   });
 
-  mobileLinks?.forEach((link) => {
+  linksMobile?.forEach((link) => {
     link.addEventListener('click', () => {
       menuMobile?.classList.remove('is-open');
     });
   });
+
+  const initLanternObserver = () => {
+    const sections: Element[] = [];
+
+    linksDesktop?.forEach((link) => {
+      const section = document.querySelector(link.hash);
+      if (section) sections.push(section);
+    });
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const sectionId = entry.target.id;
+
+          if (entry.isIntersecting) {
+            linksDesktop?.forEach((link) => link.classList.remove('is-active'));
+
+            linksDesktop?.forEach((link) => {
+              if (link.hash === `#${sectionId}`) {
+                link.classList.add('is-active');
+              }
+            });
+          } else {
+            linksDesktop?.forEach((link) => {
+              if (link.hash === `#${sectionId}`) {
+                link.classList.remove('is-active');
+              }
+            });
+          }
+        });
+      },
+      {
+        rootMargin: '-20% 0% -60% 0%',
+        threshold: 0.1,
+      },
+    );
+
+    sections.forEach((section) => observer.observe(section));
+  };
+
+  initLanternObserver();
 </script>
 
 <header>
@@ -27,7 +70,7 @@ import Socials from './Socials.astro';
     <a href="/" class="logo" aria-label="Zur Startseite">
       <Image src={header.logo.image} alt={header.logo.alt} />
     </a>
-    <nav class="nav-desktop">
+    <nav class="nav-desktop" data-js="nav-desktop">
       <svg class="string" viewBox="0 0 1434 135" fill="none" aria-hidden="true">
         <path
           d="M2 103C373 145 868.5 167 1432 2"
@@ -345,7 +388,8 @@ import Socials from './Socials.astro';
       transition: box-shadow var(--ease-smooth) 0.4s;
 
       @include has-hover {
-        &:hover {
+        &:hover,
+        &:has(.lantern-link.is-active) {
           box-shadow: 0 0 to-rem(50) color(from var(--color) srgb r g b / 0.7);
         }
       }

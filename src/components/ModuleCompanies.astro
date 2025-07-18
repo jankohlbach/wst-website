@@ -97,7 +97,6 @@ const { fields } = Astro.props;
       const maskedContentRect = maskedContent.getBoundingClientRect();
 
       const dist = pinnedCardRect.top - maskedContentRect.top;
-      maskedContent.style.setProperty('--pinned-card-top', `${dist}px`);
 
       const maxScrollDistance =
         maskedContentRect.height - pinnedCardRect.height;
@@ -283,8 +282,6 @@ const { fields } = Astro.props;
 
   .companies {
     position: relative;
-    padding-top: 18svh;
-    padding-bottom: 2svh;
   }
 
   .background-wrap {
@@ -322,8 +319,8 @@ const { fields } = Astro.props;
 
   .card {
     position: sticky;
-    top: 18svh;
-    height: 80svh;
+    top: 0;
+    height: 100dvh;
     background-color: var(--c-light);
     border-radius: var(--br-default);
 
@@ -364,10 +361,6 @@ const { fields } = Astro.props;
     z-index: 1;
     padding: clamp-fluid(24, 64);
     padding-right: clamp-fluid(32, 64);
-    clip-path: rect(
-      var(--pinned-card-top, 0px) auto calc(80svh + var(--pinned-card-top, 0px))
-        0
-    );
   }
 
   .group {

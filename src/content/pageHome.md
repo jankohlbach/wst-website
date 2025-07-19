@@ -98,62 +98,62 @@ moduleCompanies:
   living:
     - link: https://www.roter-punkt.de
       image:
-        image: ../media/logo.jpg
+        image: ../media/logos-living/RoterPunkt_weiss.webp
         alt: roter punkt Logo
       category: Art
     - link: https://www.ergonomie-und-wohnen.de
       image:
-        image: ../media/logo.jpg
+        image: ../media/logos-living/ErgonomieUndWohnen-2048x274.webp
         alt: Ergonomie und Wohnen Logo
       category: Interior Design
     - link: https://pfeiffer-may.de/ausstellungen/stil-impulse
       image:
-        image: ../media/logo.jpg
+        image: ../media/logos-living/Stilimpulse.webp
         alt: Stil Impulse Logo
       category: Interior Design
     - link: https://kreischer-hairstyling.de
       image:
-        image: ../media/logo.jpg
+        image: ../media/logos-living/SimoneKreischer.webp
         alt: Kreischer Hairstyling Logo
       category: Friseur
     - link: https://www.marvin-meyer.art
       image:
-        image: ../media/logo.jpg
+        image: ../media/logos-living/MarvinMeyerArt.webp
         alt: Marvin Meyer Art Logo
       category: Art
     - link: https://serkansari.de
       image:
-        image: ../media/logo.jpg
+        image: ../media/logos-living/serkan-sari.webp
         alt: Serkan Sari Logo
       category: Art
     - link: https://www.burger.de
       image:
-        image: ../media/logo.jpg
+        image: ../media/logos-living/Burger_weiss.webp
         alt: Burger Logo
       category: Interior Design
     - link: https://www.donato-haircreations.de
       image:
-        image: ../media/logo.jpg
+        image: ../media/logos-living/Donato.webp
         alt: Donato Haircreations Logo
       category: Friseur
     - link: https://www.galerie-elwert.de
       image:
-        image: ../media/logo.jpg
+        image: ../media/logos-living/GalerieElwert_weiss.webp
         alt: Galerie Elwert Logo
       category: Art
     - link: https://www.hofmeister.de/standort-karlsruhe
       image:
-        image: ../media/logo.jpg
+        image: ../media/logos-living/hofmeister.webp
         alt: Hofmeister Logo
       category: Interior Design
     - link: https://www.galeriemarkaj.com
       image:
-        image: ../media/logo.jpg
+        image: ../media/logos-living/galerie-markaj.webp
         alt: Galerie Markaj Logo
       category: Art
     - link: https://www.achtsam-sensibel.de
       image:
-        image: ../media/logo.jpg
+        image: ../media/logos-living/achtsam-sensibel.webp
         alt: Achtsam Sensibel Logo
       category: Coaching
   kulinarik:

@@ -159,47 +159,47 @@ moduleCompanies:
   kulinarik:
     - link: https://www.instagram.com/espressobar_karlsruhe
       image:
-        image: ../media/logo.jpg
+        image: ../media/logos-kulinarik/Esspressobar_weiss.webp
         alt: Espressobar Logo
       category: Café
     - link: https://www.tascadojose.de
       image:
-        image: ../media/logo.jpg
+        image: ../media/logos-kulinarik/TascadoJose.webp
         alt: Tasca do José Logo
       category: Restaurant
     - link: https://www.stoevchen.com
       image:
-        image: ../media/logo.jpg
+        image: ../media/logos-kulinarik/stoevchen-logo-2.webp
         alt: Stövchen Logo
       category: Restaurant
     - link: http://www.dersaftladen.de
       image:
-        image: ../media/logo.jpg
+        image: ../media/logos-kulinarik/DerSaftladen.webp
         alt: Café mit Flair Logo
       category: Café
     - link: https://www.astartcafe.com
       image:
-        image: ../media/logo.jpg
+        image: ../media/logos-kulinarik/ast-art-cafe.webp
         alt: Ast Art Café Logo
       category: Café
     - link: https://www.karlsruhe-erleben.de/media/gastronomie/Le-Renard#/article/2e9df15c-06d8-4734-8c57-5430815b5736
       image:
-        image: ../media/logo.jpg
+        image: ../media/logos-kulinarik/LeRenard.webp
         alt: Le Renard Bistro Logo
       category: Café
     - link: https://www.brickandbone.de
       image:
-        image: ../media/logo.jpg
+        image: ../media/logos-kulinarik/BrickandBone.webp
         alt: Brick + Bone Logo
       category: Restaurant
     - link: https://www.yollie.cafe
       image:
-        image: ../media/logo.jpg
+        image: ../media/logos-kulinarik/Yollie_weiss.webp
         alt: Yollie Café Logo
       category: Café
     - link: http://www.pomodoro-karlsruhe.de
       image:
-        image: ../media/logo.jpg
+        image: ../media/logos-kulinarik/Pomodoro_weiss.webp
         alt: Pomodoro Logo
       category: Restaurant
   office:

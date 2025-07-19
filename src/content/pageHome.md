@@ -22,77 +22,77 @@ moduleCompanies:
   shopping:
     - link: https://www.sentner-schmuck.de
       image:
-        image: ../media/logo.jpg
+        image: ../media/logos-shopping/Sentners-1.webp
         alt: Sentner Schmuck Logo
       category: Schmuck
     - link: https://bassmann-optik.de
       image:
-        image: ../media/logo.jpg
+        image: ../media/logos-shopping/BassmannOptik-2048x338.webp
         alt: Bassmann Optik Logo
       category: Optik
     - link: https://sarawinter-schmuck.de
       image:
-        image: ../media/logo.jpg
+        image: ../media/logos-shopping/SaraWinter.webp
         alt: Sara Winter Schmuck Logo
       category: Fashion
     - link: https://www.staudt-mode.de
       image:
-        image: ../media/logo.jpg
+        image: ../media/logos-shopping/Staudt.webp
         alt: Staudt Mode Logo
       category: Fashion
     - link: https://www.glore.de/Concept-Stores/Karlsruhe
       image:
-        image: ../media/logo.jpg
+        image: ../media/logos-shopping/Glore-2048x1221.webp
         alt: Glore Logo
       category: Fashion
     - link: https://radundtat.net
       image:
-        image: ../media/logo.jpg
+        image: ../media/logos-shopping/RadundTat.webp
         alt: Rad und Tat Logo
       category: Outdoor
     - link: https://www.facebook.com/dosul.store
       image:
-        image: ../media/logo.jpg
+        image: ../media/logos-shopping/doSul_weiss.webp
         alt: do Sul Logo
       category: Concept Store
     - link: https://www.minette-store.de
       image:
-        image: ../media/logo.jpg
+        image: ../media/logos-shopping/Minette.webp
         alt: Minette Logo
       category: Fashion
     - link: https://www.luis-karlsruhe.de
       image:
-        image: ../media/logo.jpg
+        image: ../media/logos-shopping/Luis-2048x288.webp
         alt: Luis Logo
       category: Fashion
     - link: https://feinkost-karlsruhe.de
       image:
-        image: ../media/logo.jpg
+        image: ../media/logos-shopping/el-corazon-karlsruhe-logo.webp
         alt: el corazón Logo
       category: Feinkost
     - link: https://dupario.de
       image:
-        image: ../media/logo.jpg
+        image: ../media/logos-shopping/dupario-logo.webp
         alt: dupario Logo
       category: Parfum
     - link: https://www.karlsruhe-erleben.de/attraktion/goldschmiede-nitzschke-793c073f41
       image:
-        image: ../media/logo.jpg
+        image: ../media/logos-shopping/goldschmiede-nitschke.webp
         alt: Goldschmiede Nitzschke Logo
       category: Fashion
     - link: https://www.google.com/maps/place/Schneiderei''Avanti''/@49.0072994,8.38985,17z/data=!3m1!4b1!4m6!3m5!1s0x4797076ef614ae37:0x15dae01c57d6912d!8m2!3d49.0072994!4d8.38985!16s%2Fg%2F11h6ngg9dv?entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoASAFQAw%3D%3D
       image:
-        image: ../media/logo.jpg
+        image: ../media/logos-shopping/schneiderei-avanti.webp
         alt: Schneiderei Avanti Logo
       category: Fashion
     - link: https://www.instagram.com/kontr.ast_shop
       image:
-        image: ../media/logo.jpg
+        image: ../media/logos-shopping/kontrast-logo.webp
         alt: kontrast Logo
       category: Art
     - link: https://www.instagram.com/avantgardeexclusive/?hl=en
       image:
-        image: ../media/logo.jpg
+        image: ../media/logos-shopping/cepaka.webp
         alt: CEPAKA Logo
       category: Fashion
   living:

@@ -365,7 +365,7 @@ const { fields } = Astro.props;
 
   .group {
     + .group {
-      margin-top: clamp-fluid(48, 64);
+      margin-top: clamp-fluid(80, 100);
     }
   }
 
@@ -378,7 +378,7 @@ const { fields } = Astro.props;
     margin-top: clamp-fluid(32, 48);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: clamp-fluid(32, 48) clamp-fluid(16, 32);
+    gap: clamp-fluid(36, 54) clamp-fluid(16, 32);
   }
 
   .logo {
@@ -386,11 +386,27 @@ const { fields } = Astro.props;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+
+    a {
+      flex-grow: 1;
+      display: grid;
+      place-content: center;
+
+      @include has-hover {
+        &:hover img {
+          scale: 0.9;
+        }
+      }
+    }
+
+    img {
+      transition: scale 0.4s var(--ease-smooth);
+    }
   }
 
   .category {
-    margin-top: clamp-fluid(8, 16);
-    font-size: clamp-fluid(14, 18);
+    margin-top: clamp-fluid(12, 24);
+    font-size: clamp-fluid(14, 16);
     font-weight: var(--fw-light);
     line-height: 1.1;
     text-transform: uppercase;

@@ -205,37 +205,37 @@ moduleCompanies:
   office:
     - link: https://gerwinmedia.de
       image:
-        image: ../media/logo.jpg
+        image: ../media/logos-office/Gerwin_Media_Logo.webp
         alt: Gerwin Media Logo
       category: Media
     - link: https://syd.media
       image:
-        image: ../media/logo.jpg
+        image: ../media/logos-office/syd-media.webp
         alt: SYD Media Logo
       category: Media
     - link: https://einsagentur.de
       image:
-        image: ../media/logo.jpg
+        image: ../media/logos-office/einsagentur.webp
         alt: einsagentur Schäuble GmbH Logo
       category: Konzept
     - link: https://myimmofinanz.de
       image:
-        image: ../media/logo.jpg
+        image: ../media/logos-office/myimmofinanz.webp
         alt: MyImmoFinanz Logo
       category: Immobilien
     - link: https://ant-reisen.de/site/startseite
       image:
-        image: ../media/logo.jpg
+        image: ../media/logos-office/ant-reisen.webp
         alt: Antiochia Reisen Logo
       category: Reisen
     - link: https://www.issaka-holzbau.de
       image:
-        image: ../media/logo.jpg
+        image: ../media/logos-office/issaka-holzbau.webp
         alt: Issaka Holzbau Logo
       category: Konstruktion
     - link: https://k46.team
       image:
-        image: ../media/logo.jpg
+        image: ../media/logos-office/k46-logo.webp
         alt: K46 Logo
       category: Media
 moduleEvents:

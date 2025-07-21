@@ -206,6 +206,7 @@ import Socials from './Socials.astro';
     top: 0;
     z-index: var(--zi-header);
     width: calc(100% - var(--scroll-bar-width, 0px));
+    overflow-x: clip;
   }
 
   a {
@@ -364,7 +365,6 @@ import Socials from './Socials.astro';
     position: relative;
     flex-grow: 1;
     align-self: flex-start;
-    overflow-x: clip;
     scale: 1.25;
     translate: 0 to-rem(200);
     transition:

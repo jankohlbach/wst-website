@@ -33,6 +33,8 @@ export const scrollStart = () => {
   document.body.style.overflowY = ''
 };
 
+scrollStop();
+
 lenis.on('scroll', (e) => {
   ScrollTrigger.update();
 
@@ -49,11 +51,13 @@ lenis.on('scroll', (e) => {
   }
 });
 
-window.addEventListener('load', () => {
+window.addEventListener('intro:done', () => {
   if (window.location.hash) {
     const target = document.querySelector(window.location.hash);
     if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setTimeout(() => {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 500);
     }
   }
 })

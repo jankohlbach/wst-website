@@ -32,3 +32,9 @@ window.addEventListener('load', () => {
     initInViewTrigger({trigger: inviewTriggerNoOffset, offset: false});
   }
 });
+
+window.addEventListener('intro:done', () => {
+  document.querySelectorAll('[data-inview-manual]').forEach((el) => {
+    el.classList.add('inview');
+  });
+});

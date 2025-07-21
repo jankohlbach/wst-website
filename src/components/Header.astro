@@ -7,6 +7,9 @@ import Socials from './Socials.astro';
 ---
 
 <script>
+  import { scrollStart } from '../scripts/scroll.ts';
+
+  const header = document.querySelector('[data-js="header"]');
   const menuDesktop = document.querySelector('[data-js="nav-desktop"]');
   const linksDesktop = menuDesktop?.querySelectorAll('a');
   const menuMobile = document.querySelector('[data-js="menu-mobile"]');
@@ -63,11 +66,37 @@ import Socials from './Socials.astro';
   };
 
   initLanternObserver();
+
+  window.addEventListener('load', () => {
+    if (window.innerWidth < 1024) {
+      window.dispatchEvent(new Event('intro:done'));
+      scrollStart();
+    } else {
+      header?.classList.add('animate');
+      linksDesktop?.forEach((link, i) => {
+        setTimeout(
+          () => {
+            link.classList.add('is-active');
+
+            setTimeout(() => {
+              link.classList.remove('is-active');
+
+              if (i === linksDesktop.length - 1) {
+                window.dispatchEvent(new Event('intro:done'));
+                scrollStart();
+              }
+            }, 800);
+          },
+          400 + 100 * i,
+        );
+      });
+    }
+  });
 </script>
 
-<header>
+<header data-js="header">
   <div class="container">
-    <a href="/" class="logo" aria-label="Zur Startseite">
+    <a href="/" class="logo" aria-label="Zur Startseite" data-inview-manual>
       <Image src={header.logo.image} alt={header.logo.alt} />
     </a>
     <nav class="nav-desktop" data-js="nav-desktop">
@@ -76,7 +105,8 @@ import Socials from './Socials.astro';
           d="M2 103C373 145 868.5 167 1432 2"
           stroke="#FAFAFA"
           stroke-width="3"
-          stroke-linecap="round"></path>
+          stroke-linecap="round"
+          pathLength="1"></path>
       </svg>
       <ul class="lanterns">
         <li class="lantern">
@@ -116,7 +146,7 @@ import Socials from './Socials.astro';
         </li>
       </ul>
     </nav>
-    <div class="socials">
+    <div class="socials" data-inview-manual>
       <Socials />
     </div>
     <div class="menu-mobile" data-js="menu-mobile">
@@ -343,6 +373,12 @@ import Socials from './Socials.astro';
 
     .string {
       width: 100%;
+
+      path {
+        stroke-dasharray: 1;
+        stroke-dashoffset: 1;
+        transition: stroke-dashoffset 0.8s var(--ease-smooth);
+      }
     }
 
     .lanterns {
@@ -355,29 +391,37 @@ import Socials from './Socials.astro';
       --fluid-min: 1024;
       --fluid-max: 1920;
 
+      opacity: 0;
+      transition: opacity 0.4s var(--ease-smooth);
+
       &:nth-child(1) {
         translate: 0 clamp-fluid(-7, -19);
         rotate: 5deg;
+        transition-delay: 0.15s;
       }
 
       &:nth-child(2) {
         translate: 0 clamp-fluid(0, -2);
         rotate: 1deg;
+        transition-delay: 0.2s;
       }
 
       &:nth-child(3) {
         translate: 0 clamp-fluid(-2, -8);
         rotate: -4deg;
+        transition-delay: 0.25s;
       }
 
       &:nth-child(4) {
         translate: 0 clamp-fluid(-17, -42);
         rotate: -8deg;
+        transition-delay: 0.3s;
       }
 
       &:nth-child(5) {
         translate: 0 clamp-fluid(-44, -104);
         rotate: -13deg;
+        transition-delay: 0.35s;
       }
     }
 
@@ -490,6 +534,20 @@ import Socials from './Socials.astro';
             transition-delay: 0s;
           }
         }
+      }
+    }
+  }
+
+  header.animate {
+    .nav-desktop {
+      .string {
+        path {
+          stroke-dashoffset: 0;
+        }
+      }
+
+      .lantern {
+        opacity: 1;
       }
     }
   }

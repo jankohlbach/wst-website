@@ -6,8 +6,6 @@ import { general } from '../content/globals';
 import Cursor from '../components/Cursor.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-// import Splash from '../components/Splash.astro';
-// import Canvas from '../components/Canvas.astro';
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
@@ -84,10 +82,6 @@ const { pageTitle } = Astro.props;
     <slot />
 
     <Footer />
-
-    <!-- <Splash /> -->
-
-    <!-- <Canvas /> -->
     <script>
       import '../scripts/console.ts';
       import '../scripts/scroll.ts';

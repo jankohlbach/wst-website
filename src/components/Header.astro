@@ -27,6 +27,8 @@ import Socials from './Socials.astro';
   });
 
   const initLanternObserver = () => {
+    const cursor: HTMLElement | null =
+      document.querySelector('[data-js="cursor"]');
     const sections: Element[] = [];
 
     linksDesktop?.forEach((link) => {
@@ -45,12 +47,22 @@ import Socials from './Socials.astro';
             linksDesktop?.forEach((link) => {
               if (link.hash === `#${sectionId}`) {
                 link.classList.add('is-active');
+                cursor?.style.setProperty(
+                  '--color',
+                  getComputedStyle(link).getPropertyValue('--color'),
+                );
+                cursor?.style.setProperty(
+                  '--color-dark',
+                  getComputedStyle(link).getPropertyValue('--color-dark'),
+                );
               }
             });
           } else {
             linksDesktop?.forEach((link) => {
               if (link.hash === `#${sectionId}`) {
                 link.classList.remove('is-active');
+                cursor?.style.removeProperty('--color');
+                cursor?.style.removeProperty('--color-dark');
               }
             });
           }

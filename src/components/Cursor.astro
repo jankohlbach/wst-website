@@ -75,34 +75,54 @@
 </script>
 
 <div class="cursor" data-js="cursor" aria-hidden="true">
-  <div class="cursor-inner"></div>
+  <div class="lantern">
+    <div class="lantern-inner">
+      <span class="lantern-top"></span>
+      <span class="lantern-bottom"></span>
+    </div>
+  </div>
 </div>
 
 <style lang="scss">
+  @property --color {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: purple;
+  }
+
+  @property --color-dark {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: purple;
+  }
+
   .cursor {
+    --color: var(--c-purple);
+    --color-dark: var(--c-purple-dark);
+
     position: fixed;
     z-index: var(--zi-cursor);
     display: none;
-    width: to-rem(12);
-    height: to-rem(12);
     opacity: 0;
     user-select: none;
     pointer-events: none;
     transform: translate3d(
-      calc((100vw * var(--cursor-x) - 50%) + to-rem(24)),
-      calc((100vh * var(--cursor-y) - 50%) + to-rem(24)),
+      calc((100vw * var(--cursor-x) + 10%)),
+      calc((100vh * var(--cursor-y) + 50%)),
       0
     );
-    transition: opacity 0.4s var(--ease-smooth);
+    transition:
+      opacity 0.4s var(--ease-smooth),
+      --color 0.4s var(--ease-smooth),
+      --color-dark 0.4s var(--ease-smooth);
 
     &.is-active {
       opacity: 1;
     }
 
     &.is-hover {
-      .cursor-inner {
-        background-color: var(--c-dark);
-        transform: scale(0.5);
+      .lantern-inner {
+        box-shadow: 0 0 to-rem(50) color(from var(--color) srgb r g b / 0.8);
       }
     }
 
@@ -111,15 +131,78 @@
     }
   }
 
-  .cursor-inner {
-    width: 100%;
-    height: 100%;
+  .lantern {
+    display: grid;
+    place-items: center;
+    width: clamp-fluid(30, 50);
+    aspect-ratio: 115 / 108;
     border-radius: 100%;
-    color: var(--c-dark);
-    background-color: var(--c-light);
-    border: 1px solid var(--c-light);
-    transition:
-      transform 0.4s var(--ease-smooth),
-      background-color 0.4s var(--ease-smooth);
+
+    .lantern-inner {
+      position: relative;
+      display: grid;
+      place-items: center;
+      width: 100%;
+      height: 100%;
+      background-color: var(--color);
+      border-radius: inherit;
+      transform-origin: top;
+      transition: box-shadow 0.4s var(--ease-smooth);
+      animation: swing 5.2s ease-in-out -2.1s infinite alternate forwards;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        background-image: radial-gradient(
+          circle at 50% -100%,
+          var(--color) 0%,
+          var(--color) 55%,
+          var(--color-dark) 55%,
+          var(--color-dark) 56%,
+          var(--color) 56%,
+          var(--color) 63%,
+          var(--color-dark) 63%,
+          var(--color-dark) 64%,
+          var(--color) 64%,
+          var(--color) 73%,
+          var(--color-dark) 73%,
+          var(--color-dark) 74%,
+          var(--color) 74%,
+          var(--color) 82%,
+          var(--color-dark) 82%,
+          var(--color-dark) 83%,
+          var(--color) 83%,
+          var(--color) 90%,
+          var(--color-dark) 90%,
+          var(--color-dark) 91%,
+          var(--color) 91%,
+          var(--color) 100%
+        );
+        border-radius: inherit;
+      }
+    }
+
+    .lantern-top,
+    .lantern-bottom {
+      position: absolute;
+      top: to-rem(-2);
+      left: 50%;
+      translate: -50% 0;
+      z-index: 2;
+      display: block;
+      width: 30%;
+      height: 6%;
+      background-color: var(--color-dark);
+      border-radius: 20%;
+    }
+
+    .lantern-bottom {
+      top: auto;
+      bottom: to-rem(-2);
+    }
   }
 </style>

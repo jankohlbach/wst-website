@@ -31,133 +31,135 @@ const { fields } = Astro.props;
   );
 
   if (map && pinnedCard && maskedContent) {
-    const progressStop1 = parseInt(
-      pinnedCard.style.getPropertyValue('--progress-stop-1'),
-    );
-    const progressStop2 = parseInt(
-      pinnedCard.style.getPropertyValue('--progress-stop-2'),
-    );
-    const progressStop3 = parseInt(
-      pinnedCard.style.getPropertyValue('--progress-stop-3'),
-    );
+    window.addEventListener('load', () => {
+      const progressStop1 = parseInt(
+        pinnedCard.style.getPropertyValue('--progress-stop-1'),
+      );
+      const progressStop2 = parseInt(
+        pinnedCard.style.getPropertyValue('--progress-stop-2'),
+      );
+      const progressStop3 = parseInt(
+        pinnedCard.style.getPropertyValue('--progress-stop-3'),
+      );
 
-    const pins: NodeListOf<HTMLElement> =
-      map.querySelectorAll('[data-js^="pin-"]');
+      const pins: NodeListOf<HTMLElement> =
+        map.querySelectorAll('[data-js^="pin-"]');
 
-    let currentSection = '';
+      let currentSection = '';
 
-    const resetPins = () => {
-      return gsap.to(pins, {
-        scale: 0,
-        autoAlpha: 0,
-        transformOrigin: 'center bottom',
-        duration: 0.2,
-        stagger: 0.02,
-        ease: 'power2.inOut',
-      });
-    };
-
-    const animatePins = (pins: HTMLElement[]) => {
-      gsap.fromTo(
-        pins,
-        {
+      const resetPins = () => {
+        return gsap.to(pins, {
           scale: 0,
           autoAlpha: 0,
           transformOrigin: 'center bottom',
-        },
-        {
-          scale: 1,
-          autoAlpha: 1,
-          transformOrigin: 'center bottom',
-          duration: 0.3,
-          stagger: 0.025,
-        },
-      );
-    };
+          duration: 0.2,
+          stagger: 0.02,
+          ease: 'power2.inOut',
+        });
+      };
 
-    resetPins();
+      const animatePins = (pins: HTMLElement[]) => {
+        gsap.fromTo(
+          pins,
+          {
+            scale: 0,
+            autoAlpha: 0,
+            transformOrigin: 'center bottom',
+          },
+          {
+            scale: 1,
+            autoAlpha: 1,
+            transformOrigin: 'center bottom',
+            duration: 0.3,
+            stagger: 0.025,
+          },
+        );
+      };
 
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: map,
-          start: 'top top',
-          endTrigger: maskedContent,
-          end: 'top 50%',
-          scrub: true,
-        },
-      })
-      .to(map, {
-        scale: 1.5,
-        ease: 'power1.inOut',
-      });
+      resetPins();
 
-    lenis.on('scroll', async () => {
-      const pinnedCardRect = pinnedCard.getBoundingClientRect();
-      const maskedContentRect = maskedContent.getBoundingClientRect();
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: map,
+            start: 'top top',
+            endTrigger: maskedContent,
+            end: 'top 50%',
+            scrub: true,
+          },
+        })
+        .to(map, {
+          scale: 1.5,
+          ease: 'power1.inOut',
+        });
 
-      const dist = pinnedCardRect.top - maskedContentRect.top;
-      maskedContent.style.setProperty('--pinned-card-top', `${dist}px`);
+      lenis.on('scroll', async () => {
+        const pinnedCardRect = pinnedCard.getBoundingClientRect();
+        const maskedContentRect = maskedContent.getBoundingClientRect();
 
-      const maxScrollDistance =
-        maskedContentRect.height - pinnedCardRect.height;
+        const dist = pinnedCardRect.top - maskedContentRect.top;
+        maskedContent.style.setProperty('--pinned-card-top', `${dist}px`);
 
-      const scrollProgress = Math.max(
-        0,
-        Math.min(100, (Math.abs(dist) / maxScrollDistance) * 100),
-      );
+        const maxScrollDistance =
+          maskedContentRect.height - pinnedCardRect.height;
 
-      pinnedCard.style.setProperty(
-        '--clip-progress',
-        `${100 - scrollProgress}%`,
-      );
+        const scrollProgress = Math.max(
+          0,
+          Math.min(100, (Math.abs(dist) / maxScrollDistance) * 100),
+        );
 
-      if (window.innerWidth >= 1024) {
-        let newSection = '';
+        pinnedCard.style.setProperty(
+          '--clip-progress',
+          `${100 - scrollProgress}%`,
+        );
 
-        if (scrollProgress >= 100) {
-          newSection = 'all';
-        } else if (scrollProgress > progressStop3) {
-          newSection = 'office';
-        } else if (scrollProgress > progressStop2) {
-          newSection = 'kulinarik';
-        } else if (scrollProgress > progressStop1) {
-          newSection = 'living';
-        } else if (scrollProgress > 0) {
-          newSection = 'shopping';
-        } else {
-          newSection = 'none';
-        }
+        if (window.innerWidth >= 1024) {
+          let newSection = '';
 
-        if (newSection !== currentSection) {
-          currentSection = newSection;
-
-          if (newSection === 'all') {
-            await resetPins();
-            animatePins([...pins]);
-          } else if (newSection === 'none') {
-            resetPins();
+          if (scrollProgress >= 100) {
+            newSection = 'all';
+          } else if (scrollProgress > progressStop3) {
+            newSection = 'office';
+          } else if (scrollProgress > progressStop2) {
+            newSection = 'kulinarik';
+          } else if (scrollProgress > progressStop1) {
+            newSection = 'living';
+          } else if (scrollProgress > 0) {
+            newSection = 'shopping';
           } else {
-            await resetPins();
-            animatePins(
-              [...pins].filter(
-                (pin) => pin.dataset.js === `pin-${currentSection}`,
-              ),
-            );
+            newSection = 'none';
+          }
+
+          if (newSection !== currentSection) {
+            currentSection = newSection;
+
+            if (newSection === 'all') {
+              await resetPins();
+              animatePins([...pins]);
+            } else if (newSection === 'none') {
+              resetPins();
+            } else {
+              await resetPins();
+              animatePins(
+                [...pins].filter(
+                  (pin) => pin.dataset.js === `pin-${currentSection}`,
+                ),
+              );
+            }
+          }
+        } else {
+          if (pinnedCardRect.top < window.innerHeight && !currentSection) {
+            animatePins([...pins]);
+            currentSection = 'all';
+          } else if (
+            pinnedCardRect.top >= window.innerHeight &&
+            currentSection !== ''
+          ) {
+            resetPins();
+            currentSection = '';
           }
         }
-      } else {
-        if (pinnedCardRect.top < window.innerHeight && !currentSection) {
-          animatePins([...pins]);
-          currentSection = 'all';
-        } else if (
-          pinnedCardRect.top >= window.innerHeight &&
-          currentSection !== ''
-        ) {
-          resetPins();
-          currentSection = '';
-        }
-      }
+      });
     });
   }
 </script>

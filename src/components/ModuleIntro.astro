@@ -52,25 +52,27 @@ const parsedContent = await marked(fields.content);
 
   mm.add('(min-width: 1024px)', () => {
     if (intro && video) {
-      const state = Flip.getState(video);
+      window.addEventListener('load', () => {
+        const state = Flip.getState(video);
 
-      intro.classList.add('final');
+        intro.classList.add('final');
 
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: intro,
-          start: 'top top',
-          end: 'bottom 50%',
-          scrub: true,
-          pin: true,
-        },
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: intro,
+            start: 'top top',
+            end: 'bottom 50%',
+            scrub: true,
+            pin: true,
+          },
+        });
+
+        tl.add(
+          Flip.from(state, {
+            scale: true,
+          }),
+        );
       });
-
-      tl.add(
-        Flip.from(state, {
-          scale: true,
-        }),
-      );
     }
   });
 </script>

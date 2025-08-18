@@ -27,26 +27,28 @@ const parsedContent = await marked(fields.content);
 
   mm.add('(max-width: 1023px)', () => {
     if (intro && video) {
-      const state = Flip.getState(video);
+      window.addEventListener('load', () => {
+        const state = Flip.getState(video);
 
-      intro.classList.add('final');
+        intro.classList.add('final');
 
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: intro,
-          start: 'top top',
-          endTrigger: video,
-          end: 'top 30%',
-          scrub: true,
-        },
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: intro,
+            start: 'top top',
+            endTrigger: video,
+            end: 'top 30%',
+            scrub: true,
+          },
+        });
+
+        tl.add(
+          Flip.from(state, {
+            scale: true,
+            ease: 'power1.inOut',
+          }),
+        );
       });
-
-      tl.add(
-        Flip.from(state, {
-          scale: true,
-          ease: 'power1.inOut',
-        }),
-      );
     }
   });
 

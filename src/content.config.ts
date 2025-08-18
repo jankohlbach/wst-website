@@ -2,125 +2,127 @@ import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 
 const globals = defineCollection({
-  loader: glob({base: './src/content', pattern: 'globals.json'}),
-  schema: ({ image }) => z.object({
-    general: z.array(
-      z.object({
-        siteTitle: z.string(),
-        siteDescription: z.string(),
-        siteImage: image(),
-      }),
-    ),
-    header: z.array(
-      z.object({
-        logo: z.object({
-          image: image(),
-          alt: z.string(),
+  loader: glob({ base: './src/content', pattern: 'globals.json' }),
+  schema: ({ image }) =>
+    z.object({
+      general: z.array(
+        z.object({
+          siteTitle: z.string(),
+          siteDescription: z.string(),
+          siteImage: image(),
         }),
-      }),
-    ),
-    footer: z.array(
-      z.object({
-        content: z.string(),
-        logo: z.object({
-          image: image(),
-          alt: z.string(),
+      ),
+      header: z.array(
+        z.object({
+          logo: z.object({
+            image: image(),
+            alt: z.string(),
+          }),
         }),
-        legal: z.string(),
-      }),
-    ),
-    socials: z.array(
-      z.object({
-        linkFacebook: z.string(),
-        linkInstagram: z.string(),
-      }),
-    ),
-    page404: z.array(
-      z.object({
-        title: z.string(),
-        subline: z.string(),
-        linkText: z.string(),
-      }),
-    ),
-  }),
+      ),
+      footer: z.array(
+        z.object({
+          content: z.string(),
+          logo: z.object({
+            image: image(),
+            alt: z.string(),
+          }),
+          legal: z.string(),
+        }),
+      ),
+      socials: z.array(
+        z.object({
+          linkFacebook: z.string(),
+          linkInstagram: z.string(),
+        }),
+      ),
+      page404: z.array(
+        z.object({
+          title: z.string(),
+          subline: z.string(),
+          linkText: z.string(),
+        }),
+      ),
+    }),
 });
 
 const pageHome = defineCollection({
-  loader: glob({base: './src/content', pattern: 'pageHome.md'}),
-  schema: ({ image }) => z.object({
-    title: z.string(),
-    moduleIntro: z.object({
-      video: z.string(),
-      content: z.string(),
-    }),
-    moduleCompanies: z.object({
-      shopping: z.array(
-        z.object({
-          link: z.string(),
-          image: z.object({
-            image: image(),
-            alt: z.string(),
-          }),
-          category: z.string(),
-        }),
-      ),
-      living: z.array(
-        z.object({
-          link: z.string(),
-          image: z.object({
-            image: image(),
-            alt: z.string(),
-          }),
-          category: z.string(),
-        }),
-      ),
-      kulinarik: z.array(
-        z.object({
-          link: z.string(),
-          image: z.object({
-            image: image(),
-            alt: z.string(),
-          }),
-          category: z.string(),
-        }),
-      ),
-      office: z.array(
-        z.object({
-          link: z.string(),
-          image: z.object({
-            image: image(),
-            alt: z.string(),
-          }),
-          category: z.string(),
-        }),
-      ),
-    }),
-    moduleEvents: z.object({
+  loader: glob({ base: './src/content', pattern: 'pageHome.md' }),
+  schema: ({ image }) =>
+    z.object({
       title: z.string(),
-      events: z.array(
-        z.object({
-          title: z.string(),
-          date: z.string(),
-          description: z.string().optional(),
-          image: z.object({
-            image: image(),
-            alt: z.string(),
+      moduleIntro: z.object({
+        video: z.string(),
+        content: z.string(),
+      }),
+      moduleCompanies: z.object({
+        shopping: z.array(
+          z.object({
+            link: z.string(),
+            image: z.object({
+              image: image(),
+              alt: z.string(),
+            }),
+            category: z.string(),
           }),
-        }),
-      ),
+        ),
+        living: z.array(
+          z.object({
+            link: z.string(),
+            image: z.object({
+              image: image(),
+              alt: z.string(),
+            }),
+            category: z.string(),
+          }),
+        ),
+        kulinarik: z.array(
+          z.object({
+            link: z.string(),
+            image: z.object({
+              image: image(),
+              alt: z.string(),
+            }),
+            category: z.string(),
+          }),
+        ),
+        office: z.array(
+          z.object({
+            link: z.string(),
+            image: z.object({
+              image: image(),
+              alt: z.string(),
+            }),
+            category: z.string(),
+          }),
+        ),
+      }),
+      moduleEvents: z.object({
+        title: z.string(),
+        events: z.array(
+          z.object({
+            title: z.string(),
+            date: z.string(),
+            description: z.string().optional(),
+            image: z.object({
+              image: image(),
+              alt: z.string(),
+            }),
+          }),
+        ),
+      }),
+      moduleKeywords: z.object({
+        words: z.array(
+          z.object({
+            word: z.string(),
+          }),
+        ),
+      }),
     }),
-    moduleKeywords: z.object({
-      words: z.array(
-        z.object({
-          word: z.string(),
-        }),
-      ),
-    }),
-  }),
 });
 
 const pagesGeneric = defineCollection({
-  loader: glob({base: './src/content/pagesGeneric', pattern: '**/*.md'}),
+  loader: glob({ base: './src/content/pagesGeneric', pattern: '**/*.md' }),
   schema: z.object({
     slug: z.string(),
     title: z.string(),

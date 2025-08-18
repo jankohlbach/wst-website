@@ -1,11 +1,11 @@
 ---
 import '../styles/index.scss';
 
-import { general } from '../content/globals';
+import { general } from '@content/globals';
 
-import Cursor from '../components/Cursor.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import Cursor from '@components/Cursor.astro';
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
@@ -17,7 +17,7 @@ const { pageTitle } = Astro.props;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#101010" />
     <title>{`${pageTitle ? pageTitle + ' | ' : ''}${general.siteTitle}`}</title>
     <link rel="icon" href="/favicon.ico" sizes="32x32" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -36,15 +36,22 @@ const { pageTitle } = Astro.props;
     <!-- TODO: remove when going live -->
     <meta name="robots" content="noindex, nofollow" />
     <meta name="description" content={general.siteDescription} />
-    <meta property="og:url" content={Astro.url} />
     <meta property="og:title" content={general.siteTitle} />
     <meta property="og:description" content={general.siteDescription} />
     <meta
       property="og:image"
-      content={new URL(general.siteImage.src, Astro.url)}
+      content={new URL(general.siteImage.src, Astro.site)}
     />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="de" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={general.siteTitle} />
+    <meta name="twitter:description" content={general.siteDescription} />
+    <meta
+      name="twitter:image"
+      content={new URL(general.siteImage.src, Astro.site)}
+    />
     <link
       rel="preload"
       href="/fonts/Delight-Light.woff2"
@@ -82,10 +89,11 @@ const { pageTitle } = Astro.props;
     <slot />
 
     <Footer />
+
     <script>
-      import '../scripts/console.ts';
       import '../scripts/scroll.ts';
       import '../scripts/inview.ts';
+      import '../scripts/console.ts';
     </script>
   </body>
 </html>

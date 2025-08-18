@@ -2,9 +2,9 @@
 import { marked } from 'marked';
 import { Image } from 'astro:assets';
 
-import { footer } from '../content/globals';
+import { footer } from '@content/globals';
 
-import Socials from './Socials.astro';
+import Socials from '@components/Socials.astro';
 
 const parsedContent = await marked(footer.content);
 const parsedLegal = await marked(footer.legal);

@@ -248,7 +248,7 @@ moduleEvents:
         image: ../media/midsummernight.webp
         alt: Menschen, die an Kleiderstangen einkaufen und Kleidung anschauen
     - title: Das Waldstraßenfest
-      date: 05. + 06 September 2025
+      date: 05. + 06 September
       description: MUSIC | LATE NIGHT SHOPPING | KULINARIK
       image:
         image: ../media/waldstrassenfest.webp

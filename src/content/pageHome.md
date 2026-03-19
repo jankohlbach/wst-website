@@ -98,7 +98,7 @@ moduleCompanies:
       category: Art
     - link: https://diewaldstrasse.de/
       image:
-        image: ../media/logos/logoipsum-2.svg
+        image: ../media/logos/logoipsum-9.svg
         alt: Logo
       category: Interior Design
     - link: https://diewaldstrasse.de/

@@ -31,46 +31,67 @@ import Socials from '@components/Socials.astro';
       document.querySelector('[data-js="cursor"]');
     const sections: Element[] = [];
 
+    // Track state for both sources
+    let currentCompanySection: string | null = null;
+    let currentObserverSection: string | null = null;
+
+    const updateActiveState = () => {
+      const activeId = currentCompanySection || currentObserverSection;
+
+      linksDesktop?.forEach((link) => {
+        if (link.hash === `#${activeId}`) {
+          link.classList.add('is-active');
+          cursor?.style.setProperty(
+            '--color',
+            getComputedStyle(link).getPropertyValue('--color'),
+          );
+          cursor?.style.setProperty(
+            '--color-dark',
+            getComputedStyle(link).getPropertyValue('--color-dark'),
+          );
+        } else {
+          link.classList.remove('is-active');
+        }
+      });
+
+      if (!activeId) {
+        cursor?.style.removeProperty('--color');
+        cursor?.style.removeProperty('--color-dark');
+      }
+    };
+
+    // Listen for custom events from ModuleCompanies
+    window.addEventListener('ui:section-change', (e: Event) => {
+      const customEvent = e as CustomEvent;
+      const { sectionId } = customEvent.detail;
+      // If sectionId is 'all', treat as null for activation purposes
+      currentCompanySection = sectionId === 'all' ? null : sectionId;
+      updateActiveState();
+    });
+
     linksDesktop?.forEach((link) => {
       const section = document.querySelector(link.hash);
-      if (section) sections.push(section);
+      // Only observe sections that are NOT part of the companies module logic
+      // We assume sections inside .companies are handled by the event above
+      if (section && !section.closest('.companies')) {
+        sections.push(section);
+      }
     });
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          const sectionId = entry.target.id;
-
           if (entry.isIntersecting) {
-            linksDesktop?.forEach((link) => link.classList.remove('is-active'));
-
-            linksDesktop?.forEach((link) => {
-              if (link.hash === `#${sectionId}`) {
-                link.classList.add('is-active');
-                cursor?.style.setProperty(
-                  '--color',
-                  getComputedStyle(link).getPropertyValue('--color'),
-                );
-                cursor?.style.setProperty(
-                  '--color-dark',
-                  getComputedStyle(link).getPropertyValue('--color-dark'),
-                );
-              }
-            });
-          } else {
-            linksDesktop?.forEach((link) => {
-              if (link.hash === `#${sectionId}`) {
-                link.classList.remove('is-active');
-                cursor?.style.removeProperty('--color');
-                cursor?.style.removeProperty('--color-dark');
-              }
-            });
+            currentObserverSection = entry.target.id;
+          } else if (entry.target.id === currentObserverSection) {
+            currentObserverSection = null;
           }
         });
+        updateActiveState();
       },
       {
-        rootMargin: '-20% 0% -60% 0%',
-        threshold: 0.1,
+        rootMargin: '-50% 0px -50% 0px',
+        threshold: 0,
       },
     );
 

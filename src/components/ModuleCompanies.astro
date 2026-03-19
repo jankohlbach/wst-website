@@ -133,6 +133,14 @@ const { fields } = Astro.props;
           if (newSection !== currentSection) {
             currentSection = newSection;
 
+            window.dispatchEvent(
+              new CustomEvent('ui:section-change', {
+                detail: {
+                  sectionId: currentSection === 'none' ? null : currentSection,
+                },
+              }),
+            );
+
             if (newSection === 'all') {
               await resetPins();
               animatePins([...pins]);
@@ -185,7 +193,7 @@ const { fields } = Astro.props;
       >
       </div>
       <div class="content" data-js="masked-content">
-        <div id="shopping" class="group">
+        <div id="shopping" class="group" style="--group-index: 0;">
           <h2 class="group-title" data-inview>Shopping</h2>
           <div class="logos">
             {
@@ -207,7 +215,7 @@ const { fields } = Astro.props;
             }
           </div>
         </div>
-        <div id="living" class="group">
+        <div id="living" class="group" style="--group-index: 1;">
           <h2 class="group-title" data-inview>Living</h2>
           <div class="logos">
             {
@@ -229,7 +237,7 @@ const { fields } = Astro.props;
             }
           </div>
         </div>
-        <div id="kulinarik" class="group">
+        <div id="kulinarik" class="group" style="--group-index: 2;">
           <h2 class="group-title" data-inview>Kulinarik</h2>
           <div class="logos">
             {
@@ -251,7 +259,7 @@ const { fields } = Astro.props;
             }
           </div>
         </div>
-        <div id="office" class="group">
+        <div id="office" class="group" style="--group-index: 3;">
           <h2 class="group-title" data-inview>Office</h2>
           <div class="logos">
             {
@@ -280,7 +288,7 @@ const { fields } = Astro.props;
 
 <style lang="scss">
   [id] {
-    scroll-margin-top: 20svh;
+    scroll-margin-top: calc(20svh + var(--group-index, 0) * 10svh);
   }
 
   .companies {

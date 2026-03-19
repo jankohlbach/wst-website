@@ -242,7 +242,7 @@ moduleEvents:
   title: Events
   events:
     - title: Mid Summer Night
-      date: 21. Juni 2025
+      date: 21. Juni
       description: LÄNGER SOMMER, LÄNGER WALDSTRASSE – Shopping bis 22 Uhr
       image:
         image: ../media/midsummernight.webp

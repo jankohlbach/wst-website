@@ -20,224 +20,189 @@ moduleIntro:
     öffentlichen Verkehrsmitteln laden Sie zum nächsten Besuch bei uns ein.
 moduleCompanies:
   shopping:
-    - link: https://www.sentner-schmuck.de
+    - link: https://diewaldstrasse.de/
       image:
-        image: ../media/logos-shopping/Sentners-1.webp
-        alt: Sentner Schmuck Logo
+        image: ../media/logos/logoipsum-1.svg
+        alt: Logo
       category: Schmuck
-    - link: https://bassmann-optik.de
+    - link: https://diewaldstrasse.de/
       image:
-        image: ../media/logos-shopping/BassmannOptik-2048x338.webp
-        alt: Bassmann Optik Logo
+        image: ../media/logos/logoipsum-2.svg
+        alt: Logo
       category: Optik
-    - link: https://sarawinter-schmuck.de
+    - link: https://diewaldstrasse.de/
       image:
-        image: ../media/logos-shopping/SaraWinter.webp
-        alt: Sara Winter Schmuck Logo
+        image: ../media/logos/logoipsum-3.svg
+        alt: Logo
       category: Fashion
-    - link: https://www.staudt-mode.de
+    - link: https://diewaldstrasse.de/
       image:
-        image: ../media/logos-shopping/Staudt.webp
-        alt: Staudt Mode Logo
+        image: ../media/logos/logoipsum-4.svg
+        alt: Logo
       category: Fashion
-    - link: https://www.glore.de/Concept-Stores/Karlsruhe
+    - link: https://diewaldstrasse.de/
       image:
-        image: ../media/logos-shopping/Glore-2048x1221.webp
-        alt: Glore Logo
+        image: ../media/logos/logoipsum-5.svg
+        alt: Logo
       category: Fashion
-    - link: https://radundtat.net
+    - link: https://diewaldstrasse.de/
       image:
-        image: ../media/logos-shopping/RadundTat.webp
-        alt: Rad und Tat Logo
+        image: ../media/logos/logoipsum-6.svg
+        alt: Logo
       category: Outdoor
-    - link: https://www.facebook.com/dosul.store
+    - link: https://diewaldstrasse.de/
       image:
-        image: ../media/logos-shopping/doSul_weiss.webp
-        alt: do Sul Logo
+        image: ../media/logos/logoipsum-7.svg
+        alt: Logo
       category: Concept Store
-    - link: https://www.minette-store.de
+    - link: https://diewaldstrasse.de/
       image:
-        image: ../media/logos-shopping/Minette.webp
-        alt: Minette Logo
+        image: ../media/logos/logoipsum-8.svg
+        alt: Logo
       category: Fashion
-    - link: https://www.luis-karlsruhe.de
+    - link: https://diewaldstrasse.de/
       image:
-        image: ../media/logos-shopping/Luis-2048x288.webp
-        alt: Luis Logo
-      category: Fashion
-    - link: https://feinkost-karlsruhe.de
-      image:
-        image: ../media/logos-shopping/el-corazon-karlsruhe-logo.webp
-        alt: el corazón Logo
-      category: Feinkost
-    - link: https://dupario.de
-      image:
-        image: ../media/logos-shopping/dupario-logo.webp
-        alt: dupario Logo
-      category: Parfum
-    - link: https://www.karlsruhe-erleben.de/attraktion/goldschmiede-nitzschke-793c073f41
-      image:
-        image: ../media/logos-shopping/goldschmiede-nitschke.webp
-        alt: Goldschmiede Nitzschke Logo
-      category: Fashion
-    - link: https://www.google.com/maps/place/Schneiderei''Avanti''/@49.0072994,8.38985,17z/data=!3m1!4b1!4m6!3m5!1s0x4797076ef614ae37:0x15dae01c57d6912d!8m2!3d49.0072994!4d8.38985!16s%2Fg%2F11h6ngg9dv?entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoASAFQAw%3D%3D
-      image:
-        image: ../media/logos-shopping/schneiderei-avanti.webp
-        alt: Schneiderei Avanti Logo
-      category: Fashion
-    - link: https://www.instagram.com/kontr.ast_shop
-      image:
-        image: ../media/logos-shopping/kontrast-logo.webp
-        alt: kontrast Logo
-      category: Art
-    - link: https://www.instagram.com/avantgardeexclusive/?hl=en
-      image:
-        image: ../media/logos-shopping/cepaka.webp
-        alt: CEPAKA Logo
+        image: ../media/logos/logoipsum-9.svg
+        alt: Logo
       category: Fashion
   living:
-    - link: https://www.roter-punkt.de
+    - link: https://diewaldstrasse.de/
       image:
-        image: ../media/logos-living/RoterPunkt_weiss.webp
-        alt: roter punkt Logo
+        image: ../media/logos/logoipsum-8.svg
+        alt: Logo
       category: Art
-    - link: https://www.ergonomie-und-wohnen.de
+    - link: https://diewaldstrasse.de/
       image:
-        image: ../media/logos-living/ErgonomieUndWohnen-2048x274.webp
-        alt: Ergonomie und Wohnen Logo
+        image: ../media/logos/logoipsum-4.svg
+        alt: Logo
       category: Interior Design
-    - link: https://pfeiffer-may.de/ausstellungen/stil-impulse
+    - link: https://diewaldstrasse.de/
       image:
-        image: ../media/logos-living/Stilimpulse.webp
-        alt: Stil Impulse Logo
+        image: ../media/logos/logoipsum-5.svg
+        alt: Logo
       category: Interior Design
-    - link: https://kreischer-hairstyling.de
+    - link: https://diewaldstrasse.de/
       image:
-        image: ../media/logos-living/SimoneKreischer.webp
-        alt: Kreischer Hairstyling Logo
+        image: ../media/logos/logoipsum-1.svg
+        alt: Logo
       category: Friseur
-    - link: https://www.marvin-meyer.art
+    - link: https://diewaldstrasse.de/
       image:
-        image: ../media/logos-living/MarvinMeyerArt.webp
-        alt: Marvin Meyer Art Logo
+        image: ../media/logos/logoipsum-3.svg
+        alt: Logo
       category: Art
-    - link: https://serkansari.de
+    - link: https://diewaldstrasse.de/
       image:
-        image: ../media/logos-living/serkan-sari.webp
-        alt: Serkan Sari Logo
+        image: ../media/logos/logoipsum-4.svg
+        alt: Logo
       category: Art
-    - link: https://www.burger.de
+    - link: https://diewaldstrasse.de/
       image:
-        image: ../media/logos-living/Burger_weiss.webp
-        alt: Burger Logo
+        image: ../media/logos/logoipsum-8.svg
+        alt: Logo
       category: Interior Design
-    - link: https://www.donato-haircreations.de
+    - link: https://diewaldstrasse.de/
       image:
-        image: ../media/logos-living/Donato.webp
-        alt: Donato Haircreations Logo
+        image: ../media/logos/logoipsum-6.svg
+        alt: Logo
       category: Friseur
-    - link: https://www.galerie-elwert.de
+    - link: https://diewaldstrasse.de/
       image:
-        image: ../media/logos-living/GalerieElwert_weiss.webp
-        alt: Galerie Elwert Logo
+        image: ../media/logos/logoipsum-7.svg
+        alt: Logo
       category: Art
-    - link: https://www.hofmeister.de/standort-karlsruhe
-      image:
-        image: ../media/logos-living/hofmeister.webp
-        alt: Hofmeister Logo
-      category: Interior Design
-    - link: https://www.galeriemarkaj.com
-      image:
-        image: ../media/logos-living/galerie-markaj.webp
-        alt: Galerie Markaj Logo
-      category: Art
-    - link: https://www.achtsam-sensibel.de
-      image:
-        image: ../media/logos-living/achtsam-sensibel.webp
-        alt: Achtsam Sensibel Logo
-      category: Coaching
   kulinarik:
-    - link: https://www.instagram.com/espressobar_karlsruhe
+    - link: https://diewaldstrasse.de/
       image:
-        image: ../media/logos-kulinarik/Esspressobar_weiss.webp
-        alt: Espressobar Logo
+        image: ../media/logos/logoipsum-4.svg
+        alt: Logo
       category: Café
-    - link: https://www.tascadojose.de
+    - link: https://diewaldstrasse.de/
       image:
-        image: ../media/logos-kulinarik/TascadoJose.webp
-        alt: Tasca do José Logo
+        image: ../media/logos/logoipsum-7.svg
+        alt: Logo
       category: Restaurant
-    - link: https://www.stoevchen.com
+    - link: https://diewaldstrasse.de/
       image:
-        image: ../media/logos-kulinarik/stoevchen-logo-2.webp
-        alt: Stövchen Logo
+        image: ../media/logos/logoipsum-5.svg
+        alt: Logo
       category: Restaurant
-    - link: http://www.dersaftladen.de
+    - link: https://diewaldstrasse.de/
       image:
-        image: ../media/logos-kulinarik/DerSaftladen.webp
-        alt: Café mit Flair Logo
+        image: ../media/logos/logoipsum-8.svg
+        alt: Logo
       category: Café
-    - link: https://www.astartcafe.com
+    - link: https://diewaldstrasse.de/
       image:
-        image: ../media/logos-kulinarik/ast-art-cafe.webp
-        alt: Ast Art Café Logo
+        image: ../media/logos/logoipsum-1.svg
+        alt: Logo
       category: Café
-    - link: https://www.karlsruhe-erleben.de/media/gastronomie/Le-Renard#/article/2e9df15c-06d8-4734-8c57-5430815b5736
+    - link: https://diewaldstrasse.de/
       image:
-        image: ../media/logos-kulinarik/LeRenard.webp
-        alt: Le Renard Bistro Logo
+        image: ../media/logos/logoipsum-2.svg
+        alt: Logo
       category: Café
-    - link: https://www.brickandbone.de
+    - link: https://diewaldstrasse.de/
       image:
-        image: ../media/logos-kulinarik/BrickandBone.webp
-        alt: Brick + Bone Logo
+        image: ../media/logos/logoipsum-9.svg
+        alt: Logo
       category: Restaurant
-    - link: https://www.yollie.cafe
+    - link: https://diewaldstrasse.de/
       image:
-        image: ../media/logos-kulinarik/Yollie_weiss.webp
-        alt: Yollie Café Logo
+        image: ../media/logos/logoipsum-6.svg
+        alt: Logo
       category: Café
-    - link: http://www.pomodoro-karlsruhe.de
+    - link: https://diewaldstrasse.de/
       image:
-        image: ../media/logos-kulinarik/Pomodoro_weiss.webp
-        alt: Pomodoro Logo
+        image: ../media/logos/logoipsum-3.svg
+        alt: Logo
       category: Restaurant
   office:
-    - link: https://gerwinmedia.de
+    - link: https://diewaldstrasse.de/
       image:
-        image: ../media/logos-office/Gerwin_Media_Logo.webp
-        alt: Gerwin Media Logo
+        image: ../media/logos/logoipsum-9.svg
+        alt: Logo
       category: Media
-    - link: https://syd.media
+    - link: https://diewaldstrasse.de/
       image:
-        image: ../media/logos-office/syd-media.webp
-        alt: SYD Media Logo
+        image: ../media/logos/logoipsum-3.svg
+        alt: Logo
       category: Media
-    - link: https://einsagentur.de
+    - link: https://diewaldstrasse.de/
       image:
-        image: ../media/logos-office/einsagentur.webp
-        alt: einsagentur Schäuble GmbH Logo
+        image: ../media/logos/logoipsum-7.svg
+        alt: Logo
       category: Konzept
-    - link: https://myimmofinanz.de
+    - link: https://diewaldstrasse.de/
       image:
-        image: ../media/logos-office/myimmofinanz.webp
-        alt: MyImmoFinanz Logo
+        image: ../media/logos/logoipsum-5.svg
+        alt: Logo
       category: Immobilien
-    - link: https://ant-reisen.de/site/startseite
+    - link: https://diewaldstrasse.de/
       image:
-        image: ../media/logos-office/ant-reisen.webp
-        alt: Antiochia Reisen Logo
+        image: ../media/logos/logoipsum-1.svg
+        alt: Logo
       category: Reisen
-    - link: https://www.issaka-holzbau.de
+    - link: https://diewaldstrasse.de/
       image:
-        image: ../media/logos-office/issaka-holzbau.webp
-        alt: Issaka Holzbau Logo
+        image: ../media/logos/logoipsum-4.svg
+        alt: Logo
       category: Konstruktion
-    - link: https://k46.team
+    - link: https://diewaldstrasse.de/
       image:
-        image: ../media/logos-office/k46-logo.webp
-        alt: K46 Logo
+        image: ../media/logos/logoipsum-6.svg
+        alt: Logo
       category: Media
+    - link: https://diewaldstrasse.de/
+      image:
+        image: ../media/logos/logoipsum-2.svg
+        alt: Logo
+      category: Finanz
+    - link: https://diewaldstrasse.de/
+      image:
+        image: ../media/logos/logoipsum-8.svg
+        alt: Logo
+      category: Konzept
 moduleEvents:
   title: Events
   events:

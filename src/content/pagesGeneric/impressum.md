@@ -7,20 +7,17 @@ sections:
         title: Impressum
       - type: moduleRichText
         content: >-
-          Interessengemeinschaft Südliche Waldstrasse e.V. Waldstrasse 44  
-
-          – Ergonomie und Wohnen – 76133 Karlsruhe 1. Vorsitzender: Raimund
-          Löhr  
-
-          Schatzmeister Hubert Roth
+          This is just a personal project and not the real, original site (which
+          can be found [here](https://diewaldstrasse.de/)).
 
 
-          Steuernummer: 35022 / 57507  
+          I ([jankohlbach.com](http://jankohlbach.com)) made this to showcase
+          what's possible.
 
-          HRA: VR 2930 Amtsgericht Karlsruhe
+
+          If you want to work together and have a site just like this, please
+          contact me via mail:
 
 
-          [hello@diewaldstrasse.com](mailto:hello@diewaldstrasse.com)  
-
-          [https://diewaldstrasse.de](https://diewaldstrasse.de)
+          [wst@jankohlbach.com](mailto:wst@jankohlbach.com)
 ---

@@ -10,7 +10,7 @@ export default defineConfig({
   site:
     process.env.NODE_ENV === 'development'
       ? 'http://localhost:4321'
-      : 'https://wst-website-new.vercel.app',
+      : 'https://waldstrasse.jnkl.dev',
   integrations: [
     robotsTxt({
       sitemapBaseFileName: 'sitemap-index',
